@@ -55,62 +55,195 @@
         </div>
         
         <div class="content mt-0">
-            <div class="row">
-                <div class="col-12">
+                {{-- <div class="col-12">
                     <a href="#" class="btn btn-full btn-m rounded-s text-uppercase font-900 shadow-xl bg-highlight">Contact Us</a>
-                </div>
-                {{-- <div class="col-6">
-                    <a href="#" class="btn btn-full btn-border btn-m rounded-s text-uppercase font-900 shadow-l border-highlight color-highlight">Contact US</a>
                 </div> --}}
-            </div>
-        </div>
 
-		<div class="card card-style">
-            <div class="content">
-                <h4>Galery Foto dan Video</h4>
+                {{-- <div class="card card-style mb-3">
+                    <div class="list-group list-custom-small list-icon-0 bg-highlight ps-3 pe-4">
 
-            </div>
-        </div>
-
-        <div class="splide double-slider visible-slider slider-no-arrows slider-no-dots" id="double-slider-2">
-            <div class="splide__track">
-                <div class="splide__list">
-                    <div class="splide__slide">
-                        <div data-card-height="185" class="card bg-18 mx-3 rounded-m shadow-l">
-                            <div class="card-bottom text-center mb-4">
-                                <h2 class="color-white text-uppercase font-700">Apptastic</h2>
-                            </div>
-                            <div class="card-overlay bg-gradient"></div>
-                        </div>
-                        <a href="#" class="under-slider-btn btn btn-s btn-center-xs text-uppercase font-700 bg-red-dark rounded-s">Detail</a>
+                        <a data-bs-toggle="collapse" class="no-effect" href="#collapse-5">
+                            <div class="font-14 color-white justify-content-center align-items-center ">Contact Us</div>
+                        </a>
+                        
                     </div>
-                    <div class="splide__slide">
-                        <div data-card-height="185" class="card bg-28 mx-3 rounded-m shadow-l">
-                            <div class="card-bottom text-center mb-4">
-                                <h2 class="color-white text-uppercase font-700">AMP Drawer</h2>
-                            </div>
-                            <div class="card-overlay bg-gradient"></div>
+                    <div class="collapse ps-2 pe-4" id="collapse-5">
+                        <div class="list-group list-custom-small">
+                            <a href="#" data-menu="menu-maps">
+                                <i class="fa font-13 fa-home color-green-dark"></i>
+                                <span>Rumah Sakit Umum</span>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <a href="#" data-menu="menu-maps">
+                                <i class="fa font-13 fa-suitcase color-brown-light"></i>
+                                <span>Klinik</span>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <a href="#" data-menu="menu-maps">
+                                <i class="fa font-13 fa-building color-gray-dark"></i>
+                                <span>Puskesmas</span>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <a href="#" data-menu="menu-maps">
+                                <i class="fa font-13 fa-building color-gray-dark"></i>
+                                <span>Puskesmas Pembantu</span>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         </div>
-                        <a href="#" class="under-slider-btn btn btn-s btn-center-xs text-uppercase font-700 bg-red-dark rounded-s">Detail</a>
                     </div>
-                    <div class="splide__slide">
-                        <div data-card-height="185" class="card bg-13 mx-3 rounded-m shadow-l">
-                            <div class="card-bottom text-center mb-4">
-                                <h2 class="color-white text-uppercase font-700">Appeca</h2>
+                </div> --}}
+                <div class="divider divider-margins mt-4"></div>
+                <div class="card card-style">
+                    <div class="content">
+                        <h4 class="bolder text-center font-800 pb-3">Sekretariat PEDA </h4>
+                        <h5 class="text-center font-700 pb-3">PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025 <br> 
+                            d/a. Kawasan Perkantoran Bisnis Center Sendawar, Kecamatan Barong Tongkok, Kabupaten Kutai Barat <br>
+                            Telepon/Fax ........................................ <br>
+                            e-mail: ............................................
+                        </h5>
+                        <div class="collapse" id="collapse-8">
+                            <div class="card card-style">
+                                <div class="content">
+                                    
+                                    <div data-splide='{"autoplay":false}' class="splide single-slider slider-no-arrows slider-no-dots" id="user-slider-1">
+                                        <div class="splide__track">
+                                            <div class="splide__list">
+                                                <div class="splide__slide mx-3">
+                                                    <div class="d-flex">
+                                                        <div><img src="{{ asset('frontend') }}/images/avatars/1s.png" class="me-3 rounded-circle bg-fade-red-light shadow-l" width="50"></div>
+                                                        <div>
+                                                            <h5 class="mt-1 mb-0">Johnatan Doe</h5>
+                                                            <p class="font-10 mt-n1 color-red-dark">Panitia</p>
+                                                        </div>
+                                                        <div class="ms-auto"><span class="slider-next badge bg-red-dark mt-2 p-2 font-8">TAP FOR MORE</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="splide__slide mx-3">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mt-1 mb-0">Johnatan Doe</h5>
+                                                            <p class="font-10 mt-n1 color-red-dark">Panitia</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <a href="#" class="icon icon-xs rounded-circle shadow-l bg-phone"><i class="fa fa-phone"></i></a>
+                                                            <a href="#" class="icon icon-xs rounded-circle shadow-l bg-facebook me-2 ms-2"><i class="fab fa-whatsapp"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>      
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="divider mt-3"></div>
+                    
+                                    <div data-splide='{"autoplay":false}' class="splide single-slider slider-no-arrows slider-no-dots" id="user-slider-2">
+                                        <div class="splide__track">
+                                            <div class="splide__list">
+                                                <div class="splide__slide mx-3">
+                                                    <div class="d-flex">
+                                                        <div><img src="{{ asset('frontend') }}/images/avatars/2s.png" class="me-3 rounded-circle bg-fade-green-dark shadow-l" width="50"></div>
+                                                        <div>
+                                                            <h5 class="mt-1 mb-0">Alexander Mac</h5>
+                                                            <p class="font-10 mt-n1 color-green-dark">Kebersihan</p>
+                                                        </div>
+                                                        <div class="ms-auto"><span class="slider-next badge bg-green-dark mt-2 p-2 font-8">TAP FOR MORE</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="splide__slide mx-3">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mt-1 mb-0">Alexander Mac</h5>
+                                                            <p class="font-10 mt-n1 color-green-dark">Kebersihan</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <a href="#" class="icon icon-xs rounded-circle shadow-l bg-phone"><i class="fa fa-phone"></i></a>
+                                                            <a href="#" class="icon icon-xs rounded-circle shadow-l bg-facebook me-2 ms-2"><i class="fab fa-whatsapp"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>     
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="divider mt-3"></div>
+                    
+                                    <div data-splide='{"autoplay":false}' class="splide single-slider slider-no-arrows slider-no-dots" id="user-slider-3">
+                                        <div class="splide__track">
+                                            <div class="splide__list">
+                                                <div class="splide__slide mx-3">
+                                                    <div class="d-flex">
+                                                        <div><img src="{{ asset('frontend') }}/images/avatars/5s.png" class="me-3 rounded-circle shadow-l bg-fade-yellow-dark" width="50"></div>
+                                                        <div>
+                                                            <h5 class="mt-1 mb-0">Johnatan Unixer</h5>
+                                                            <p class="font-10 mt-n1 color-blue-dark">Petugas Medis</p>
+                                                        </div>
+                                                        <div class="ms-auto"><span class="slider-next badge bg-blue-dark mt-2 p-2 font-8">TAP FOR MORE</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="splide__slide mx-3">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mt-1 mb-0">Johnatan Doe</h5>
+                                                            <p class="font-10 mt-n1 color-blue-dark">Petugas Medis</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <a href="#" class="icon icon-xs rounded-circle shadow-l bg-phone"><i class="fa fa-phone"></i></a>
+                                                            <a href="#" class="icon icon-xs rounded-circle shadow-l bg-facebook me-2 ms-2"><i class="fab fa-whatsapp"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>     
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="divider mt-3"></div>
+                    
+                                    <div data-splide='{"autoplay":false}' class="splide single-slider slider-no-arrows slider-no-dots" id="user-slider-4">
+                                        <div class="splide__track">
+                                            <div class="splide__list">
+                                                <div class="splide__slide mx-3">
+                                                    <div class="d-flex">
+                                                        <div><img src="{{ asset('frontend') }}/images/avatars/7s.png" class="me-3 rounded-circle shadow-l bg-fade-red-dark" width="50"></div>
+                                                        <div>
+                                                            <h5 class="mt-1 mb-0">Vincent Mobi</h5>
+                                                            <p class="font-10 mt-n1 color-gray-dark">Driver</p>
+                                                        </div>
+                                                        <div class="ms-auto"><span class="slider-next badge bg-blue-dark mt-2 p-2 font-8">TAP FOR MORE</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="splide__slide mx-3">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mt-1 mb-0">Vincent Mobi</h5>
+                                                            <p class="font-10 mt-n1 color-gray-dark">Driver</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <a href="#" class="icon icon-xs rounded-circle shadow-l bg-phone"><i class="fa fa-phone"></i></a>
+                                                            <a href="#" class="icon icon-xs rounded-circle shadow-l bg-facebook me-2 ms-2"><i class="fab fa-whatsapp"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>     
+                                        </div>
+                                    </div>
+                    
+                                    
+                                </div>
                             </div>
-                            <div class="card-overlay bg-gradient"></div>
                         </div>
-                        <a href="#" class="under-slider-btn btn btn-s btn-center-xs text-uppercase font-700 bg-red-dark rounded-s">Detail</a>
-                    </div>
+                        <a data-bs-toggle="collapse" href="#collapse-8" class="btn btn-m btn-full rounded-sm bg-highlight font-700 shadow-xl text-uppercase">Contact Us</a>
+                    </div>    
                 </div>
-            </div>
+
         </div>
+
+
 
 		<div class="divider divider-margins mt-4"></div>
 
 		<div class="card card-style">
-            <div class="content">
-                <h4>Selamat Datang di PEDA Kutai Barat Tahun 2025</h4>
+            <div class="content text-center font-800">
+                <h4>Selamat Datang di PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025</h4>
             </div>
         </div>
 
@@ -183,7 +316,7 @@
                 </div>
             </div>
         </div>
-            
+          
         <div class="content mb-2 pt-3">
 			<h5 class="float-start font-16 font-600">🔥 Berita Terkini</h5>
 			<a class="float-end font-12 color-highlight mt-n1" href="#">View All</a>
@@ -251,7 +384,42 @@
 				</div>
 			</div>
 		</div>
-        
+
+        <div class="card card-style">
+            <div class="content text-center font-800">
+                <h4>Galery Foto dan Video</h4>
+            </div>
+            <div class="row mb-0 p-4 ">
+                <div class="col-6 pe-0">
+                    <div class="card card-style me-2" data-card-height="380" style="background-image:url({{ asset('frontend') }}/images/food/7.jpg)">
+                        <div class="card-bottom bg-white m-2 p-3 rounded-s">
+                            <span class="badge bg-red-dark d-inline-block mb-2 text-uppercase font-11 mt-n2  rounded-s">Galery Foto</span>
+                            <h5 class="font-500 pt-2">
+                                Galery Foto Kegiatan
+                            </h5>
+                            <div class="clearfix"></div>
+                            <a href="{{ route('foto') }}" class="btn btn-m btn-full bg-highlight font-900 text-uppercase rounded-s">Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 pe-0">
+                    <div class="card card-style me-2" data-card-height="380" style="background-image:url({{ asset('frontend') }}/images/food/7.jpg)">
+                        <div class="card-bottom bg-white m-2 p-3 rounded-s">
+                            <span class="badge bg-red-dark d-inline-block mb-2 text-uppercase font-11 mt-n2  rounded-s font-800">Galery Video</span>
+                            <h5 class="font-500 pt-2">
+                                Galery Video Kegiatan
+                            </h5>
+                            <div class="clearfix"></div>
+                            <a href="#" class="btn btn-m btn-full bg-highlight font-900 text-uppercase rounded-s">Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+
+
         <!-- footer and footer card-->
         {{-- <div class="footer" data-menu-load="menu-footer.html"></div>   --}}
     </div> 

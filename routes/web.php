@@ -29,3 +29,9 @@ Route::get('/pemondokan', function () {
 Route::get('/direktori', function () {
     return view('frontend.direktori.direktori');
 })->name(name: 'direktori');
+
+
+//halaman
+Route::get('/foto', function () {
+    return view('frontend.foto');
+})->name(name: 'foto');

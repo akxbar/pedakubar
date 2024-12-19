@@ -15,33 +15,73 @@
 
     <div class="card card-style">
         <div class="content mb-0">
-            <h4>Daftar Event Pekan Provinsi</h4>
+            <h4>Penyelenggaraan PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025 </h4>
             <p>
                 Similar to action sheets you can create store actions for your store elements that will be triggered on specific buttons. For example, carts, wishlists and more.
             </p>
 
-            <div class="list-group list-custom-large">
-                <a href="#" data-menu="cart-item-list">
+            <div class="list-group list-custom-large ">
+                <a data-bs-toggle="collapse" class="no-effect mb-3 " href="#collapse-5">
                     <i class="fa fa-list font-20 color-teal-dark"></i>
-                    <span>Event 1 </span>
+                    <span>Upacara dan Apresiasi </span>
                     <strong>A list of cart Items</strong>
-                    <i class="fa fa-angle-right"></i>
+                    <i class="fa fa-angle-down"></i>
                 </a>
+
+                <div class="card card-style">
+                    <div class="collapse ps-2 pe-4" id="collapse-5">
+                        <div class="list-group list-custom-small">
+                            <a href="#"  data-menu="cart-item-list">
+                                <i class="fa font-13 fa-home color-green-dark"></i>
+                                <span>Pembukaan</span>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <a href="#" data-menu="cart-item-list1">
+                                <i class="fa font-13 fa-suitcase color-brown-light"></i>
+                                <span>Klinik</span>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <a href="#" data-menu="cart-item-list2">
+                                <i class="fa font-13 fa-building color-gray-dark"></i>
+                                <span>Puskesmas</span>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <a href="#" data-menu="cart-item-list">
+                                <i class="fa font-13 fa-building color-gray-dark"></i>
+                                <span>Puskesmas Pembantu</span>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                      
 
                 <a href="#" data-menu="cart-item-list1">
                     <i class="fa fa-list font-20 color-teal-dark"></i>
-                    <span>Event 2</span>
+                    <span>Kepemimpinan dan Kemandirian Kontak tani Nelayan</span>
                     <strong>Edit Cart Item Options</strong>
                     <i class="fa fa-angle-right"></i>
                 </a>
 
                 <a href="#" data-menu="cart-item-list2">
                     <i class="fa fa-list font-20 color-teal-dark"></i>
-                    <span>Event 2</span>
+                    <span>Kemitraan Usaha dan Jaringan Informasi Agribisnis</span>
                     <strong>Edit Cart Item Options</strong>
                     <i class="fa fa-angle-right"></i>
                 </a>
-
+                <a href="#" data-menu="cart-item-list2">
+                    <i class="fa fa-list font-20 color-teal-dark"></i>
+                    <span>Pengembangan Teknologi dan Kualitas Produksi Agribisnis</span>
+                    <strong>Edit Cart Item Options</strong>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                <a href="#" data-menu="cart-item-list2">
+                    <i class="fa fa-list font-20 color-teal-dark"></i>
+                    <span>Study Banding, Widyawisata dan Pagelaran Seni Budaya</span>
+                    <strong>Edit Cart Item Options</strong>
+                    <i class="fa fa-angle-right"></i>
+                </a>
 
             </div>
 
@@ -198,6 +238,11 @@
                     <strong>Jalan Usaha Tani Nomor 10</strong>
                     <span class="badge bg-highlight">SEE ON MAP</span>
                     <i class="fa fa-angle-right"></i>
+                </a>
+                <a href="#">
+                    <i class="far fa-calendar color-blue-dark"></i>
+                    <span>Narasumber</span>
+                    <strong>10:00 AM -  11:30 AM</strong>
                 </a>
 
             </div>

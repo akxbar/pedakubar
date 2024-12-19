@@ -23,7 +23,7 @@
 
 
     <div class="card card-style mb-3">
-        <div class="list-group list-custom-small list-icon-0 bg-green-dark ps-3 pe-4">
+        <div class="list-group list-custom-small list-icon-0 bg-blue-dark ps-3 pe-4">
             <a data-bs-toggle="collapse" class="no-effect" href="#collapse-5">
                 <i class="fa fa-medkit color-white"></i>
                 <span class="font-14 color-white">Fasilitas Kesehatan</span>
@@ -57,7 +57,7 @@
     </div>
 
     <div class="card card-style mb-3">
-        <div class="list-group list-custom-small list-icon-0 bg-red-dark ps-3 pe-4">
+        <div class="list-group list-custom-small list-icon-0 bg-blue-dark ps-3 pe-4">
             <a data-bs-toggle="collapse" class="no-effect" href="#collapse-6">
                 <i class="fa-solid fa-hands-praying color-white"></i>
                 <span class="font-14 color-white">Rumah Ibadah</span>
@@ -86,7 +86,7 @@
     </div>
 
     <div class="card card-style mb-3">
-        <div class="list-group list-custom-small list-icon-0 bg-red-dark ps-3 pe-4">
+        <div class="list-group list-custom-small list-icon-0 bg-blue-dark ps-3 pe-4">
             <a data-bs-toggle="collapse" class="no-effect" href="#collapse-7">
                 <i class="fa fa-building color-white"></i>
                 <span class="font-14 color-white">Hotel</span>
@@ -114,7 +114,7 @@
         </div>
     </div>
     <div class="card card-style mb-3">
-        <div class="list-group list-custom-small list-icon-0 bg-red-dark ps-3 pe-4">
+        <div class="list-group list-custom-small list-icon-0 bg-mint-dark ps-3 pe-4">
             <a data-bs-toggle="collapse" class="no-effect" href="#collapse-71">
                 <i class="fa fa-building color-white"></i>
                 <span class="font-14 color-white">Bank & ATM</span>
@@ -148,7 +148,7 @@
     </div>
 
     <div class="card card-style mb-3">
-        <div class="list-group list-custom-small list-icon-0 bg-red-dark ps-3 pe-4">
+        <div class="list-group list-custom-small list-icon-0 bg-mint-dark ps-3 pe-4">
             <a data-bs-toggle="collapse" class="no-effect" href="#collapse-8">
                 <i class="fa fa-car color-white"></i>
                 <span class="font-14 color-white">Transpotasi</span>
@@ -192,7 +192,7 @@
     </div>
 
     <div class="card card-style mb-3">
-        <div class="list-group list-custom-small list-icon-0 bg-red-dark ps-3 pe-4">
+        <div class="list-group list-custom-small list-icon-0 bg-mint-dark ps-3 pe-4">
             <a data-bs-toggle="collapse" class="no-effect" href="#collapse-91">
                 <i class="fa-solid fa-solid fa-gas-pump color-white"></i>
                 <span class="font-14 color-white">SPBU</span>
@@ -220,7 +220,7 @@
         </div>
     </div>
     <div class="card card-style mb-3">
-        <div class="list-group list-custom-small list-icon-0 bg-red-dark ps-3 pe-4">
+        <div class="list-group list-custom-small list-icon-0 bg-green-dark ps-3 pe-4">
             <a data-bs-toggle="collapse" class="no-effect" href="#collapse-9">
                 <i class="fa-solid fa-cart-shopping color-white"></i>
                 <span class="font-14 color-white">Perbelanjaan</span>
@@ -249,7 +249,7 @@
     </div>
 
     <div class="card card-style mb-3">
-        <div class="list-group list-custom-small list-icon-0 bg-blue-dark ps-3 pe-4">
+        <div class="list-group list-custom-small list-icon-0 bg-green-dark ps-3 pe-4">
             <a data-bs-toggle="collapse" class="no-effect" href="#collapse-10">
                 <i class="fa-solid fa-utensils color-white"></i>
                 <span class="font-14 color-white">Kuliner</span>
@@ -278,7 +278,7 @@
     </div>
 
     <div class="card card-style mb-3">
-        <div class="list-group list-custom-small list-icon-0 bg-blue-dark ps-3 pe-4">
+        <div class="list-group list-custom-small list-icon-0 bg-green-dark ps-3 pe-4">
             <a data-bs-toggle="collapse" class="no-effect" href="#collapse-11">
                 <i class="fa-solid fa-gift color-white"></i>
                 <span class="font-14 color-white">Souvenir</span>
@@ -307,7 +307,7 @@
     </div>
 
     <div class="card card-style mb-3">
-        <div class="list-group list-custom-small list-icon-0 bg-blue-dark ps-3 pe-4">
+        <div class="list-group list-custom-small list-icon-0 bg-yellow-dark ps-3 pe-4">
             <a data-bs-toggle="collapse" class="no-effect" href="#collapse-12">
                 <i class="fas fa-umbrella-beach color-white"></i>
                 <span class="font-14 color-white">Wisata dan Hiburan</span>
@@ -336,7 +336,7 @@
     </div>
 
     <div class="card card-style mb-3">
-        <div class="list-group list-custom-small list-icon-0 bg-red-dark ps-3 pe-4">
+        <div class="list-group list-custom-small list-icon-0 bg-yellow-dark ps-3 pe-4">
             <a data-bs-toggle="collapse" class="no-effect" href="#collapse-13">
                 <i class="fa-solid fa-house color-white"></i>
                 <span class="font-14 color-white">BPP</span>
@@ -375,7 +375,7 @@
     </div>
 
     <div class="card card-style mb-3">
-        <div class="list-group list-custom-small list-icon-0 bg-red-dark ps-3 pe-4">
+        <div class="list-group list-custom-small list-icon-0 bg-yellow-dark ps-3 pe-4">
             <a data-bs-toggle="collapse" class="no-effect" href="#collapse-14">
                 <i class="fa-solid fa-location-dot color-white"></i>
                 <span class="font-14 color-white">Rest Area</span>
@@ -406,8 +406,8 @@
 </div>
 
 <div id="menu-maps" class="menu menu-box-modal rounded-m"
-data-menu-height="700"
-data-menu-width="500">
+data-menu-height="500"
+data-menu-width="400">
 <div class="card card-style mt-3">
     {{-- <div data-card-height="200" class="card shadow-l mb-0 bg-18 mt-4">
         <div class="card-overlay bg-gradient opacity-90"></div>
@@ -435,9 +435,40 @@ data-menu-width="500">
         </div>
         <div class="clearfix mb-3"></div>
         <div data-bs-parent="#tab-group-2" class="collapse show" id="tab-5">
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
+            <div class="card card-style">
+                <div class="content mb-3">
+                    <h3 class="mb-0">Fasiltas Pemondokan</h3>
+                    <p>
+                        Simple thumbnails with caption attached to them. These will all open a gallery when tapped.
+                    </p>            
+                    <div class="row text-center row-cols-3 mb-0">
+                        <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/27s.jpg" title="Vynil and Typerwritter">
+                            <img src="{{ asset('frontend') }}/images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/27s.jpg" class="preload-img img-fluid rounded-xs" alt="img">
+                            <p class="font-600 pb-1">Parkiran</p>
+                        </a>
+                        <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/22s.jpg" title="Cream Cookie">
+                            <img src="{{ asset('frontend') }}/images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/22s.jpg" class="preload-img img-fluid rounded-xs" alt="img">
+                            <p class="font-600 pb-1">Kamar Tidur</p>
+                        </a>
+                        <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/23s.jpg" title="Cookies and Flowers">
+                            <img src="{{ asset('frontend') }}/images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/23s.jpg" class="preload-img img-fluid rounded-xs" alt="img">
+                            <p class="font-600 pb-1">Dapur</p>
+                        </a>
+                        <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/24s.jpg" title="Pots and Pans">
+                            <img src="{{ asset('frontend') }}/images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/24s.jpg" class="preload-img img-fluid rounded-xs" alt="img">
+                            <p class="font-600 pb-1">Kamar Mandi</p>
+                        </a>
+                        <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/25s.jpg" title="Berries are Packed with Fiber">
+                            <img src="{{ asset('frontend') }}/images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/25s.jpg" class="preload-img img-fluid rounded-xs" alt="img">
+                            <p class="font-600 pb-1">Ruang Tamu</p>
+                        </a>
+                        <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/26s.jpg" title="A beautiful Retro Camera">
+                            <img src="{{ asset('frontend') }}/images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/26s.jpg" class="preload-img img-fluid rounded-xs" alt="img">
+                            <p class="font-600 pb-1">Laundry</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div data-bs-parent="#tab-group-2" class="collapse" id="tab-7">
