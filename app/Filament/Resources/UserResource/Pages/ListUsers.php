@@ -2,9 +2,11 @@
 
 namespace App\Filament\Resources\UserResource\Pages;
 
-use App\Filament\Resources\UserResource;
+use App\Models\User;
 use Filament\Actions;
+use App\Filament\Resources\UserResource;
 use Filament\Resources\Pages\ListRecords;
+use Illuminate\Database\Eloquent\Builder;
 
 class ListUsers extends ListRecords
 {
@@ -15,5 +17,10 @@ class ListUsers extends ListRecords
         return [
             Actions\CreateAction::make(),
         ];
+    }
+
+    protected function getTableQuery(): Builder
+    {
+        return User::where('id', '!=', 1);
     }
 }
