@@ -10,7 +10,7 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('pengumumen', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->text('body')->nullable();
@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->dateTime('tanggal')->nullable();
             $table->boolean('publish')->default(true);
             $table->string('tempat')->nullable();
+            $table->string('alamat')->nullable();
             $table->string('link_gmap')->nullable();
             $table->timestamps();
         });
@@ -28,6 +29,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('pengumumen');
+        Schema::dropIfExists('events');
     }
 };

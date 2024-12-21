@@ -10,14 +10,17 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('pengumumen', function (Blueprint $table) {
+        Schema::create('direktoris', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('kategori_direktori_id');
             $table->text('body')->nullable();
             $table->string('image')->nullable();
-            $table->dateTime('tanggal')->nullable();
+            $table->text('multi_image')->nullable();
             $table->boolean('publish')->default(true);
-            $table->string('tempat')->nullable();
+
+            $table->string('alamat')->nullable();
+            $table->string('no_telp')->nullable();
             $table->string('link_gmap')->nullable();
             $table->timestamps();
         });
@@ -28,6 +31,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('pengumumen');
+        Schema::dropIfExists('direktoris');
     }
 };

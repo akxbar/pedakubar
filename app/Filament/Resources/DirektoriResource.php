@@ -5,20 +5,21 @@ namespace App\Filament\Resources;
 use Filament\Forms;
 use Filament\Tables;
 use Filament\Forms\Form;
-use App\Models\Pengumuman;
+use App\Models\Direktori;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use App\Models\KategoriDirektori;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Builder;
 use AmidEsfahani\FilamentTinyEditor\TinyEditor;
+use App\Filament\Resources\DirektoriResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\PengumumanResource\Pages;
-use App\Filament\Resources\PengumumanResource\RelationManagers;
+use App\Filament\Resources\DirektoriResource\RelationManagers;
 
-class PengumumanResource extends Resource
+class DirektoriResource extends Resource
 {
-    protected static ?string $model = Pengumuman::class;
+    protected static ?string $model = Direktori::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -31,16 +32,25 @@ class PengumumanResource extends Resource
                         Forms\Components\Section::make()
                             ->schema([
                                 Forms\Components\TextInput::make('title')
+                                    ->label('Nama Tempat')
                                     ->required(),
+                                Forms\Components\Select::make('kategori_direktori_id')
+                                    ->label('Kategori')
+                                    ->options(KategoriDirektori::all()->where('active', 1)->pluck('title', 'id'))
+                                    ->required(),
+
                                 TinyEditor::make('body')
+                                    ->label('Fasilits')
                                     ->fileAttachmentsDisk('public')
                                     ->fileAttachmentsVisibility('public')
-                                    ->fileAttachmentsDirectory('pengumuman')
+                                    ->fileAttachmentsDirectory('direktori')
                                     ->profile('simpel')
                                     ->ltr()
-                                    ->columnSpan('full')
-                                    ->required(),
-                                Forms\Components\TextInput::make('tempat')->label('Nama Tempat'),
+                                    ->columnSpan('full'),
+
+                                Forms\Components\TextInput::make('no_telp')
+                                    ->label('Nomor Telpon'),
+                                Forms\Components\TextInput::make('alamat'),
 
                                 Forms\Components\TextInput::make('link_gmap')
                             ]),
@@ -51,19 +61,30 @@ class PengumumanResource extends Resource
                         Forms\Components\Section::make()
                             ->schema([
                                 Forms\Components\FileUpload::make('image')
+                                    ->label('Gambar Utama')
                                     ->image()
-                                    ->directory('pengumuman')
+                                    ->directory('direktori')
 
                                     ->imageResizeMode('cover')
-                                    ->imageResizeTargetWidth('800')
+                                    ->imageResizeTargetWidth('440')
+                                    ->helperText('Gambar Max 1MB, Setiap Gambar di Size Kecilkan Dulu')
                                     ->maxSize(1024),
+
+                                Forms\Components\FileUpload::make('multi_image')
+                                    ->label('Multi Gambar Fasilitas')
+                                    ->multiple()
+                                    ->image()
+                                    ->directory('multi_direktori')
+
+                                    ->helperText('Uplod total Gambar Max 2MB, Setiap Gambar di Size Kecilkan Dulu')
+                                    ->maxSize(2024),
+
+
                                 Forms\Components\Toggle::make('publish')
                                     ->default(true)
                                     ->inline(),
 
-                                Forms\Components\DateTimePicker::make('tanggal')
-                                    ->label('Tanggal Waktu Kegiatan')
-                                ,
+
                             ]),
                     ])
                     ->columnSpan(['lg' => 1]),
@@ -78,20 +99,14 @@ class PengumumanResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('No')->rowIndex(),
-
                 Tables\Columns\TextColumn::make('title')
+                    ->label('Nama Tempat')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('tanggal')
-                    ->label('Tanggal Waktu Kegiatan')
-                    ->dateTime()
-                    ->sortable(),
+
+                Tables\Columns\TextColumn::make('kategori_direktori.title'),
+
                 Tables\Columns\ToggleColumn::make('publish'),
-
-
-
-
-            ])->defaultSort('id', 'desc')
-
+            ])
             ->filters([
                 //
             ])
@@ -125,9 +140,9 @@ class PengumumanResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListPengumumen::route('/'),
-            // 'create' => Pages\CreatePengumuman::route('/create'),
-            // 'edit' => Pages\EditPengumuman::route('/{record}/edit'),
+            'index' => Pages\ListDirektoris::route('/'),
+            'create' => Pages\CreateDirektori::route('/create'),
+            'edit' => Pages\EditDirektori::route('/{record}/edit'),
         ];
     }
 }

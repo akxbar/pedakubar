@@ -10,15 +10,10 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('pengumumen', function (Blueprint $table) {
+        Schema::create('kategori_direktoris', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('body')->nullable();
-            $table->string('image')->nullable();
-            $table->dateTime('tanggal')->nullable();
-            $table->boolean('publish')->default(true);
-            $table->string('tempat')->nullable();
-            $table->string('link_gmap')->nullable();
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }
@@ -28,6 +23,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('pengumumen');
+        Schema::dropIfExists('kategori_direktoris');
     }
 };
