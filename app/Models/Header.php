@@ -4,13 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Pengumuman extends Model
+class Header extends Model
 {
     protected $guarded = ['id'];
-
-
-    protected $casts = [
-        'tanggal' => 'datetime',
-    ];
 
 }

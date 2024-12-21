@@ -2,16 +2,19 @@
 
 namespace App\Filament\Resources;
 
+use Filament\Forms;
+use Filament\Tables;
+use Filament\Forms\Form;
+use App\Models\Pengumuman;
+use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\Eloquent\Builder;
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PengumumanResource\Pages;
 use App\Filament\Resources\PengumumanResource\RelationManagers;
-use App\Models\Pengumuman;
-use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
-use Filament\Tables;
-use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class PengumumanResource extends Resource
 {
@@ -23,55 +26,92 @@ class PengumumanResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\Textarea::make('body')
-                    ->columnSpanFull(),
-                Forms\Components\FileUpload::make('image')
-                    ->image(),
-                Forms\Components\DateTimePicker::make('tanggal')
-                    ->required(),
-                Forms\Components\Toggle::make('publish')
-                    ->required(),
-                Forms\Components\TextInput::make('link_gmap')
-                    ->maxLength(255)
-                    ->default(null),
-            ]);
+                Forms\Components\Group::make()
+                    ->schema([
+                        Forms\Components\Section::make()
+                            ->schema([
+                                Forms\Components\TextInput::make('title')
+                                    ->required(),
+                                TinyEditor::make('body')
+                                    ->fileAttachmentsDisk('public')
+                                    ->fileAttachmentsVisibility('public')
+                                    ->fileAttachmentsDirectory('pengumuman')
+                                    ->profile('simpel')
+                                    ->ltr()
+                                    ->columnSpan('full')
+                                    ->required(),
+
+                                Forms\Components\TextInput::make('link_gmap')
+                            ]),
+                    ])
+                    ->columnSpan(['lg' => 2]),
+                Forms\Components\Group::make()
+                    ->schema([
+                        Forms\Components\Section::make()
+                            ->schema([
+                                Forms\Components\FileUpload::make('image')
+                                    ->image()
+                                    ->directory('pengumuman')
+
+                                    ->imageResizeMode('cover')
+                                    ->imageResizeTargetWidth('800')
+                                    ->maxSize(1024),
+                                Forms\Components\Toggle::make('publish')
+                                    ->default(true)
+                                    ->inline(),
+
+                                Forms\Components\DateTimePicker::make('tanggal')
+                                    ->required()
+                                    ->default(now())
+                                    ->label('Tanggal Waktu Kegiatan')
+                                ,
+                            ]),
+                    ])
+                    ->columnSpan(['lg' => 1]),
+
+
+            ])->columns(3);
+
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('No')->rowIndex(),
+
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('tanggal')
+                    ->label('Tanggal Waktu Kegiatan')
                     ->dateTime()
                     ->sortable(),
-                Tables\Columns\IconColumn::make('publish')
-                    ->boolean(),
-                Tables\Columns\TextColumn::make('link_gmap')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-            ])
+                Tables\Columns\ToggleColumn::make('publish'),
+
+
+
+
+            ])->defaultSort('id', 'desc')
+
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
+                    ->requiresConfirmation()
+                    ->before(function (Model $record) {
+                        if ($record->image == null) {
+                            return;
+                        } else {
+
+                            Storage::disk('public')->delete($record->image);
+                        }
+                    })
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    // Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -87,8 +127,8 @@ class PengumumanResource extends Resource
     {
         return [
             'index' => Pages\ListPengumumen::route('/'),
-            'create' => Pages\CreatePengumuman::route('/create'),
-            'edit' => Pages\EditPengumuman::route('/{record}/edit'),
+            // 'create' => Pages\CreatePengumuman::route('/create'),
+            // 'edit' => Pages\EditPengumuman::route('/{record}/edit'),
         ];
     }
 }
