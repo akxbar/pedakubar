@@ -17,11 +17,12 @@
                     <div data-card-height="cover-card" class="card card-style" style="background-image:url({{ asset('frontend') }}/images/pictures/kubar.jpg)">
                         <div class="card-center text-center">
                             <h1 class="mb-5"><img src="{{ asset('frontend') }}/images/pictures/logokubar.png" class="me-3 rounded-circle shadow-l bg-fade-red-dark" width="200"></i></h1>
-                            <h1 class="color-white bolder fa-3x">Dinas Pertanian <br> Kabupaten Kutai Barat</h1>
-                            <h6 class="color-white mb-4 ">Pekan Pertanian Provinsi ke-xx tahun 2025</h6>
+                            <h1 class="color-white bolder fa-2x">PEKAN DAERAH (PEDA) XI KTNA KALTIM  <br> TAHUN 2025</h1>
+                            <h6 class="color-white mb-4 ">MELALUI PEKAN DAERAH XI PETANI NELAYAN PROVINSI KALIMANTAN TIMUR TAHUN 2025 KITA TINGKATKAN DAYA SAING DAN PRODUK UNGGULAN PETANI NELAYAN MENDUKUNG KALIMANTAN TIMUR 
+                                SEBAGAI PENYANGGA IBUKOTA NUSANTARA</h6>
 
                             <p class="boxed-text-l color-white opacity-80 mb-5">
-                                With over 10 years of experience in the Mobile World, we give our customers everything we have.
+                                
                             </p>
 
                             <div class="row mb-0 text-center">
