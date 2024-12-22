@@ -4,12 +4,9 @@ if (!function_exists('getYt')) {
     function getYt($url)
     {
         // Parse URL dan ambil query string
-        $parsedUrl = parse_url($url);
-        if (isset($parsedUrl['query'])) {
-            parse_str($parsedUrl['query'], $queryParams);
-            if (isset($queryParams['v'])) {
-                return $queryParams['v'];
-            }
+        $pattern = '/(?:youtube\.com\/(?:.*[?&]v=|(?:embed|v|e)\/|.*[?&]list=.*[?&]v=)|youtu\.be\/|youtube\.com\/user\/.*#.*\/|youtube\.com\/.*#p\/.*\/)([a-zA-Z0-9_-]{11})/';
+        if (preg_match($pattern, $url, $matches)) {
+            return $matches[1];
         }
         return null; // Kode tidak ditemukan
     }
