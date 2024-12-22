@@ -30,13 +30,13 @@ class VideoResource extends Resource
                     ->label('Link Youtube')
                     ->required(),
                 Forms\Components\TextInput::make('ket')->label('Keterangan'),
-                Forms\Components\FileUpload::make('image')
-                    ->image()
-                    ->helperText('Tidak Boleh Lebih dari 1MB')
-                    ->directory('video')
-                    ->imageResizeMode('cover')
-                    ->imageResizeTargetWidth('750')
-                    ->maxSize(1024),
+                // Forms\Components\FileUpload::make('image')
+                //     ->image()
+                //     ->helperText('Tidak Boleh Lebih dari 1MB')
+                //     ->directory('video')
+                //     ->imageResizeMode('cover')
+                //     ->imageResizeTargetWidth('750')
+                //     ->maxSize(1024),
 
             ]);
     }
