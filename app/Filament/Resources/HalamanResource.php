@@ -4,21 +4,21 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
+use App\Models\Halaman;
 use Filament\Forms\Form;
-use App\Models\Pengumuman;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Builder;
 use AmidEsfahani\FilamentTinyEditor\TinyEditor;
+use App\Filament\Resources\HalamanResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\PengumumanResource\Pages;
-use App\Filament\Resources\PengumumanResource\RelationManagers;
+use App\Filament\Resources\HalamanResource\RelationManagers;
 
-class PengumumanResource extends Resource
+class HalamanResource extends Resource
 {
-    protected static ?string $model = Pengumuman::class;
+    protected static ?string $model = Halaman::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -35,14 +35,11 @@ class PengumumanResource extends Resource
                                 TinyEditor::make('body')
                                     ->fileAttachmentsDisk('public')
                                     ->fileAttachmentsVisibility('public')
-                                    ->fileAttachmentsDirectory('pengumuman')
+                                    ->fileAttachmentsDirectory('halaman')
                                     ->profile('simpel')
                                     ->ltr()
                                     ->columnSpan('full')
                                     ->required(),
-                                Forms\Components\TextInput::make('tempat')->label('Nama Tempat'),
-
-                                Forms\Components\TextInput::make('link_gmap')
                             ]),
                     ])
                     ->columnSpan(['lg' => 2]),
@@ -52,18 +49,19 @@ class PengumumanResource extends Resource
                             ->schema([
                                 Forms\Components\FileUpload::make('image')
                                     ->image()
-                                    ->directory('pengumuman')
+                                    ->directory('halaman')
                                     ->helperText('Tidak Boleh Lebih dari 1MB')
                                     ->imageResizeMode('cover')
                                     ->imageResizeTargetWidth('800')
                                     ->maxSize(1024),
+
+
+
                                 Forms\Components\Toggle::make('publish')
                                     ->default(true)
                                     ->inline(),
 
-                                Forms\Components\DateTimePicker::make('tanggal')
-                                    ->label('Tanggal Waktu Kegiatan')
-                                ,
+
                             ]),
                     ])
                     ->columnSpan(['lg' => 1]),
@@ -78,20 +76,12 @@ class PengumumanResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('No')->rowIndex(),
-
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('tanggal')
-                    ->label('Tanggal Waktu Kegiatan')
-                    ->dateTime()
-                    ->sortable(),
                 Tables\Columns\ToggleColumn::make('publish'),
 
 
-
-
             ])->defaultSort('id', 'desc')
-
             ->filters([
                 //
             ])
@@ -125,9 +115,9 @@ class PengumumanResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListPengumumen::route('/'),
-            // 'create' => Pages\CreatePengumuman::route('/create'),
-            // 'edit' => Pages\EditPengumuman::route('/{record}/edit'),
+            'index' => Pages\ListHalamen::route('/'),
+            // 'create' => Pages\CreateHalaman::route('/create'),
+            // 'edit' => Pages\EditHalaman::route('/{record}/edit'),
         ];
     }
 }

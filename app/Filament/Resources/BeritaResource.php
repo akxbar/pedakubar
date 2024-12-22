@@ -51,7 +51,7 @@ class BeritaResource extends Resource
                                 Forms\Components\FileUpload::make('image')
                                     ->image()
                                     ->directory('berita')
-
+                                    ->helperText('Tidak Boleh Lebih dari 1MB')
                                     ->imageResizeMode('cover')
                                     ->imageResizeTargetWidth('800')
                                     ->maxSize(1024),

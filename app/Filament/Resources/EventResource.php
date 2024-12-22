@@ -54,7 +54,7 @@ class EventResource extends Resource
                                 Forms\Components\FileUpload::make('image')
                                     ->image()
                                     ->directory('event')
-
+                                    ->helperText('Tidak Boleh Lebih dari 1MB')
                                     ->imageResizeMode('cover')
                                     ->imageResizeTargetWidth('400')
                                     ->maxSize(1024),
