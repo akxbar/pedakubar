@@ -81,23 +81,14 @@ if (!function_exists('getTahun')) {
 if (!function_exists('getTgl')) {
     function getTgl($tgl)
     {
-        if (!empty($tgl)):
-            $tanggal = substr($tgl, 8, 2);
-            $bulan = getBulan(substr($tgl, 5, 2));
-            $tahun = substr($tgl, 0, 4);
-            return $tanggal;
-        else:
-            return '-';
-        endif;
+        return date('d', strtotime($tgl)) ?: '-';
     }
 }
 
 if (!function_exists('getHari')) {
     function getHari($tgl)
     {
-        $hari = date('w', strtotime($tgl));
-        $hari_ini = ['', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'][$hari];
-        return $hari_ini;
+        return ['', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'][(int) date('w', strtotime($tgl))];
     }
 }
 
