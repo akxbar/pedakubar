@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\PemondokanResource\Pages;
+namespace App\Filament\Resources\PenangungJawabResource\Pages;
 
-use App\Filament\Resources\PemondokanResource;
+use App\Filament\Resources\PenangungJawabResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditPemondokan extends EditRecord
+class EditPenangungJawab extends EditRecord
 {
-    protected static string $resource = PemondokanResource::class;
+    protected static string $resource = PenangungJawabResource::class;
 
     protected function getHeaderActions(): array
     {
