@@ -4,23 +4,23 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
-use App\Models\Berita;
-use App\Models\Kategori;
 use Filament\Forms\Form;
+use App\Models\Direktori;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use App\Models\KategoriDirektori;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Builder;
 use AmidEsfahani\FilamentTinyEditor\TinyEditor;
-use App\Filament\Resources\BeritaResource\Pages;
+use App\Filament\Resources\DirektoriResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\BeritaResource\RelationManagers;
+use App\Filament\Resources\DirektoriResource\RelationManagers;
 
-class BeritaResource extends Resource
+class DirektoriResource extends Resource
 {
-    protected static ?string $model = Berita::class;
-    protected static bool $canCreateAnother = false;
+    protected static ?string $model = Direktori::class;
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
@@ -32,15 +32,27 @@ class BeritaResource extends Resource
                         Forms\Components\Section::make()
                             ->schema([
                                 Forms\Components\TextInput::make('title')
+                                    ->label('Nama Tempat')
                                     ->required(),
+                                Forms\Components\Select::make('kategori_direktori_id')
+                                    ->label('Kategori')
+                                    ->options(KategoriDirektori::all()->where('active', 1)->pluck('title', 'id'))
+                                    ->required(),
+
                                 TinyEditor::make('body')
+                                    ->label('Fasilits')
                                     ->fileAttachmentsDisk('public')
                                     ->fileAttachmentsVisibility('public')
-                                    ->fileAttachmentsDirectory('uploads')
-                                    ->profile('custom')
+                                    ->fileAttachmentsDirectory('direktori')
+                                    ->profile('simpel')
                                     ->ltr()
-                                    ->columnSpan('full')
-                                    ->required(),
+                                    ->columnSpan('full'),
+
+                                Forms\Components\TextInput::make('no_telp')
+                                    ->label('Nomor Telpon'),
+                                Forms\Components\TextInput::make('alamat'),
+
+                                Forms\Components\TextInput::make('link_gmap')
                             ]),
                     ])
                     ->columnSpan(['lg' => 2]),
@@ -49,28 +61,30 @@ class BeritaResource extends Resource
                         Forms\Components\Section::make()
                             ->schema([
                                 Forms\Components\FileUpload::make('image')
+                                    ->label('Gambar Utama')
                                     ->image()
-                                    ->directory('berita')
-                                    ->helperText('Tidak Boleh Lebih dari 1MB')
+                                    ->directory('direktori')
+
                                     ->imageResizeMode('cover')
-                                    ->imageResizeTargetWidth('800')
+                                    ->imageResizeTargetWidth('440')
+                                    ->helperText('Gambar Max 1MB, Setiap Gambar di Size Kecilkan Dulu')
                                     ->maxSize(1024),
 
-                                Forms\Components\Select::make('kategori_id')
-                                    ->label('Kategori')
-                                    ->options(Kategori::all()->where('active', 1)->pluck('title', 'id'))
-                                    ->required(),
-                                Forms\Components\Hidden::make('user_id')
-                                    ->default(auth()->user()->id)
-                                ,
+                                Forms\Components\FileUpload::make('multi_image')
+                                    ->label('Multi Gambar Fasilitas')
+                                    ->multiple()
+                                    ->image()
+                                    ->directory('multi_direktori')
+
+                                    ->helperText('Uplod total Gambar Max 2MB, Setiap Gambar di Size Kecilkan Dulu')
+                                    ->maxSize(2024),
+
 
                                 Forms\Components\Toggle::make('publish')
                                     ->default(true)
                                     ->inline(),
 
-                                Forms\Components\DatePicker::make('tanggal')
-                                    ->label('Tanggal Publish')
-                                    ->default(now()),
+
                             ]),
                     ])
                     ->columnSpan(['lg' => 1]),
@@ -86,18 +100,13 @@ class BeritaResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('No')->rowIndex(),
                 Tables\Columns\TextColumn::make('title')
+                    ->label('Nama Tempat')
                     ->searchable(),
 
-                Tables\Columns\TextColumn::make('kategori.title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('user.name')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('kategori_direktori.title'),
+
                 Tables\Columns\ToggleColumn::make('publish'),
-                Tables\Columns\TextColumn::make('tanggal')
-                    ->date()
-                    ->sortable(),
-
-            ])->defaultSort('id', 'desc')
+            ])
             ->filters([
                 //
             ])
@@ -131,9 +140,9 @@ class BeritaResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListBeritas::route('/'),
-            'create' => Pages\CreateBerita::route('/create'),
-            'edit' => Pages\EditBerita::route('/{record}/edit'),
+            'index' => Pages\ListDirektoris::route('/'),
+            'create' => Pages\CreateDirektori::route('/create'),
+            'edit' => Pages\EditDirektori::route('/{record}/edit'),
         ];
     }
 }

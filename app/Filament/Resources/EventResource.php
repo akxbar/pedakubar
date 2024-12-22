@@ -4,8 +4,7 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
-use App\Models\Berita;
-use App\Models\Kategori;
+use App\Models\Event;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
@@ -13,14 +12,14 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Builder;
 use AmidEsfahani\FilamentTinyEditor\TinyEditor;
-use App\Filament\Resources\BeritaResource\Pages;
+use App\Filament\Resources\EventResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\BeritaResource\RelationManagers;
+use App\Filament\Resources\EventResource\RelationManagers;
 
-class BeritaResource extends Resource
+class EventResource extends Resource
 {
-    protected static ?string $model = Berita::class;
-    protected static bool $canCreateAnother = false;
+    protected static ?string $model = Event::class;
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
@@ -36,11 +35,15 @@ class BeritaResource extends Resource
                                 TinyEditor::make('body')
                                     ->fileAttachmentsDisk('public')
                                     ->fileAttachmentsVisibility('public')
-                                    ->fileAttachmentsDirectory('uploads')
-                                    ->profile('custom')
+                                    ->fileAttachmentsDirectory('event')
+                                    ->profile('simpel')
                                     ->ltr()
                                     ->columnSpan('full')
                                     ->required(),
+                                Forms\Components\TextInput::make('tempat')->label('Nama Tempat'),
+                                Forms\Components\TextInput::make('alamat'),
+
+                                Forms\Components\TextInput::make('link_gmap')
                             ]),
                     ])
                     ->columnSpan(['lg' => 2]),
@@ -50,27 +53,20 @@ class BeritaResource extends Resource
                             ->schema([
                                 Forms\Components\FileUpload::make('image')
                                     ->image()
-                                    ->directory('berita')
+                                    ->directory('event')
                                     ->helperText('Tidak Boleh Lebih dari 1MB')
                                     ->imageResizeMode('cover')
-                                    ->imageResizeTargetWidth('800')
+                                    ->imageResizeTargetWidth('400')
                                     ->maxSize(1024),
-
-                                Forms\Components\Select::make('kategori_id')
-                                    ->label('Kategori')
-                                    ->options(Kategori::all()->where('active', 1)->pluck('title', 'id'))
-                                    ->required(),
-                                Forms\Components\Hidden::make('user_id')
-                                    ->default(auth()->user()->id)
-                                ,
-
                                 Forms\Components\Toggle::make('publish')
                                     ->default(true)
                                     ->inline(),
 
-                                Forms\Components\DatePicker::make('tanggal')
-                                    ->label('Tanggal Publish')
-                                    ->default(now()),
+                                Forms\Components\DateTimePicker::make('tanggal')
+
+                                    // ->default(now())
+                                    ->label('Tanggal Waktu Kegiatan')
+                                ,
                             ]),
                     ])
                     ->columnSpan(['lg' => 1]),
@@ -79,23 +75,22 @@ class BeritaResource extends Resource
             ])->columns(3);
 
     }
-
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('No')->rowIndex(),
+
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-
-                Tables\Columns\TextColumn::make('kategori.title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('user.name')
-                    ->searchable(),
-                Tables\Columns\ToggleColumn::make('publish'),
                 Tables\Columns\TextColumn::make('tanggal')
-                    ->date()
+                    ->label('Tanggal Waktu Kegiatan')
+                    ->dateTime()
                     ->sortable(),
+                Tables\Columns\ToggleColumn::make('publish'),
+
+
+
 
             ])->defaultSort('id', 'desc')
             ->filters([
@@ -113,6 +108,8 @@ class BeritaResource extends Resource
                             Storage::disk('public')->delete($record->image);
                         }
                     })
+
+
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -131,9 +128,9 @@ class BeritaResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListBeritas::route('/'),
-            'create' => Pages\CreateBerita::route('/create'),
-            'edit' => Pages\EditBerita::route('/{record}/edit'),
+            'index' => Pages\ListEvents::route('/'),
+            // 'create' => Pages\CreateEvent::route('/create'),
+            // 'edit' => Pages\EditEvent::route('/{record}/edit'),
         ];
     }
 }
