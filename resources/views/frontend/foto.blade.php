@@ -36,12 +36,6 @@
                 <div class="clearfix mb-3"></div>
                 <div data-bs-parent="#tab-group-1" class="collapse show" id="tab-1">
 
-                    <div class="gallery-view-controls">
-                        <a href="#" class="color-highlight gallery-view-1-activate"><i class="fa fa-th"></i></a>
-                        <a href="#" class="gallery-view-2-activate"><i class="fa fa-th-large"></i></a>
-                        <a href="#" class="gallery-view-3-activate"><i class="fa fa-bars"></i></a>
-                        <div class="clearfix"></div>
-                    </div>
                     <div class="content my-n1">
                         <div class="gallery-views gallery-view-1">
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/10t.jpg" title="Vynil and Typerwritter">
@@ -97,12 +91,6 @@
                 </div>
                 <div data-bs-parent="#tab-group-1" class="collapse" id="tab-2">
 
-                    <div class="gallery-view-controls">
-                        <a href="#" class="color-highlight gallery-view-1-activate"><i class="fa fa-th"></i></a>
-                        <a href="#" class="gallery-view-2-activate"><i class="fa fa-th-large"></i></a>
-                        <a href="#" class="gallery-view-3-activate"><i class="fa fa-bars"></i></a>
-                        <div class="clearfix"></div>
-                    </div>
                     <div class="content my-n1">
                         <div class="gallery-views gallery-view-1">
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/10t.jpg" title="Vynil and Typerwritter">
@@ -157,13 +145,7 @@
                     
                 </div>
                 <div data-bs-parent="#tab-group-1" class="collapse" id="tab-3">
-                    
-                    <div class="gallery-view-controls">
-                        <a href="#" class="color-highlight gallery-view-1-activate"><i class="fa fa-th"></i></a>
-                        <a href="#" class="gallery-view-2-activate"><i class="fa fa-th-large"></i></a>
-                        <a href="#" class="gallery-view-3-activate"><i class="fa fa-bars"></i></a>
-                        <div class="clearfix"></div>
-                    </div>
+
                     <div class="content my-n1">
                         <div class="gallery-views gallery-view-1">
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/10t.jpg" title="Vynil and Typerwritter">
@@ -219,12 +201,6 @@
                 </div>
                 <div data-bs-parent="#tab-group-1" class="collapse" id="tab-4">
 
-                    <div class="gallery-view-controls">
-                        <a href="#" class="color-highlight gallery-view-1-activate"><i class="fa fa-th"></i></a>
-                        <a href="#" class="gallery-view-2-activate"><i class="fa fa-th-large"></i></a>
-                        <a href="#" class="gallery-view-3-activate"><i class="fa fa-bars"></i></a>
-                        <div class="clearfix"></div>
-                    </div>
                     <div class="content my-n1">
                         <div class="gallery-views gallery-view-1">
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/10t.jpg" title="Vynil and Typerwritter">
@@ -280,12 +256,6 @@
                 </div>
                 <div data-bs-parent="#tab-group-1" class="collapse" id="tab-5">
 
-                    <div class="gallery-view-controls">
-                        <a href="#" class="color-highlight gallery-view-1-activate"><i class="fa fa-th"></i></a>
-                        <a href="#" class="gallery-view-2-activate"><i class="fa fa-th-large"></i></a>
-                        <a href="#" class="gallery-view-3-activate"><i class="fa fa-bars"></i></a>
-                        <div class="clearfix"></div>
-                    </div>
                     <div class="content my-n1">
                         <div class="gallery-views gallery-view-1">
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/10t.jpg" title="Vynil and Typerwritter">
@@ -341,15 +311,9 @@
                 </div>
                 <div data-bs-parent="#tab-group-1" class="collapse" id="tab-6">
 
-                    <div class="gallery-view-controls">
-                        <a href="#" class="color-highlight gallery-view-1-activate"><i class="fa fa-th"></i></a>
-                        <a href="#" class="gallery-view-2-activate"><i class="fa fa-th-large"></i></a>
-                        <a href="#" class="gallery-view-3-activate"><i class="fa fa-bars"></i></a>
-                        <div class="clearfix"></div>
-                    </div>
                     <div class="content my-n1">
                         <div class="gallery-views gallery-view-1">
-                            <a data-gallery="gallery-1" href="images/pictures/10t.jpg" title="Vynil and Typerwritter">
+                            <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/10t.jpg" title="Vynil and Typerwritter">
                                 <img src="images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/10t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
                                     <h4 class="color-theme">Messy Desk?</h4>
@@ -357,7 +321,7 @@
                                     <div class="divider bottom-0"></div>
                                 </div>
                             </a>
-                            <a data-gallery="gallery-1" href="images/pictures/11t.jpg" title="Fruit Cookie Pie">
+                            <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/11t.jpg" title="Fruit Cookie Pie">
                                 <img src="images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/11t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
                                     <h4 class="color-theme">Designers Desk</h4>
@@ -365,7 +329,7 @@
                                     <div class="divider bottom-0"></div>
                                 </div>
                             </a>		
-                            <a data-gallery="gallery-1" href="images/pictures/28t.jpg" title="Plain Cookies and Flour">
+                            <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/28t.jpg" title="Plain Cookies and Flour">
                                 <img src="images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/28t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
                                     <h4 class="color-theme">Apple Watch</h4>
@@ -373,7 +337,7 @@
                                     <div class="divider bottom-0"></div>
                                 </div>
                             </a>	
-                            <a data-gallery="gallery-1" href="images/pictures/18t.jpg" title="Pots and Stuff">
+                            <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/18t.jpg" title="Pots and Stuff">
                                 <img src="images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/18t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
                                     <h4 class="color-theme">City Landscape</h4>
@@ -381,7 +345,7 @@
                                     <div class="divider bottom-0"></div>
                                 </div>
                             </a>
-                            <a data-gallery="gallery-1" href="images/pictures/14t.jpg" title="Delicious Strawberries">
+                            <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/14t.jpg" title="Delicious Strawberries">
                                 <img src="images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/14t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
                                     <h4 class="color-theme">Typography and iPhone 5</h4>
@@ -389,7 +353,7 @@
                                     <div class="divider bottom-0"></div>
                                 </div>
                             </a>
-                            <a data-gallery="gallery-1" href="images/pictures/15t.jpg" title="A Beautiful Camera">
+                            <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/15t.jpg" title="A Beautiful Camera">
                                 <img src="images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/15t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
                                     <h4 class=" color-theme">Feather and Paper?</h4>
