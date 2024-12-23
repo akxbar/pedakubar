@@ -21,32 +21,47 @@
                             <h6 class="color-white mb-4 ">MELALUI PEKAN DAERAH XI PETANI NELAYAN PROVINSI KALIMANTAN TIMUR TAHUN 2025 KITA TINGKATKAN DAYA SAING DAN PRODUK UNGGULAN PETANI NELAYAN MENDUKUNG KALIMANTAN TIMUR 
                                 SEBAGAI PENYANGGA IBUKOTA NUSANTARA</h6>
 
-                            <p class="boxed-text-l color-white opacity-80 mb-5">
-                                
-                            </p>
-
-                            <div class="row mb-0 text-center">
+                            {{-- <div class="row mb-0 text-center">
                                 <div class="col-4 pe-1">
                                    
                                 </div>
                                 <div class="col-4 ps-1 pe-1">
                                     <div class="row mb-0">
-                                    <div class="col-2 ps-1 pe-1">
-                                        
-                                </div>
+                                    <div class="col-2 ps-1 pe-1"> 
+                                    </div>
                                     <div class="col-8 ps-1 pe-1">
                                         <a href="{{ route('beranda') }}" class="btn btn-m btn-full mb-3 rounded-xs text-uppercase font-900 shadow-s bg-mint-dark">Login</a>
-                                </div>
-                                    <div class="col-2 ps-1 pe-1">
-                                       
-                                </div>
+                                    </div>
+                                    <div class="col-2 ps-1 pe-1">    
+                                    </div>
                                 </div>
                                 </div>
                                 <div class="col-4 ps-1">
                                    
                                 </div>
-                            </div>
+                            </div> --}}
 
+            <div class="content mb-0">
+
+                <div class="row mb-0 align-content-center ">
+                    <div class="col-2 ps-1 pe-1">
+                        {{-- <a href="#" class="btn btn-m btn-full mb-3 rounded-xs text-uppercase font-700 shadow-s bg-blue-dark">Button</a> --}}
+                                              
+                    </div>
+                    <div class="col-4 pe-1">
+                        <a href="#" class="btn btn-m btn-full mb-3 rounded-xs text-uppercase font-700 shadow-s bg-blue-light">Login</a>
+                        
+                    </div>
+                    <div class="col-4 ps-1">
+                        <a href="#" class="btn btn-m btn-full mb-3 rounded-xs text-uppercase font-700 shadow-s bg-green-light">Started</a>
+                
+                    </div>
+                    <div class="col-2 ps-1 pe-1">
+                        {{-- <a href="#" class="btn btn-m btn-full mb-3 rounded-xs text-uppercase font-700 shadow-s bg-blue-dark">Button</a> --}}
+                                              
+                    </div>
+                </div>
+            </div>
                         </div>
                         
                         <div class="card-overlay bg-black opacity-60"></div>

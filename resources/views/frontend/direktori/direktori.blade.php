@@ -4,13 +4,27 @@
 <div class="page-content" style="min-height:60vh!important">
     <div class="page-title page-title-small">
         <h2><a href="#" data-back-button></a>Direktori</h2>
-        <a href="#" data-menu="menu-main" class="bg-fade-highlight-light shadow-xl preload-img" data-src="{{ asset('frontend') }}/images/pictures/logokubar.png"></a>
+        <a href="#" data-menu="menu-warning-1" class="bg-fade-highlight-light shadow-xl preload-img" data-src="{{ asset('frontend') }}/images/pictures/logokubar.png"></a>
     </div>
     <div class="card header-card shape-rounded" data-card-height="150">
         <div class="card-overlay bg-highlight opacity-95"></div>
         <div class="card-overlay dark-mode-tint"></div>
         <div class="card-bg preload-img" data-src="{{ asset('frontend') }}/images/pictures/20s.jpg"></div>
     </div>
+
+        <!--Menu Warning-->
+    <!---------------->
+    <!---------------->
+    <div id="menu-warning-1" class="menu menu-box-right menu-box-detached rounded-m"
+         data-menu-height="10"
+         data-menu-effect="menu-over">
+         <h1 class="text-center mt-5 text-uppercase font-700">Log Out!</h1>
+         <img class="mx-auto mb-3 text-center" src="{{ asset('frontend') }}/images/logopeda2.png" width="100">
+        <a href="#" class="close-menu btn btn-m btn-center-m button-s shadow-l rounded-s text-uppercase font-700 bg-red-light">Log Out</a>
+    </div>
+    <!---------------->
+    <!---------------->
+        
 
     <div class="card card-style">
         <div class="content">
@@ -430,11 +444,39 @@ data-menu-width="400">
 <div class="card card-style bg-theme pb-0">
     <div class="content" id="tab-group-2">
         <div class="tab-controls tabs-small tabs-rounded" data-highlight="bg-blue-dark">
-            <a href="#" data-active data-bs-toggle="collapse" data-bs-target="#tab-5">Fasilitas</a>
-            <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-7">Foto</a>
+            <a href="#" data-active data-bs-toggle="collapse" data-bs-target="#tab-5">Informasi</a>
+            <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-7">Dokumentasi</a>
         </div>
         <div class="clearfix mb-3"></div>
         <div data-bs-parent="#tab-group-2" class="collapse show" id="tab-5">
+            <div class="card card-style">
+                <div class="content">
+                    
+                    <div class="list-group list-custom-small">
+                        <a href="tel:+1 234 567 890">
+                            <i class="fa font-14 fa-phone color-phone"></i>
+                            <span>+1 234 567 8900</span>
+                            <span class="badge bg-highlight color-white">TAP TO CALL</span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                        <a href="https://wa.me/+1234567890">
+                            <i class="fa font-14 fab fa-whatsapp color-whatsapp"></i>
+                            <span>+1 234 567 8900</span>
+                            <span class="badge bg-highlight color-white">TAP TO WHATSAPP</span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                        <a href="mailto:mail@domain.com">
+                            <i class="fa font-14 fa-envelope color-mail"></i>
+                            <span>mail@domain.com</span>
+                            <span class="badge bg-highlight color-white">TAP TO MAIL</span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>                    
+                    </div>                                  
+                </div>
+            </div>
+        </div>
+
+        <div data-bs-parent="#tab-group-2" class="collapse" id="tab-7">
             <div class="card card-style">
                 <div class="content mb-3">
                     <h3 class="mb-0">Fasiltas Pemondokan</h3>
@@ -469,14 +511,6 @@ data-menu-width="400">
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div data-bs-parent="#tab-group-2" class="collapse" id="tab-7">
-            <img class="img-fluid rounded-sm mt-2" src="{{ asset('frontend') }}/images/pictures/28.jpg" alt="img">
-            <img class="img-fluid rounded-sm mt-2" src="{{ asset('frontend') }}/images/pictures/28.jpg" alt="img">
-            <img class="img-fluid rounded-sm mt-2" src="{{ asset('frontend') }}/images/pictures/28.jpg" alt="img">
-            <img class="img-fluid rounded-sm mt-2" src="{{ asset('frontend') }}/images/pictures/28.jpg" alt="img">
-            <img class="img-fluid rounded-sm mt-2" src="{{ asset('frontend') }}/images/pictures/28.jpg" alt="img">
         </div>
     </div>    
 </div>

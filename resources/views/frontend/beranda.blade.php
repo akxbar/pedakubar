@@ -4,7 +4,7 @@
         
         <div class="page-title page-title-large">
             <h2 data-username="Enabled (username)!" class="greeting-text"></h2>
-            <a href="#" data-menu="menu-main" class="bg-fade-highlight-light shadow-xl preload-img" data-src="{{ asset('frontend') }}/images/pictures/logokubar.png"></a>
+            <a href="#" data-menu="menu-warning-1" class="bg-fade-highlight-light shadow-xl preload-img" data-src="{{ asset('frontend') }}/images/pictures/logokubar.png"></a>
         </div>
         <div class="card header-card shape-rounded" data-card-height="210">
             <div class="card-overlay bg-highlight opacity-95"></div>
@@ -13,6 +13,19 @@
         </div>
         
         
+    <!--Menu Warning-->
+    <!---------------->
+    <!---------------->
+    <div id="menu-warning-1" class="menu menu-box-right menu-box-detached rounded-m"
+         data-menu-height="10"
+         data-menu-effect="menu-over">
+         <h1 class="text-center mt-5 text-uppercase font-700">Log Out!</h1>
+         <img class="mx-auto mb-3 text-center" src="{{ asset('frontend') }}/images/logopeda2.png" width="100">
+        <a href="#" class="close-menu btn btn-m btn-center-m button-s shadow-l rounded-s text-uppercase font-700 bg-red-light">Log Out</a>
+    </div>
+    <!---------------->
+    <!---------------->
+        
         <!-- Homepage Slider-->
         <div class="splide single-slider slider-no-arrows slider-no-dots homepage-slider" id="single-slider-1">
             <div class="splide__track">
@@ -20,9 +33,10 @@
                     <div class="splide__slide">
                         <div class="card card-style" style="background-image:url({{ asset('frontend') }}/images/pictures/kubar1.jpg)" data-card-height="320">
                             <div class="card-bottom">
-                                <h1 class="font-24 font-700 text-center">Meet Azures</h1>
+                                <h1 class="font-24 font-700 text-center">PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025</h1>
                                 <p class="boxed-text-xl">
-                                    Azures brings beauty and colors to your Mobile device with a stunning user interface to match.
+                                    MELALUI PEKAN DAERAH XI PETANI NELAYAN PROVINSI KALIMANTAN TIMUR TAHUN 2025 KITA TINGKATKAN DAYA SAING DAN PRODUK UNGGULAN PETANI NELAYAN MENDUKUNG KALIMANTAN TIMUR 
+                                    SEBAGAI PENYANGGA IBUKOTA NUSANTARA
                                 </p>
                             </div>
                             <div class="card-overlay bg-gradient-fade "></div>
@@ -55,179 +69,46 @@
         </div>
         
         <div class="content mt-0">
-                {{-- <div class="col-12">
-                    <a href="#" class="btn btn-full btn-m rounded-s text-uppercase font-900 shadow-xl bg-highlight">Contact Us</a>
-                </div> --}}
-
-                {{-- <div class="card card-style mb-3">
-                    <div class="list-group list-custom-small list-icon-0 bg-highlight ps-3 pe-4">
-
-                        <a data-bs-toggle="collapse" class="no-effect" href="#collapse-5">
-                            <div class="font-14 color-white justify-content-center align-items-center ">Contact Us</div>
-                        </a>
-                        
+                <div class="card card-style">
+                    <div class="content text-center font-800">
+                        <h3>Selamat Datang di PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025</h3>
+                        <p>
+                            MELALUI PEKAN DAERAH XI PETANI NELAYAN PROVINSI KALIMANTAN TIMUR TAHUN 2025 <br> KITA TINGKATKAN DAYA SAING DAN PRODUK UNGGULAN PETANI NELAYAN MENDUKUNG KALIMANTAN TIMUR 
+                            SEBAGAI PENYANGGA IBUKOTA NUSANTARA
+                        </p>
                     </div>
-                    <div class="collapse ps-2 pe-4" id="collapse-5">
-                        <div class="list-group list-custom-small">
-                            <a href="#" data-menu="menu-maps">
-                                <i class="fa font-13 fa-home color-green-dark"></i>
-                                <span>Rumah Sakit Umum</span>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                            <a href="#" data-menu="menu-maps">
-                                <i class="fa font-13 fa-suitcase color-brown-light"></i>
-                                <span>Klinik</span>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                            <a href="#" data-menu="menu-maps">
-                                <i class="fa font-13 fa-building color-gray-dark"></i>
-                                <span>Puskesmas</span>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                            <a href="#" data-menu="menu-maps">
-                                <i class="fa font-13 fa-building color-gray-dark"></i>
-                                <span>Puskesmas Pembantu</span>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div> --}}
-                <div class="divider divider-margins mt-4"></div>
+                </div>
+
                 <div class="card card-style">
                     <div class="content">
                         <h4 class="bolder text-center font-800 pb-3">Sekretariat PEDA </h4>
                         <h5 class="text-center font-700 pb-3">PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025 <br> 
-                            d/a. Kawasan Perkantoran Bisnis Center Sendawar, Kecamatan Barong Tongkok, Kabupaten Kutai Barat <br>
-                            Telepon/Fax ........................................ <br>
-                            e-mail: ............................................
+                            d/a. Kawasan Perkantoran Bisnis Center Sendawar, Kecamatan Barong Tongkok, Kabupaten Kutai Barat
                         </h5>
                         <div class="collapse" id="collapse-8">
                             <div class="card card-style">
                                 <div class="content">
                                     
-                                    <div data-splide='{"autoplay":false}' class="splide single-slider slider-no-arrows slider-no-dots" id="user-slider-1">
-                                        <div class="splide__track">
-                                            <div class="splide__list">
-                                                <div class="splide__slide mx-3">
-                                                    <div class="d-flex">
-                                                        <div><img src="{{ asset('frontend') }}/images/avatars/1s.png" class="me-3 rounded-circle bg-fade-red-light shadow-l" width="50"></div>
-                                                        <div>
-                                                            <h5 class="mt-1 mb-0">Johnatan Doe</h5>
-                                                            <p class="font-10 mt-n1 color-red-dark">Panitia</p>
-                                                        </div>
-                                                        <div class="ms-auto"><span class="slider-next badge bg-red-dark mt-2 p-2 font-8">TAP FOR MORE</span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="splide__slide mx-3">
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mt-1 mb-0">Johnatan Doe</h5>
-                                                            <p class="font-10 mt-n1 color-red-dark">Panitia</p>
-                                                        </div>
-                                                        <div class="ms-auto">
-                                                            <a href="#" class="icon icon-xs rounded-circle shadow-l bg-phone"><i class="fa fa-phone"></i></a>
-                                                            <a href="#" class="icon icon-xs rounded-circle shadow-l bg-facebook me-2 ms-2"><i class="fab fa-whatsapp"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>      
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="divider mt-3"></div>
-                    
-                                    <div data-splide='{"autoplay":false}' class="splide single-slider slider-no-arrows slider-no-dots" id="user-slider-2">
-                                        <div class="splide__track">
-                                            <div class="splide__list">
-                                                <div class="splide__slide mx-3">
-                                                    <div class="d-flex">
-                                                        <div><img src="{{ asset('frontend') }}/images/avatars/2s.png" class="me-3 rounded-circle bg-fade-green-dark shadow-l" width="50"></div>
-                                                        <div>
-                                                            <h5 class="mt-1 mb-0">Alexander Mac</h5>
-                                                            <p class="font-10 mt-n1 color-green-dark">Kebersihan</p>
-                                                        </div>
-                                                        <div class="ms-auto"><span class="slider-next badge bg-green-dark mt-2 p-2 font-8">TAP FOR MORE</span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="splide__slide mx-3">
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mt-1 mb-0">Alexander Mac</h5>
-                                                            <p class="font-10 mt-n1 color-green-dark">Kebersihan</p>
-                                                        </div>
-                                                        <div class="ms-auto">
-                                                            <a href="#" class="icon icon-xs rounded-circle shadow-l bg-phone"><i class="fa fa-phone"></i></a>
-                                                            <a href="#" class="icon icon-xs rounded-circle shadow-l bg-facebook me-2 ms-2"><i class="fab fa-whatsapp"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>     
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="divider mt-3"></div>
-                    
-                                    <div data-splide='{"autoplay":false}' class="splide single-slider slider-no-arrows slider-no-dots" id="user-slider-3">
-                                        <div class="splide__track">
-                                            <div class="splide__list">
-                                                <div class="splide__slide mx-3">
-                                                    <div class="d-flex">
-                                                        <div><img src="{{ asset('frontend') }}/images/avatars/5s.png" class="me-3 rounded-circle shadow-l bg-fade-yellow-dark" width="50"></div>
-                                                        <div>
-                                                            <h5 class="mt-1 mb-0">Johnatan Unixer</h5>
-                                                            <p class="font-10 mt-n1 color-blue-dark">Petugas Medis</p>
-                                                        </div>
-                                                        <div class="ms-auto"><span class="slider-next badge bg-blue-dark mt-2 p-2 font-8">TAP FOR MORE</span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="splide__slide mx-3">
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mt-1 mb-0">Johnatan Doe</h5>
-                                                            <p class="font-10 mt-n1 color-blue-dark">Petugas Medis</p>
-                                                        </div>
-                                                        <div class="ms-auto">
-                                                            <a href="#" class="icon icon-xs rounded-circle shadow-l bg-phone"><i class="fa fa-phone"></i></a>
-                                                            <a href="#" class="icon icon-xs rounded-circle shadow-l bg-facebook me-2 ms-2"><i class="fab fa-whatsapp"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>     
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="divider mt-3"></div>
-                    
-                                    <div data-splide='{"autoplay":false}' class="splide single-slider slider-no-arrows slider-no-dots" id="user-slider-4">
-                                        <div class="splide__track">
-                                            <div class="splide__list">
-                                                <div class="splide__slide mx-3">
-                                                    <div class="d-flex">
-                                                        <div><img src="{{ asset('frontend') }}/images/avatars/7s.png" class="me-3 rounded-circle shadow-l bg-fade-red-dark" width="50"></div>
-                                                        <div>
-                                                            <h5 class="mt-1 mb-0">Vincent Mobi</h5>
-                                                            <p class="font-10 mt-n1 color-gray-dark">Driver</p>
-                                                        </div>
-                                                        <div class="ms-auto"><span class="slider-next badge bg-blue-dark mt-2 p-2 font-8">TAP FOR MORE</span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="splide__slide mx-3">
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <h5 class="mt-1 mb-0">Vincent Mobi</h5>
-                                                            <p class="font-10 mt-n1 color-gray-dark">Driver</p>
-                                                        </div>
-                                                        <div class="ms-auto">
-                                                            <a href="#" class="icon icon-xs rounded-circle shadow-l bg-phone"><i class="fa fa-phone"></i></a>
-                                                            <a href="#" class="icon icon-xs rounded-circle shadow-l bg-facebook me-2 ms-2"><i class="fab fa-whatsapp"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>     
-                                        </div>
-                                    </div>
-                    
-                                    
+                                    <div class="list-group list-custom-small">
+                                        <a href="tel:+1 234 567 890">
+                                            <i class="fa font-14 fa-phone color-phone"></i>
+                                            <span>+1 234 567 8900</span>
+                                            <span class="badge bg-highlight color-white">TAP TO CALL</span>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                        <a href="https://wa.me/+1234567890">
+                                            <i class="fa font-14 fab fa-whatsapp color-whatsapp"></i>
+                                            <span>+1 234 567 8900</span>
+                                            <span class="badge bg-highlight color-white">TAP TO WHATSAPP</span>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                        <a href="mailto:mail@domain.com">
+                                            <i class="fa font-14 fa-envelope color-mail"></i>
+                                            <span>mail@domain.com</span>
+                                            <span class="badge bg-highlight color-white">TAP TO MAIL</span>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>                    
+                                    </div>                                  
                                 </div>
                             </div>
                         </div>
@@ -418,6 +299,13 @@
             </div>
         </div>
 
+        <div id="menu-main"
+        class="menu menu-box-right menu-box-detached rounded-m"
+        data-menu-width="260"
+        data-menu-load="menu-main.html"
+        data-menu-active="nav-features"
+        data-menu-effect="menu-over">
+   </div>
 
 
         <!-- footer and footer card-->

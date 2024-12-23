@@ -10,6 +10,12 @@ Route::get('/', function () {
     return view('frontend.index');
 })->name(name: 'index');
 
+//login
+Route::get('/login', function () {
+    return view('frontend.login');
+})->name(name: 'login');
+
+
 Route::get('/beranda', function () {
     return view('frontend.beranda');
 })->name(name: 'beranda');
