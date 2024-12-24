@@ -144,3 +144,23 @@ if (!function_exists('ubahTgl2')) {
         endif;
     }
 }
+
+
+if (!function_exists('getTimePeriod')) {
+    function getTimePeriod($hour)
+    {
+        if ($hour >= 4 && $hour < 6) {
+            return "Early Morning (Subuh)";
+        } elseif ($hour >= 6 && $hour < 9) {
+            return "Morning";
+        } elseif ($hour >= 9 && $hour < 12) {
+            return "Late Morning";
+        } else {
+            return "Out of Morning Range";
+        }
+
+
+        // $currentHour = date("G");
+    }
+
+}

@@ -1,14 +1,26 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+
+
+
+
+//route with controller
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/pengumuman', [HomeController::class, 'pengumuman'])->name('pengumuman');
+
+
+//
+
+
+
 
 // Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/', function () {
-    return view('frontend.index');
-})->name(name: 'index');
+//     return view('frontend.index');
+// })->name(name: 'index');
 
 //login
 Route::get('/login', function () {
@@ -24,9 +36,9 @@ Route::get('/event', function () {
     return view('frontend.event.event');
 })->name(name: 'event');
 
-Route::get('/pengumuman', function () {
-    return view('frontend.pengumuman.pengumuman');
-})->name(name: 'pengumuman');
+// Route::get('/pengumuman', function () {
+//     return view('frontend.pengumuman.pengumuman');
+// })->name(name: 'pengumuman');
 
 Route::get('/pemondokan', function () {
     return view('frontend.pemondokan.pemondokan');
