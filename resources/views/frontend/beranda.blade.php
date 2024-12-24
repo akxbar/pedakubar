@@ -33,8 +33,8 @@
                     <div class="splide__slide">
                         <div class="card card-style" style="background-image:url({{ asset('frontend') }}/images/pictures/pedashow.png)" data-card-height="320">
                             <div class="card-bottom">
-                                <p class="font-6 font-700 text-center mx-2 ">MELALUI PEKAN DAERAH XI PETANI NELAYAN PROVINSI KALIMANTAN TIMUR TAHUN 2025 KITA TINGKATKAN DAYA SAING DAN PRODUK UNGGULAN PETANI NELAYAN MENDUKUNG KALIMANTAN TIMUR 
-                                    SEBAGAI PENYANGGA IBUKOTA NUSANTARA</p>
+                                <h1 class="font-24 font-700 text-center"></h1>
+                                <p class="boxed-text-xl mx-2 ">Logo Resmi Pekan Daerah (PEDA) KTNA Kalimantan Timur XI Tahun 2025</p>
                                 {{-- <p class="boxed-text-xl">
                                     MELALUI PEKAN DAERAH XI PETANI NELAYAN PROVINSI KALIMANTAN TIMUR TAHUN 2025 KITA TINGKATKAN DAYA SAING DAN PRODUK UNGGULAN PETANI NELAYAN MENDUKUNG KALIMANTAN TIMUR 
                                     SEBAGAI PENYANGGA IBUKOTA NUSANTARA
