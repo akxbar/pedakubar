@@ -5,7 +5,12 @@
     <a href="/"
         class="mb-3 close-menu btn btn-m btn-center-m button-s shadow-l rounded-s text-uppercase font-700 bg-green-light">Login</a>
 
-    <a href="#"
-        class="close-menu btn btn-m btn-center-m button-s shadow-l rounded-s text-uppercase font-700 bg-red-light">Log
-        Out</a>
+
+
+    <form action="{{ url('logout') }}" method="POST">
+        @csrf
+        <button
+            class="close-menu btn btn-m btn-center-m button-s shadow-l rounded-s text-uppercase font-700 bg-red-light"
+            type="submit"> Logout </button>
+    </form>
 </div>

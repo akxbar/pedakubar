@@ -19,4 +19,11 @@ class HomeController extends Controller
 
         return view('web.pengumuman.pengumuman', compact('posts'));
     }
+
+
+    public function beranda()
+    {
+
+        return view('web.beranda');
+    }
 }
