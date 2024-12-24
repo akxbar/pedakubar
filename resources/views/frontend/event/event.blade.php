@@ -34,7 +34,7 @@
                 Similar to action sheets you can create store actions for your store elements that will be triggered on specific buttons. For example, carts, wishlists and more.
             </p>
 
-            <div class="list-group list-custom-large ">
+            {{-- <div class="list-group list-custom-large ">
                 <a data-bs-toggle="collapse" class="no-effect mb-3 " href="#collapse-5">
                     <i class="fa fa-list font-20 color-teal-dark"></i>
                     <span>Upacara dan Apresiasi </span>
@@ -97,7 +97,178 @@
                     <i class="fa fa-angle-right"></i>
                 </a>
 
+            </div> --}}
+
+            //
+            <div class="accordion mt-4" id="accordion-1">
+                <div class="card card-style shadow-0 bg-highlight mb-1">
+                    <button class="btn accordion-btn  color-white no-effect" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                        <i class="fa fa-heart me-2"></i>
+                        Upacara dan Apresiasi
+                        <i class="fa fa-chevron-down font-10 accordion-icon"></i>
+                    </button>
+
+                    <div id="collapse4" class="collapse bg-theme" data-bs-parent="#accordion-1">
+                        <div class="pt-3 pb-3">
+                            <div class="list-group list-custom-small">
+                                <a href="#"  data-menu="cart-item-list">
+                                    <i class="fa font-13 fa-home color-green-dark"></i>
+                                    <span>Pembukaan</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" data-menu="cart-item-list1">
+                                    <i class="fa font-13 fa-suitcase color-brown-light"></i>
+                                    <span>Klinik</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" data-menu="cart-item-list2">
+                                    <i class="fa font-13 fa-building color-gray-dark"></i>
+                                    <span>Puskesmas</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" data-menu="cart-item-list">
+                                    <i class="fa font-13 fa-building color-gray-dark"></i>
+                                    <span>Puskesmas Pembantu</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-style shadow-0 bg-highlight mb-1">
+                    <button class="btn accordion-btn color-white no-effect" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                        <i class="fa fa-star me-2"></i>
+                        Kepemimpinan dan Kemandirian Kontak Tani Nelayan
+                        <i class="fa fa-chevron-down font-10 accordion-icon"></i>
+                    </button>
+                    <div id="collapse5" class="collapse bg-theme" data-bs-parent="#accordion-2">
+                        <div class="pt-3 pb-3">
+                            <div class="list-group list-custom-small">
+                                <a href="#"  data-menu="cart-item-list">
+                                    <i class="fa font-13 fa-home color-green-dark"></i>
+                                    <span>Pembukaan</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" data-menu="cart-item-list1">
+                                    <i class="fa font-13 fa-suitcase color-brown-light"></i>
+                                    <span>Klinik</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" data-menu="cart-item-list2">
+                                    <i class="fa font-13 fa-building color-gray-dark"></i>
+                                    <span>Puskesmas</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" data-menu="cart-item-list">
+                                    <i class="fa font-13 fa-building color-gray-dark"></i>
+                                    <span>Puskesmas Pembantu</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-style shadow-0 bg-highlight mb-1">
+                    <button class="btn accordion-btn color-white no-effect" data-bs-toggle="collapse" data-bs-target="#collapse6">
+                        <i class="fa fa-star me-2"></i>
+                        Kemitraan Usaha dan Jaringan Informasi Agribisnis
+                        <i class="fa fa-chevron-down font-10 accordion-icon"></i>
+                    </button>
+                    <div id="collapse6" class="collapse bg-theme" data-bs-parent="#accordion-3">
+                        <div class="pt-3 pb-3">
+                            <div class="list-group list-custom-small">
+                                <a href="#"  data-menu="cart-item-list">
+                                    <i class="fa font-13 fa-home color-green-dark"></i>
+                                    <span>Pembukaan</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" data-menu="cart-item-list1">
+                                    <i class="fa font-13 fa-suitcase color-brown-light"></i>
+                                    <span>Klinik</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" data-menu="cart-item-list2">
+                                    <i class="fa font-13 fa-building color-gray-dark"></i>
+                                    <span>Puskesmas</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" data-menu="cart-item-list">
+                                    <i class="fa font-13 fa-building color-gray-dark"></i>
+                                    <span>Puskesmas Pembantu</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-style shadow-0 bg-highlight mb-1">
+                    <button class="btn accordion-btn color-white no-effect" data-bs-toggle="collapse" data-bs-target="#collapse7">
+                        <i class="fa fa-star me-2"></i>
+                        Pengembangan Teknologi dan Kualitas Produksi Agribisnis
+                        <i class="fa fa-chevron-down font-10 accordion-icon"></i>
+                    </button>
+                    <div id="collapse7" class="collapse bg-theme" data-bs-parent="#accordion-4">
+                        <div class="pt-3 pb-3">
+                            <div class="list-group list-custom-small">
+                                <a href="#"  data-menu="cart-item-list">
+                                    <i class="fa font-13 fa-home color-green-dark"></i>
+                                    <span>Pembukaan</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" data-menu="cart-item-list1">
+                                    <i class="fa font-13 fa-suitcase color-brown-light"></i>
+                                    <span>Klinik</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" data-menu="cart-item-list2">
+                                    <i class="fa font-13 fa-building color-gray-dark"></i>
+                                    <span>Puskesmas</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" data-menu="cart-item-list">
+                                    <i class="fa font-13 fa-building color-gray-dark"></i>
+                                    <span>Puskesmas Pembantu</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-style shadow-0 bg-highlight">
+                    <button class="btn accordion-btn color-white no-effect" data-bs-toggle="collapse" data-bs-target="#collapse8">
+                        <i class="fa fa-cloud me-2"></i>
+                        Study Banding, Widyawisata dan Pagelaran Seni Budaya
+                        <i class="fa fa-arrow-down font-10 accordion-icon"></i>
+                    </button>
+                    <div id="collapse8" class="collapse bg-theme" data-bs-parent="#accordion-5">
+                        <div class="pt-3 pb-3">
+                            <div class="list-group list-custom-small">
+                                <a href="#"  data-menu="cart-item-list">
+                                    <i class="fa font-13 fa-home color-green-dark"></i>
+                                    <span>Pembukaan</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" data-menu="cart-item-list1">
+                                    <i class="fa font-13 fa-suitcase color-brown-light"></i>
+                                    <span>Klinik</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" data-menu="cart-item-list2">
+                                    <i class="fa font-13 fa-building color-gray-dark"></i>
+                                    <span>Puskesmas</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a href="#" data-menu="cart-item-list">
+                                    <i class="fa font-13 fa-building color-gray-dark"></i>
+                                    <span>Puskesmas Pembantu</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            //
 
         </div>
     </div>
