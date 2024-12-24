@@ -53,7 +53,7 @@
                         
                     </div>
                     <div class="col-4 ps-1">
-                        <a href="#" class="btn btn-m btn-full mb-3 rounded-xs text-uppercase font-700 shadow-s bg-green-light">Started</a>
+                        <a href="{{ route('beranda') }}" class="btn btn-m btn-full mb-3 rounded-xs text-uppercase font-700 shadow-s bg-green-light">Started</a>
                 
                     </div>
                     <div class="col-2 ps-1 pe-1">
