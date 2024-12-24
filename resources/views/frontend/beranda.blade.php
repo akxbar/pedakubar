@@ -31,13 +31,14 @@
             <div class="splide__track">
                 <div class="splide__list">
                     <div class="splide__slide">
-                        <div class="card card-style" style="background-image:url({{ asset('frontend') }}/images/pictures/kubar1.jpg)" data-card-height="320">
+                        <div class="card card-style" style="background-image:url({{ asset('frontend') }}/images/pictures/pedashow.png)" data-card-height="320">
                             <div class="card-bottom">
-                                <h1 class="font-24 font-700 text-center">PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025</h1>
-                                <p class="boxed-text-xl">
+                                <p class="font-6 font-700 text-center mx-2 ">MELALUI PEKAN DAERAH XI PETANI NELAYAN PROVINSI KALIMANTAN TIMUR TAHUN 2025 KITA TINGKATKAN DAYA SAING DAN PRODUK UNGGULAN PETANI NELAYAN MENDUKUNG KALIMANTAN TIMUR 
+                                    SEBAGAI PENYANGGA IBUKOTA NUSANTARA</p>
+                                {{-- <p class="boxed-text-xl">
                                     MELALUI PEKAN DAERAH XI PETANI NELAYAN PROVINSI KALIMANTAN TIMUR TAHUN 2025 KITA TINGKATKAN DAYA SAING DAN PRODUK UNGGULAN PETANI NELAYAN MENDUKUNG KALIMANTAN TIMUR 
                                     SEBAGAI PENYANGGA IBUKOTA NUSANTARA
-                                </p>
+                                </p> --}}
                             </div>
                             <div class="card-overlay bg-gradient-fade "></div>
                         </div>
@@ -69,7 +70,7 @@
         </div>
         
         <div class="content mt-0">
-                <div class="card card-style">
+                <div class="card card-style bg-fade-green-dark ">
                     <div class="content text-center font-800">
                         <h3>Selamat Datang di PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025</h3>
                         <p>
@@ -81,31 +82,30 @@
 
                 <div class="card card-style">
                     <div class="content">
-                        <h4 class="bolder text-center font-800 pb-3">Sekretariat PEDA </h4>
-                        <h5 class="text-center font-700 pb-3">PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025 <br> 
-                            d/a. Kawasan Perkantoran Bisnis Center Sendawar, Kecamatan Barong Tongkok, Kabupaten Kutai Barat
-                        </h5>
+                        <h4 class="bolder text-center font-800 ">Sekretariat PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025 </h4>
+                        <p class="text-center font-700 pb-1">Kawasan Perkantoran Bisnis Center Sendawar, Kecamatan Barong Tongkok, Kabupaten Kutai Barat
+                        </p>
                         <div class="collapse" id="collapse-8">
                             <div class="card card-style">
                                 <div class="content">
                                     
                                     <div class="list-group list-custom-small">
                                         <a href="tel:+1 234 567 890">
-                                            <i class="fa font-14 fa-phone color-phone"></i>
+                                            <i class="fa font-18 fa-phone color-phone"></i>
                                             <span>+1 234 567 8900</span>
-                                            <span class="badge bg-highlight color-white">TAP TO CALL</span>
+                                            <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO CALL</span>
                                             <i class="fa fa-angle-right"></i>
                                         </a>
                                         <a href="https://wa.me/+1234567890">
-                                            <i class="fa font-14 fab fa-whatsapp color-whatsapp"></i>
+                                            <i class="fa font-18 fab fa-whatsapp color-whatsapp"></i>
                                             <span>+1 234 567 8900</span>
-                                            <span class="badge bg-highlight color-white">TAP TO WHATSAPP</span>
+                                            <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO WHATSAPP</span>
                                             <i class="fa fa-angle-right"></i>
                                         </a>
                                         <a href="mailto:mail@domain.com">
-                                            <i class="fa font-14 fa-envelope color-mail"></i>
+                                            <i class="fa font-18 fa-envelope color-mail"></i>
                                             <span>mail@domain.com</span>
-                                            <span class="badge bg-highlight color-white">TAP TO MAIL</span>
+                                            <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO MAIL</span>
                                             <i class="fa fa-angle-right"></i>
                                         </a>                    
                                     </div>                                  
@@ -118,15 +118,7 @@
 
         </div>
 
-
-
 		<div class="divider divider-margins mt-4"></div>
-
-		<div class="card card-style">
-            <div class="content text-center font-800">
-                <h4>Selamat Datang di PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025</h4>
-            </div>
-        </div>
 
         <div class="row mb-0">
             <div class="col-6 pe-0">
@@ -141,7 +133,7 @@
                         <p>
                             A small description about your project goes here. Then, you can access the portfolio project to see it in detail.
                         </p>
-                        <a href="#" class="btn btn-m btn-full bg-highlight font-900 text-uppercase rounded-s">Read More</a>
+                        <a href="{{ route('sambutan') }}" class="btn btn-m btn-full bg-highlight font-900 text-uppercase rounded-s">Read More</a>
                     </div>
                 </div>
             </div>
@@ -158,7 +150,7 @@
                         <p>
                             A small description about your project goes here. Then, you can access the portfolio project to see it in detail.
                         </p>
-                        <a href="#" class="btn btn-m btn-full bg-highlight font-900 text-uppercase rounded-s">Read More</a>
+                        <a href="{{ route('tatib') }}" class="btn btn-m btn-full bg-highlight font-900 text-uppercase rounded-s">Read More</a>
                     </div>
                 </div>
             </div>
@@ -175,7 +167,7 @@
                         <p>
                             A small description about your project goes here. Then, you can access the portfolio project to see it in detail.
                         </p>
-                        <a href="#" class="btn btn-m btn-full bg-highlight font-900 text-uppercase rounded-s">Read More</a>
+                        <a href="{{ route('profilkeg') }}" class="btn btn-m btn-full bg-highlight font-900 text-uppercase rounded-s">Read More</a>
                     </div>
                 </div>
             </div>
@@ -184,7 +176,7 @@
                 <div class="card card-style ms-2">
                     <a data-card-height="150" class="card preload-img mb-3" data-src="{{ asset('frontend') }}/images/pictures/24.jpg"  href="#">
                         <div class="card-bottom ms-3 mb-2">
-                            <h4 class="color-white font-600 ">Lain-lain</h4>
+                            <h4 class="color-white font-600 ">Selayang Pandang Kubar</h4>
                         </div>
                         <div class="card-overlay bg-gradient rounded-0"></div>
                     </a>
@@ -192,79 +184,58 @@
                         <p>
                             A small description about your project goes here. Then, you can access the portfolio project to see it in detail.
                         </p>
-                        <a href="#" class="btn btn-m btn-full bg-highlight font-900 text-uppercase rounded-s">Read More</a>
+                        <a href="https://youtu.be/NuxBxy0iDoc?si=wf8J1BCLqjXgou3t" class="btn btn-m btn-full bg-highlight font-900 text-uppercase rounded-s">Read More</a>
                     </div>
                 </div>
             </div>
         </div>
           
         <div class="content mb-2 pt-3">
-			<h5 class="float-start font-16 font-600">🔥 Berita Terkini</h5>
-			<a class="float-end font-12 color-highlight mt-n1" href="#">View All</a>
+			<h5 class="float-start font-28 font-600">🔥 Berita Terkini</h5>
+			<a class="float-end font-18 color-highlight mt-n1 pe-4" href="#">View All</a>
 			<div class="clearfix"></div>
 		</div>
 
-		<div class="card card-style mb-3 d-flex">
-			<div class="d-flex py-3 ps-3 pe-4">
-				<div class="align-self-center">
-					<img src="images/pictures/14t.jpg" width="70" class="rounded-m">
-				</div>
-				<div class="ps-2 ms-1 align-self-center w-100">
-					<h5 class="font-600 mb-0">Typography</h5>
-					<p class="mt-n1 font-11 mb-0">
-						Get Certified in The art of fonts.
-					</p>
-					<div class="row mb-0">
-						<div class="col-6">
-							<span class="font-10 color-highlight">By Johnatan Doe</span>
-						</div>
-						<div class="col-6 text-end">
-							<span class="font-10 opacity-50">12 Courses</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="divider divider-margins mb-0"></div>
-			<div class="d-flex py-3 ps-3 pe-4">
-				<div class="align-self-center">
-					<img src="images/pictures/17t.jpg" width="70" class="rounded-m">
-				</div>
-				<div class="ps-2 ms-1 align-self-center w-100">
-					<h5 class="font-600 mb-0">Vanilla JavaScript</h5>
-					<p class="mt-n1 font-11 mb-0">
-						Data Structures and Algorithms.
-					</p>
-					<div class="row mb-0">
-						<div class="col-6">
-							<span class="font-10 color-highlight">By Alexander Joe</span>
-						</div>
-						<div class="col-6 text-end">
-							<span class="font-10 opacity-50">12 Courses</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="divider divider-margins mb-0"></div>
-			<div class="d-flex py-3 ps-3 pe-4">
-				<div class="align-self-center">
-					<img src="images/pictures/20t.jpg" width="70" class="rounded-m">
-				</div>
-				<div class="ps-2 ms-1 align-self-center w-100">
-					<h5 class="font-600 mb-0">SEO & Ranking</h5>
-					<p class="mt-n1 font-11 mb-0">
-						Search Engine Optimization Certificate.
-					</p>
-					<div class="row mb-0">
-						<div class="col-6">
-							<span class="font-10 color-highlight">By Doeson Jackson</span>
-						</div>
-						<div class="col-6 text-end">
-							<span class="font-10 opacity-50">12 Courses</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="card card-style">
+            <div class="content mb-0">
+
+                <a href="{{ route('berita') }}">
+                    <div class="d-flex mb-3">
+                        <div class="align-self-center">
+                            <h5 class="font-500 font-20 pb-1">Gorgeous ideas to create your next mobile website with</h5>
+                            <span class="badge text-uppercase font-16 px-2 py-1 bg-orange-dark">25 Minutes Ago</span>
+                        </div>
+                        <div class="align-self-center ms-auto">
+                            <img src="{{ asset('frontend') }}/images/pictures/15s.jpg" class="rounded-m ms-3" width="90">
+                        </div>
+                    </div>
+                </a>
+                <div class="divider mb-3"></div>
+                <a href="{{ route('berita') }}">
+                    <div class="d-flex mb-3">
+                        <div class="align-self-center">
+                            <h5 class="font-500 font-20 pb-1">What's the next best gadget to come from Apple in <span class="copyright-year"></span>?</h5>
+                            <span class="badge text-uppercase font-16 px-2 py-1 bg-orange-dark">45 Minutes Ago</span>
+                        </div>
+                        <div class="align-self-center ms-auto">
+                            <img src="{{ asset('frontend') }}/images/pictures/28s.jpg" class="rounded-m ms-3" width="90">
+                        </div>
+                    </div>
+                </a>
+                <div class="divider mb-3"></div>
+                <a href="{{ route('berita') }}">
+                    <div class="d-flex mb-3">
+                        <div class="align-self-center">
+                            <h5 class="font-500 font-20 pb-1">Laptops are still outselling Mobile Devices? Well,  think again!</h5>
+                            <span class="badge text-uppercase font-16 px-2 py-1 bg-orange-dark">50 Minutes Ago</span>
+                        </div>
+                        <div class="align-self-center ms-auto">
+                            <img src="{{ asset('frontend') }}/images/pictures/21s.jpg" class="rounded-m ms-3" width="90">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
 
         <div class="card card-style">
             <div class="content text-center font-800">
@@ -291,7 +262,7 @@
                                 Galery Video Kegiatan
                             </h5>
                             <div class="clearfix"></div>
-                            <a href="#" class="btn btn-m btn-full bg-highlight font-900 text-uppercase rounded-s">Selengkapnya</a>
+                            <a href="#link youtube" class="btn btn-m btn-full bg-highlight font-900 text-uppercase rounded-s">Selengkapnya</a>
                         </div>
                     </div>
                 </div>

@@ -110,7 +110,7 @@
 
 <div id="cart-item-list"
      class="menu menu-box-bottom menu-box-detached rounded-m"
-     data-menu-height="420"
+     data-menu-height="550"
      data-menu-effect="menu-over">
 
      <div class="content">
@@ -152,7 +152,13 @@
                     <span class="badge bg-highlight">SEE ON MAP</span>
                     <i class="fa fa-angle-right"></i>
                 </a>
-
+                <a href="#">
+                    <i class="far fa-calendar color-blue-dark"></i>
+                    <span>Narasumber</span>
+                    <strong>10:00 AM -  11:30 AM</strong>
+                </a>
+                <div class="divider"></div>
+                <a href="#" class="btn text-uppercase font-900 bg-highlight rounded-sm mb-0 shadow-xl btn-m ">Link Materi</a>
             </div>
         </div>
     </div>
@@ -258,7 +264,8 @@
                     <span>Narasumber</span>
                     <strong>10:00 AM -  11:30 AM</strong>
                 </a>
-
+                <div class="divider"></div>
+                <a href="#" class="btn text-uppercase font-900 bg-highlight rounded-sm mb-3 shadow-xl btn-m btn-full">Link Materi</a>
             </div>
         </div>
     </div>

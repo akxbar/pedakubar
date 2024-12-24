@@ -6,8 +6,8 @@
 <div class="page-content">
         
     <div class="page-title page-title-small">
-        <h2><a href="{{ route('beranda') }}" data-back-button><i class="fa fa-arrow-right"></i></a>Gallery Foto</h2>
-        <a href="{{ route('beranda') }}" data-menu="menu-main" class="bg-fade-highlight-light shadow-xl preload-img" data-src="images/avatars/5s.png"></a>
+        <h2><a href="{{ route('beranda') }}" data-back-button><i class="fa fa-arrow-left"></i></a>Kembali</h2>
+        <a href="#" data-menu="menu-warning-1" class="bg-fade-highlight-light shadow-xl preload-img" data-src="{{ asset('frontend') }}/images/pictures/logokubar.png"></a>
     </div>
     <div class="card header-card shape-rounded" data-card-height="150">
         <div class="card-overlay bg-highlight opacity-95"></div>
@@ -15,6 +15,19 @@
         <div class="card-bg preload-img" data-src="{{ asset('frontend') }}/images/pictures/20s.jpg"></div>
     </div>
     
+        <!--Menu Warning-->
+    <!---------------->
+    <!---------------->
+    <div id="menu-warning-1" class="menu menu-box-right menu-box-detached rounded-m"
+         data-menu-height="10"
+         data-menu-effect="menu-over">
+         <h1 class="text-center mt-5 text-uppercase font-700">Log Out!</h1>
+         <img class="mx-auto mb-3 text-center" src="{{ asset('frontend') }}/images/logopeda2.png" width="100">
+        <a href="#" class="close-menu btn btn-m btn-center-m button-s shadow-l rounded-s text-uppercase font-700 bg-red-light">Log Out</a>
+    </div>
+    <!---------------->
+    <!---------------->
+
     <div class="card card-style">
         <div class="content">
             <h4 class="mb-0">Galery Foto</h4>

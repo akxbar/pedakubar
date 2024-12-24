@@ -38,6 +38,22 @@ Route::get('/direktori', function () {
 
 
 //halaman
+Route::get('/sambutan', function () {
+    return view('frontend.sambutan');
+})->name(name: 'sambutan');
+
+Route::get('/tatib', function () {
+    return view('frontend.tatib');
+})->name(name: 'tatib');
+
+Route::get('/profilkeg', function () {
+    return view('frontend.profilkeg');
+})->name(name: 'profilkeg');
+
+Route::get('/berita', function () {
+    return view('frontend.berita');
+})->name(name: 'berita');
+
 Route::get('/foto', function () {
     return view('frontend.foto');
 })->name(name: 'foto');
