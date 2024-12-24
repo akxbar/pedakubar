@@ -61,3 +61,7 @@ Route::get('/berita', function () {
 Route::get('/foto', function () {
     return view('frontend.foto');
 })->name(name: 'foto');
+
+Route::get('/evendetail', function () {
+    return view('frontend.evendetail');
+})->name(name: 'evendetail');

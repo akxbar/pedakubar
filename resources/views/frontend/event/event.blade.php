@@ -262,17 +262,17 @@
                     <i class="fa fa-map-marker-alt color-red-dark"></i>
                     <span>Aula Kantor Distan Kubar</span>
                     <strong>Jalan Usaha Tani Nomor 10</strong>
-                    <span class="badge bg-highlight mb-0">SEE ON MAP</span>
+                    <span class="badge bg-blue-dark font-10 rounded-xs mb-0">SEE ON MAP</span>
                     <i class="fa fa-angle-right"></i>
                 </a>
                 <a href="#">
                     <i class="far fa-calendar color-blue-dark mb-2"></i>
                     <span>Narasumber</span>
-                    <strong>10:00 AM -  11:30 AM</strong>
+                    <strong>Dr. Tahir, MP dan Ir. Rano, MP</strong>
                 </a>
                 <div class="divider"></div>
             </div>
-            <a href="#" class="btn text-uppercase font-900 bg-highlight rounded-sm mb-0 shadow-xl btn-m ">Selengkapnya</a>
+            <a href="{{ route('evendetail') }}" class="btn text-uppercase font-900 bg-highlight rounded-sm mb-0 shadow-xl btn-m ">Selengkapnya</a>
         </div>
     </div>
 </div>
