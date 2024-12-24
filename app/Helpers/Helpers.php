@@ -95,14 +95,7 @@ if (!function_exists('getHari')) {
 if (!function_exists('tgl_indo')) {
     function tgl_indo($tgl)
     {
-        if (!empty($tgl)):
-            $tanggal = substr($tgl, 8, 2);
-            $bulan = getBulan(substr($tgl, 5, 2));
-            $tahun = substr($tgl, 0, 4);
-            return $tanggal . ' ' . $bulan . ' ' . $tahun;
-        else:
-            return '-';
-        endif;
+        return empty($tgl) ? '-' : date('d F Y', strtotime($tgl));
     }
 
     if (!function_exists('tgl_singkat')) {
