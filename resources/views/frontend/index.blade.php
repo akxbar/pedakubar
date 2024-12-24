@@ -49,7 +49,7 @@
                                               
                     </div>
                     <div class="col-4 pe-1">
-                        <a href="#" class="btn btn-m btn-full mb-3 rounded-xs text-uppercase font-700 shadow-s bg-blue-light">Login</a>
+                        <a href="{{ route('login') }}" class="btn btn-m btn-full mb-3 rounded-xs text-uppercase font-700 shadow-s bg-blue-light">Login</a>
                         
                     </div>
                     <div class="col-4 ps-1">
