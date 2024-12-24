@@ -441,6 +441,7 @@ data-menu-width="400">
     </div>
 </div>
 
+{{-- modal --}}
 <div class="card card-style bg-theme pb-0">
     <div class="content" id="tab-group-2">
         <div class="tab-controls tabs-small tabs-rounded" data-highlight="bg-blue-dark">
@@ -451,38 +452,20 @@ data-menu-width="400">
         <div data-bs-parent="#tab-group-2" class="collapse show" id="tab-5">
             <div class="card card-style">
                 <div class="content">
-                    
-                    <div class="list-group list-custom-small">
-                        <a href="tel:+1 234 567 890">
-                            <i class="fa font-14 fa-phone color-phone"></i>
-                            <span>+1 234 567 8900</span>
-                            <span class="badge bg-highlight color-white">TAP TO CALL</span>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                        <a href="https://wa.me/+1234567890">
-                            <i class="fa font-14 fab fa-whatsapp color-whatsapp"></i>
-                            <span>+1 234 567 8900</span>
-                            <span class="badge bg-highlight color-white">TAP TO WHATSAPP</span>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                        <a href="mailto:mail@domain.com">
-                            <i class="fa font-14 fa-envelope color-mail"></i>
-                            <span>mail@domain.com</span>
-                            <span class="badge bg-highlight color-white">TAP TO MAIL</span>
-                            <i class="fa fa-angle-right"></i>
-                        </a>                    
-                    </div>                                  
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Curabitur aliquam non nunc quis maximus.
+                        Fusce volutpat arcu id ante maximus vestibulum.
+                        Curabitur non nisi venenatis, pharetra nisl et, ullamcorper diam.
+                        Morbi interdum varius molestie. Quisque feugiat augue id diam ornare auctor.
+                    </p>                                 
                 </div>
             </div>
         </div>
 
         <div data-bs-parent="#tab-group-2" class="collapse" id="tab-7">
             <div class="card card-style">
-                <div class="content mb-3">
-                    <h3 class="mb-0">Fasiltas Pemondokan</h3>
-                    <p>
-                        Simple thumbnails with caption attached to them. These will all open a gallery when tapped.
-                    </p>            
+                <div class="content mb-3">           
                     <div class="row text-center row-cols-3 mb-0">
                         <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/27s.jpg" title="Vynil and Typerwritter">
                             <img src="{{ asset('frontend') }}/images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/27s.jpg" class="preload-img img-fluid rounded-xs" alt="img">
@@ -514,6 +497,8 @@ data-menu-width="400">
         </div>
     </div>    
 </div>
+
+
 <a href="#" class="close-menu btn btn-center-m btn-sm shadow-l rounded-s text-uppercase font-900 bg-red-dark mt-1 mb-2">Tutup</a>
 </div>
 

@@ -114,7 +114,7 @@
      data-menu-effect="menu-over">
 
      <div class="content">
-        <div class="d-flex">
+        <div class="d-flex mb-3">
             <div class="me-auto">
                 <img src="{{ asset('frontend') }}/images/food/1s.jpg" class="rounded-m shadow-xl" width="110">
             </div>
@@ -124,7 +124,7 @@
                 <div class="clearfix"></div>
                 <div class="d-flex">
                     <div>
-                        <h3 class="font-12 font-700 pt-2 mt-4 ">Kegiatan Pameran Bibit Unggulan Kabupaten Kubar</h3>
+                        <h3 class="font-18 font-700 pt-2 mt-4 ">Kegiatan Pameran Bibit Unggulan Kabupaten Kubar</h3>
                     </div>
                 </div>
             </div>
@@ -134,12 +134,12 @@
             <div class="col-12">
                 <div>
                     <h4>About Event</h4>
-                    <p class="mb-4">
+                    <p class="mb-2">
                         Are you a fan of paintball? Then this is the even for you! Join today and you get free gear for the duration of the event.
                     </p>
                </div>
             </div>
-            <div class="list-group list-custom-large mb-2">
+            <div class="list-group list-custom-large mb-0">
                 <a href="#">
                     <i class="far fa-calendar color-blue-dark"></i>
                     <span>Sat, May 25, 2029</span>
@@ -153,13 +153,13 @@
                     <i class="fa fa-angle-right"></i>
                 </a>
                 <a href="#">
-                    <i class="far fa-calendar color-blue-dark"></i>
+                    <i class="far fa-calendar color-blue-dark mb-2"></i>
                     <span>Narasumber</span>
                     <strong>10:00 AM -  11:30 AM</strong>
                 </a>
                 <div class="divider"></div>
-                <a href="#" class="btn text-uppercase font-900 bg-highlight rounded-sm mb-0 shadow-xl btn-m ">Link Materi</a>
             </div>
+            <a href="#" class="btn text-uppercase font-900 bg-highlight rounded-sm mb-0 shadow-xl btn-m ">Selengkapnya</a>
         </div>
     </div>
 </div>
