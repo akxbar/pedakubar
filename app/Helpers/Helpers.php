@@ -95,14 +95,7 @@ if (!function_exists('getHari')) {
 if (!function_exists('tgl_indo')) {
     function tgl_indo($tgl)
     {
-        if (!empty($tgl)):
-            $tanggal = substr($tgl, 8, 2);
-            $bulan = getBulan(substr($tgl, 5, 2));
-            $tahun = substr($tgl, 0, 4);
-            return $tanggal . ' ' . $bulan . ' ' . $tahun;
-        else:
-            return '-';
-        endif;
+        return empty($tgl) ? '-' : date('d F Y', strtotime($tgl));
     }
 
     if (!function_exists('tgl_singkat')) {
@@ -150,4 +143,24 @@ if (!function_exists('ubahTgl2')) {
             return '-';
         endif;
     }
+}
+
+
+if (!function_exists('getTimePeriod')) {
+    function getTimePeriod($hour)
+    {
+        if ($hour >= 4 && $hour < 6) {
+            return "Early Morning (Subuh)";
+        } elseif ($hour >= 6 && $hour < 9) {
+            return "Morning";
+        } elseif ($hour >= 9 && $hour < 12) {
+            return "Late Morning";
+        } else {
+            return "Out of Morning Range";
+        }
+
+
+        // $currentHour = date("G");
+    }
+
 }

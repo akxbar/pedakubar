@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 use Filament\Support\View\Components\Modal;
 
@@ -21,5 +22,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Modal::closedByClickingAway(false);
+        Paginator::useBootstrapFive();
     }
 }

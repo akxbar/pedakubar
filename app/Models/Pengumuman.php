@@ -13,4 +13,16 @@ class Pengumuman extends Model
         'tanggal' => 'datetime',
     ];
 
+
+
+    // public function getDateAttribute()
+    // {
+    //     return $this->datetime->format('Y-m-d'); // Mengambil tanggal
+    // }
+
+    // public function getTimeAttribute()
+    // {
+    //     return $this->datetime->format('H:i:s'); // Mengambil waktu
+    // }
+
 }
