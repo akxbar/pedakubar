@@ -192,7 +192,7 @@
           
         <div class="content mb-2 pt-3">
 			<h5 class="float-start font-28 font-600 mb-3">🔥 Berita Terkini</h5>
-			<a class="float-end font-18 color-highlight mt-n1 pe-4" href="#">View All</a>
+			<a class="float-end font-18 color-highlight mt-n1 pe-4" href="{{ route('daftarberita') }}">View All</a>
 			<div class="clearfix"></div>
 		</div>
 

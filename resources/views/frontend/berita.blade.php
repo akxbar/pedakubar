@@ -6,7 +6,7 @@
 <div class="page-content">
         
     <div class="page-title page-title-small">
-        <h2><a href="{{ route('beranda') }}" data-back-button><i class="fa fa-arrow-left"></i></a>Kembali</h2>
+        <h2><a href="{{ route('daftarberita') }}" data-back-button><i class="fa fa-arrow-left"></i></a>Kembali</h2>
         <a href="#" data-menu="menu-warning-1" class="bg-fade-highlight-light shadow-xl preload-img" data-src="{{ asset('frontend') }}/images/pictures/logokubar.png"></a>
     </div>
     <div class="card header-card shape-rounded" data-card-height="150">

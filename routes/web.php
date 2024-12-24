@@ -50,6 +50,10 @@ Route::get('/profilkeg', function () {
     return view('frontend.profilkeg');
 })->name(name: 'profilkeg');
 
+Route::get('/daftarberita', function () {
+    return view('frontend.daftarberita');
+})->name(name: 'daftarberita');
+
 Route::get('/berita', function () {
     return view('frontend.berita');
 })->name(name: 'berita');
