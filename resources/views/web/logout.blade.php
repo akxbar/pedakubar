@@ -1,5 +1,5 @@
 @php
-    $aksesExists = getUserId(session('user_id'));
+    $aksesExists = getUserId(session('user_id'))??false;
 @endphp
 
 @if ($aksesExists)
