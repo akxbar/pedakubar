@@ -35,7 +35,7 @@ class PenangungJawabResource extends Resource
                             ->required(),
                         Repeater::make('image')
                             ->label('Panitia')
-                            ->addActionLabel('Add image')
+                            ->addActionLabel('Tambah Panitia')
                             ->maxItems(8)
                             ->schema([
                                 Forms\Components\TextInput::make('name')
@@ -49,7 +49,7 @@ class PenangungJawabResource extends Resource
                                     ->image()
                                     ->reorderable()
                                     ->appendFiles()
-                                    ->maxSize(1048)
+                                    ->maxSize(500)
                                     ->directory('tanggungjawab'),
                             ]),
                     ])
