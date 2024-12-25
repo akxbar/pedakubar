@@ -21,6 +21,14 @@ class HeaderResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
+    protected static ?string $navigationGroup = 'Beranda';
+
+    protected static ?string $navigationLabel = 'Header';
+    protected static ?string $pluralModelLabel = 'Header';
+    protected ?string $heading = 'Header';
+    protected static ?int $navigationSort = 5;
+
     public static function form(Form $form): Form
     {
         return $form

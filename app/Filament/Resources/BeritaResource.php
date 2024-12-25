@@ -23,6 +23,14 @@ class BeritaResource extends Resource
     protected static bool $canCreateAnother = false;
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup = 'Beranda';
+
+    protected static ?string $navigationLabel = 'Berita';
+    protected static ?string $pluralModelLabel = 'Berita';
+
+    protected ?string $heading = 'Berita';
+
+    protected static ?int $navigationSort = 1;
     public static function form(Form $form): Form
     {
         return $form

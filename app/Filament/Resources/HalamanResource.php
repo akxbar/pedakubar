@@ -22,6 +22,12 @@ class HalamanResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup = 'Beranda';
+
+    protected static ?string $navigationLabel = 'Halaman';
+    protected static ?string $pluralModelLabel = 'Halaman';
+    protected ?string $heading = 'Halaman';
+    protected static ?int $navigationSort = 3;
     public static function form(Form $form): Form
     {
         return $form

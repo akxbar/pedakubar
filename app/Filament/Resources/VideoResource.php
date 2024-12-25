@@ -21,6 +21,15 @@ class VideoResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup = 'Beranda';
+
+    protected static ?string $navigationLabel = 'Galleri Video';
+    protected static ?string $pluralModelLabel = 'Galleri Video';
+    protected ?string $heading = 'Galleri Video';
+    protected static ?int $navigationSort = 4;
+
+
+
     public static function form(Form $form): Form
     {
         return $form

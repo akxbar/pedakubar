@@ -7,6 +7,7 @@ use Filament\Panel;
 use Filament\Widgets;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
+use Filament\Navigation\NavigationGroup;
 use Filament\Http\Middleware\Authenticate;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
@@ -53,6 +54,25 @@ class AdminPanelProvider extends PanelProvider
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
+            ]) ->navigationGroups([
+                NavigationGroup::make()
+                    ->label('Beranda')
+                    ->collapsed(false),
+                NavigationGroup::make()
+                    ->label('Pengumuman')
+                    ->collapsed(),
+                NavigationGroup::make()
+                    ->label('Event')
+                    ->collapsed(),
+                NavigationGroup::make()
+                    ->label('Pemondokan')
+                    ->collapsed(),
+                NavigationGroup::make()
+                    ->label('Direktori')
+                    ->collapsed(),
+                NavigationGroup::make('Setting')
+                    ->collapsed(),
+
             ])
 
             ->authMiddleware([
