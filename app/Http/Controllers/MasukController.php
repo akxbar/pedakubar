@@ -30,6 +30,7 @@ class MasukController extends Controller
         if ($peserta && Hash::check($request->password, $peserta->password)) {
             // If credentials are correct, regenerate session and redirect
             $request->session()->put('user_name', $peserta->name);
+            $request->session()->put('user_id', $peserta->id);
             $request->session()->regenerate();
 
             return redirect()->intended('/beranda');

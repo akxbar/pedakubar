@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Peserta;
+
 if (!function_exists('getYt')) {
     function getYt($url)
     {
@@ -163,4 +165,13 @@ if (!function_exists('getTimePeriod')) {
         // $currentHour = date("G");
     }
 
+}
+
+
+if (!function_exists('getUserId(')) {
+
+    function getUserId($userId)
+    {
+        return Peserta::where('id', $userId)->exists();
+    }
 }

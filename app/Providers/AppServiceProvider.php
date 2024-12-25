@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Peserta;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Filament\Support\View\Components\Modal;
 
@@ -23,5 +25,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Modal::closedByClickingAway(false);
         Paginator::useBootstrapFive();
+
+
     }
 }
