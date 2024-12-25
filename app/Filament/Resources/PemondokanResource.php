@@ -7,6 +7,7 @@ use Filament\Tables;
 use Filament\Forms\Form;
 use App\Models\Pemondokan;
 use Filament\Tables\Table;
+use App\Models\TempatPemondokan;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Repeater;
 use Illuminate\Database\Eloquent\Builder;
@@ -29,6 +30,11 @@ class PemondokanResource extends Resource
                     ->schema([
                         Forms\Components\Section::make()
                             ->schema([
+
+                                Forms\Components\Select::make('tempat_pemondokan_id')
+                                    ->label('Lokasi Pemondokan')
+                                    ->options(TempatPemondokan::all()->where('active', 1)->pluck('title', 'id'))
+                                    ->required(),
                                 Forms\Components\TextInput::make('title')
                                     ->label('Nama Pemondokan')
                                     ->required(),
@@ -40,8 +46,8 @@ class PemondokanResource extends Resource
                                     ->fileAttachmentsDirectory('pemondokan')
                                     ->profile('simpel')
                                     ->ltr()
-                                    ->columnSpan('full')
-                                    ->required(),
+                                    ->columnSpan('full'),
+
                                 Forms\Components\TextArea::make('embed_gmap'),
 
                                 Forms\Components\TextInput::make('link_gmap')
@@ -89,6 +95,11 @@ class PemondokanResource extends Resource
 
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('tempat_pemondokan.title')
+                    ->label('Lokasi Pemondokan')
+                    ->searchable(),
+
+
             ])->defaultSort('id', 'desc')
             ->filters([
                 //

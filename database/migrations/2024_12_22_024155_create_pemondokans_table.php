@@ -12,6 +12,7 @@ return new class extends Migration {
     {
         Schema::create('pemondokans', function (Blueprint $table) {
             $table->id();
+            $table->string('tempat_pemondokan_id');
             $table->string('title');
             $table->string('alamat')->nullable();
             $table->text('body')->nullable();
