@@ -26,8 +26,7 @@
         <div class="content">
             <h2>Lokasi Pemondokan</h2>
             <p class="mb-3">
-                Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
+            Lokasi Pemondokan PEDA KTNA XI Provinsi Kalimantan Timur Tahun 2025 .
             </p>
 
 
@@ -50,9 +49,21 @@
                     </div>
                     <div class="collapse ps-2 pe-4" id="collapse-51">
 
+
+                         @php
+                        $aksesExists = getUserId(session('user_id'));
+                        @endphp
+
                         @foreach ($pemondokans as $pemondokan)
                             @if($pemondokan->tempat_pemondokan_id == $lokasi->id)
-                                <a href="#" data-menu="menu-appointment-{{ $pemondokan->id }}">
+
+                                        @if ($aksesExists)
+                                          @php
+                                           $ada =  $pemondokan->id ;
+                                           @endphp
+                                          @endif
+
+                                <a href="#" data-menu="menu-appointment-{{ $ada??null}}">
                                     <div class="card card-style bg-mint-light mb-2 mx-0">
                                         <div class="d-flex">
                                             <div class="ps-2 ms-2 mb-3 align-self-center">
