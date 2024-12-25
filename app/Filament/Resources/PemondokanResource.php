@@ -33,7 +33,7 @@ class PemondokanResource extends Resource
 
                                 Forms\Components\Select::make('tempat_pemondokan_id')
                                     ->label('Lokasi Pemondokan')
-                                    ->options(TempatPemondokan::all()->where('active', 1)->pluck('title', 'id'))
+                                    ->options(TempatPemondokan::all()->where('publish', 1)->pluck('title', 'id'))
                                     ->required(),
                                 Forms\Components\TextInput::make('title')
                                     ->label('Nama Pemondokan')
@@ -98,6 +98,7 @@ class PemondokanResource extends Resource
                 Tables\Columns\TextColumn::make('tempat_pemondokan.title')
                     ->label('Lokasi Pemondokan')
                     ->searchable(),
+                Tables\Columns\ToggleColumn::make('publish'),
 
 
             ])->defaultSort('id', 'desc')

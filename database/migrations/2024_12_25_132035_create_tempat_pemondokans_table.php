@@ -13,7 +13,7 @@ return new class extends Migration {
         Schema::create('tempat_pemondokans', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->boolean('active')->default(true);
+            $table->boolean('publish')->default(true);
             $table->timestamps();
         });
     }

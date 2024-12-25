@@ -64,7 +64,7 @@ class PenangungJawabResource extends Resource
                 Tables\Columns\TextColumn::make('No')->rowIndex(),
 
                 Tables\Columns\TextColumn::make(name: 'pemondokan.title'),
-
+                Tables\Columns\ToggleColumn::make('publish'),
             ])->defaultSort('id', 'desc')
             ->filters([
                 //

@@ -17,9 +17,10 @@ Route::get('/login', [MasukController::class, 'login'])->name('login');
 Route::post('/login', [MasukController::class, 'authenticate'])->name('auth.authenticate');
 Route::post('/logout', [MasukController::class, 'lgout'])->name('auth.logout');
 
-
-
 Route::get('/beranda', [HomeController::class, 'beranda'])->name('beranda');
+
+
+Route::get('/pemondokan', [HomeController::class, 'pemondokan'])->name('pemondokan');
 
 
 //
@@ -49,9 +50,9 @@ Route::get('/event', function () {
 //     return view('frontend.pengumuman.pengumuman');
 // })->name(name: 'pengumuman');
 
-Route::get('/pemondokan', function () {
-    return view('frontend.pemondokan.pemondokan');
-})->name(name: 'pemondokan');
+// Route::get('/pemondokan', function () {
+//     return view('frontend.pemondokan.pemondokan');
+// })->name(name: 'pemondokan');
 
 Route::get('/direktori', function () {
     return view('frontend.direktori.direktori');

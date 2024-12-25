@@ -41,7 +41,7 @@ class TempatPemondokanResource extends Resource
 
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\ToggleColumn::make('active'),
+                Tables\Columns\ToggleColumn::make('publish'),
 
             ])->defaultSort('id', 'desc')
             ->filters([

@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('pemondokan_id');
             $table->json('image')->nullable();
+            $table->boolean('publish')->default(true);
             $table->timestamps();
         });
     }

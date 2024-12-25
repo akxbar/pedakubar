@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pemondokan;
+use App\Models\PenangungJawab;
 use App\Models\Pengumuman;
 use Illuminate\Http\Request;
+use App\Models\TempatPemondokan;
 
 class HomeController extends Controller
 {
@@ -26,4 +29,18 @@ class HomeController extends Controller
 
         return view('web.beranda');
     }
+
+
+
+    public function pemondokan()
+    {
+
+        $lokasis = TempatPemondokan::where('publish', 1)->latest()->get();
+        $pemondokans = Pemondokan::where('publish', 1)->latest()->get();
+        $penangungjawabs = PenangungJawab::where('publish', 1)->get();
+        // dd($lokasis);
+
+        return view('web.pemondokan.pemondokan', compact('lokasis', 'pemondokans', 'penangungjawabs'));
+    }
+
 }
