@@ -82,3 +82,10 @@ Route::get('/berita', function () {
 Route::get('/foto', function () {
     return view('frontend.foto');
 })->name(name: 'foto');
+<<<<<<< HEAD
+
+Route::get('/evendetail', function () {
+    return view('frontend.evendetail');
+})->name(name: 'evendetail');
+=======
+>>>>>>> 5801315004f7bdaac8951b008c287fed4bd284fe

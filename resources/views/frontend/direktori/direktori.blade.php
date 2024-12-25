@@ -419,6 +419,8 @@
 
 </div>
 
+{{-- modal --}}
+
 <div id="menu-maps" class="menu menu-box-modal rounded-m"
 data-menu-height="500"
 data-menu-width="400">
@@ -440,8 +442,6 @@ data-menu-width="400">
         
     </div>
 </div>
-
-{{-- modal --}}
 <div class="card card-style bg-theme pb-0">
     <div class="content" id="tab-group-2">
         <div class="tab-controls tabs-small tabs-rounded" data-highlight="bg-blue-dark">
