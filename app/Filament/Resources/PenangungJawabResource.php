@@ -21,6 +21,11 @@ class PenangungJawabResource extends Resource
     protected static ?string $model = PenangungJawab::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Pemondokan';
+    protected static ?string $navigationLabel = 'Penangung Jawab';
+    protected static ?string $pluralModelLabel = 'Penangung Jawab';
+    protected ?string $heading = 'Penangung Jawab';
+    protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form
     {

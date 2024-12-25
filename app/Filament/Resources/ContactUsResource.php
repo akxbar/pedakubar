@@ -19,6 +19,17 @@ class ContactUsResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup = 'Beranda';
+
+    protected static ?string $navigationLabel = 'Contact Us';
+    protected static ?string $pluralModelLabel = 'Contact Us';
+
+    protected ?string $heading = 'Contact Us';
+
+    protected static ?int $navigationSort = 7;
+
+
+
     public static function form(Form $form): Form
     {
         return $form

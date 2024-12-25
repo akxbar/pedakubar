@@ -19,6 +19,12 @@ class KategoriDirektoriResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup = 'Direktori';
+    protected static ?string $navigationLabel = 'Kategori Direktori';
+    protected static ?string $pluralModelLabel = 'Kategori Direktori';
+    protected ?string $heading = 'Kategori Direktori';
+    protected static ?int $navigationSort = 2;
+
     public static function form(Form $form): Form
     {
         return $form

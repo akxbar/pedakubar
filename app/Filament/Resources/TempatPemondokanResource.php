@@ -19,6 +19,13 @@ class TempatPemondokanResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
+    protected static ?string $navigationGroup = 'Pemondokan';
+    protected static ?string $navigationLabel = 'Lokasi Pemondokan';
+    protected static ?string $pluralModelLabel = 'Lokasi Pemondokan';
+    protected ?string $heading = 'Lokasi Pemondokan';
+    protected static ?int $navigationSort = 1;
+
     public static function form(Form $form): Form
     {
         return $form

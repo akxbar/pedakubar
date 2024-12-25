@@ -20,6 +20,14 @@ class PesertaResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
+
+    protected static ?string $navigationGroup = 'Daftar Peserta';
+    protected static ?string $navigationLabel = 'Peserta Pemondokan';
+    protected static ?string $pluralModelLabel = 'Peserta Pemondokan';
+    protected ?string $heading = 'Peserta Pemondokan';
+    protected static ?int $navigationSort = 1;
+
     public static function form(Form $form): Form
     {
         return $form

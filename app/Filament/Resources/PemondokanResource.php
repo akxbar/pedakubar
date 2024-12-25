@@ -22,6 +22,15 @@ class PemondokanResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
+    protected static ?string $navigationGroup = 'Pemondokan';
+    protected static ?string $navigationLabel = 'Pemondokan';
+    protected static ?string $pluralModelLabel = 'Pemondokan';
+    protected ?string $heading = 'Pemondokan';
+    protected static ?int $navigationSort = 2;
+
+
+
     public static function form(Form $form): Form
     {
         return $form
@@ -48,7 +57,7 @@ class PemondokanResource extends Resource
                                 Forms\Components\TextInput::make('fasilitas_mck')->numeric(),
                                 Forms\Components\TextInput::make('kendaraan_roda4')->numeric(),
                                 Forms\Components\TextInput::make('kendaraan_roda2')->numeric(),
-                               
+
                                 TinyEditor::make('body')
                                     ->label('Keterangan')
                                     ->fileAttachmentsDisk('public')

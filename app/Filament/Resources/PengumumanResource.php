@@ -22,6 +22,13 @@ class PengumumanResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup = 'Pengumuman';
+    protected static ?string $navigationLabel = 'Pengumuman';
+    protected static ?string $pluralModelLabel = 'Pengumuman';
+    protected ?string $heading = 'Pengumuman';
+    protected static ?int $navigationSort = 1;
+
+
     public static function form(Form $form): Form
     {
         return $form

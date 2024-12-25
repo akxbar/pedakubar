@@ -57,7 +57,7 @@ class AdminPanelProvider extends PanelProvider
             ]) ->navigationGroups([
                 NavigationGroup::make()
                     ->label('Beranda')
-                    ->collapsed(false),
+                    ->collapsed(true),
                 NavigationGroup::make()
                     ->label('Pengumuman')
                     ->collapsed(),
@@ -70,7 +70,11 @@ class AdminPanelProvider extends PanelProvider
                 NavigationGroup::make()
                     ->label('Direktori')
                     ->collapsed(),
-                NavigationGroup::make('Setting')
+                NavigationGroup::make()
+                    ->label('Daftar Peserta')
+                    ->collapsed(),
+                NavigationGroup::make()
+                    ->label('Settings')
                     ->collapsed(),
 
             ])
