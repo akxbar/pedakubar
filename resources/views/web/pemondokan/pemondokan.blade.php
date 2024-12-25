@@ -85,7 +85,7 @@
             <div class="content mb-3">
                 <h3 class="mb-0">Informasi Pemondokan </h3>
                 <p>
-                    Simple thumbnails with caption attached to them. These will all open a gallery when tapped.
+                   {{ $pemondokan->alamat }}
                 </p>
                 <div class="d-flex mb-3">
                     <div>
@@ -96,7 +96,7 @@
                         <h4 class="font-600 font-14 mb-n2">Nama Kampung</h4>
                     </div>
                     <div class="align-self-center ms-auto">
-                        <h5 class="color-mint-dark mb-n1 text-end">Sumber Bangun</h5>
+                        <h5 class="color-mint-dark mb-n1 text-end">{{$pemondokan->nama_kampung}}</h5>
                     </div>
                 </div>
 
@@ -109,7 +109,7 @@
                         <h4 class="font-600 font-14 mb-n2">RT</h4>
                     </div>
                     <div class="align-self-center ms-auto">
-                        <h5 class="color-mint-dark mb-n1 text-end">001</h5>
+                        <h5 class="color-mint-dark mb-n1 text-end">{{$pemondokan->rt}}</h5>
                     </div>
                 </div>
 
@@ -122,7 +122,7 @@
                         <h4 class="font-600 font-14 mb-n2">Kecamatan</h4>
                     </div>
                     <div class="align-self-center ms-auto">
-                        <h5 class="color-mint-dark mb-n1 text-end">Sekolaq Darat</h5>
+                        <h5 class="color-mint-dark mb-n1 text-end">{{$pemondokan->kecamatan}}</h5>
                     </div>
                 </div>
 
@@ -135,7 +135,7 @@
                         <h4 class="font-600 font-14 mb-n2">Daya Tampung</h4>
                     </div>
                     <div class="align-self-center ms-auto">
-                        <h5 class="color-orange-dark mb-n1 text-end">10 Orang</h5>
+                        <h5 class="color-orange-dark mb-n1 text-end">{{ $pemondokan->daya_tampung }} Orang</h5>
                     </div>
                 </div>
 
@@ -148,7 +148,7 @@
                         <h4 class="font-600 font-14 mb-n2">Jumlah Kamar Tidur</h4>
                     </div>
                     <div class="align-self-center ms-auto">
-                        <h5 class="color-blue-dark mb-n1 text-end">4 Kamar Tidur</h5>
+                        <h5 class="color-blue-dark mb-n1 text-end">{{ $pemondokan->jumlah_kamar_tidur }} Kamar Tidur</h5>
                     </div>
                 </div>
 
@@ -161,7 +161,7 @@
                         <h4 class="font-600 font-14 mb-n2">Fasilitas MCK</h4>
                     </div>
                     <div class="align-self-center ms-auto">
-                        <h5 class="color-blue-dark mb-n1 text-end">2 Buah</h5>
+                        <h5 class="color-blue-dark mb-n1 text-end">{{ $pemondokan->fasilitas_mck }} Buah</h5>
                     </div>
                 </div>
 
@@ -174,7 +174,7 @@
                         <h4 class="font-600 font-14 mb-n2">Kendaraan Roda 4</h4>
                     </div>
                     <div class="align-self-center ms-auto">
-                        <h5 class="color-blue-dark mb-n1 text-end">2 Unit Mobil</h5>
+                        <h5 class="color-blue-dark mb-n1 text-end">{{ $pemondokan->kendaraan_roda4 }} Unit Mobil</h5>
                     </div>
                 </div>
 
@@ -187,7 +187,7 @@
                         <h4 class="font-600 font-14 mb-n2">Kendaraan Roda 2</h4>
                     </div>
                     <div class="align-self-center ms-auto">
-                        <h5 class="color-blue-dark mb-n1 text-end">3 Unit Sepeda Motor</h5>
+                        <h5 class="color-blue-dark mb-n1 text-end">{{ $pemondokan->kendaraan_roda2 }} Unit Sepeda Motor</h5>
                     </div>
                 </div>
             </div>
@@ -197,51 +197,24 @@
             <div class="content mb-3">
                 <h3 class="mb-0">Fasiltas Pemondokan</h3>
                 <p>
-                    Simple thumbnails with caption attached to them. These will all open a gallery when tapped.
+                   Tampilan Gambar Fasilitas Pemondokan {{ $pemondokan->title }}
                 </p>
                 <div class="row text-center row-cols-3 mb-0">
-                    <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/27s.jpg"
+                                     @php
+                                        $dataArray2 = $pemondokan->image;
+                                    @endphp
+                 @php $counter1 = 1; @endphp
+                                    @foreach ($dataArray2 as $value)
+
+                <a class="col" data-gallery="gallery-{{ $counter1 }}/{{$value['fasilitas']}}"
                         title="Parkiran">
-                        <img src="{{ asset('frontend') }}/images/empty.png"
-                            data-src="{{ asset('frontend') }}/images/pictures/27s.jpg"
+                        <img src="{{ asset('storage') }}/{{$value['fasilitas']}}"
+                            data-src="{{ asset('storage') }}/{{$value['fasilitas']}}"
                             class="preload-img img-fluid rounded-xs" alt="img">
-                        <p class="font-600 pb-1">Parkiran</p>
+                        <p class="font-600 pb-1">{{$value['name']}}</p>
                     </a>
-                    <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/22s.jpg"
-                        title="Kamar Tidur">
-                        <img src="{{ asset('frontend') }}/images/empty.png"
-                            data-src="{{ asset('frontend') }}/images/pictures/22s.jpg"
-                            class="preload-img img-fluid rounded-xs" alt="img">
-                        <p class="font-600 pb-1">Kamar Tidur</p>
-                    </a>
-                    <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/23s.jpg"
-                        title="Kamar Mandi">
-                        <img src="{{ asset('frontend') }}/images/empty.png"
-                            data-src="{{ asset('frontend') }}/images/pictures/23s.jpg"
-                            class="preload-img img-fluid rounded-xs" alt="img">
-                        <p class="font-600 pb-1">Dapur</p>
-                    </a>
-                    <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/24s.jpg"
-                        title="Kamar Mandi">
-                        <img src="{{ asset('frontend') }}/images/empty.png"
-                            data-src="{{ asset('frontend') }}/images/pictures/24s.jpg"
-                            class="preload-img img-fluid rounded-xs" alt="img">
-                        <p class="font-600 pb-1">Kamar Mandi</p>
-                    </a>
-                    <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/25s.jpg"
-                        title="Ruang Tamu">
-                        <img src="{{ asset('frontend') }}/images/empty.png"
-                            data-src="{{ asset('frontend') }}/images/pictures/25s.jpg"
-                            class="preload-img img-fluid rounded-xs" alt="img">
-                        <p class="font-600 pb-1">Ruang Tamu</p>
-                    </a>
-                    <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/26s.jpg"
-                        title="Laundry">
-                        <img src="{{ asset('frontend') }}/images/empty.png"
-                            data-src="{{ asset('frontend') }}/images/pictures/26s.jpg"
-                            class="preload-img img-fluid rounded-xs" alt="img">
-                        <p class="font-600 pb-1">Laundry</p>
-                    </a>
+                    @php $counter1++; @endphp
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -249,16 +222,13 @@
         <div class="content">
             <h1>Lokasi Pemondokan</h1>
             <p>
-                Simple thumbnails with caption attached to them. These will all open a gallery when tapped.
+              {!! $pemondokan->body !!}
             </p>
             <p>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4885.6774132665605!2d115.69027702194127!3d-0.23682780309848775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df7f5c9e8dbdb4f%3A0x3c9638ecbaefef26!2sDINAS%20PERTANIAN%20KAB.KUTAI%20BARAT!5e1!3m2!1sen!2sid!4v1729537266556!5m2!1sen!2sid"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+               {!! $pemondokan->embed_gmap !!}
             </p>
 
-            <a href="https://maps.app.goo.gl/GA9Y7dc4YPAb2iuMA"
+            <a href="{{$pemondokan->link_gmap}}"
                 class="btn btn-m rounded-sm bg-blue-dark font-700 text-uppercase btn-full mb-4">View on Map</a>
 
             <div class="divider"></div>

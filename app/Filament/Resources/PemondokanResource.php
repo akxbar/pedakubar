@@ -38,7 +38,17 @@ class PemondokanResource extends Resource
                                 Forms\Components\TextInput::make('title')
                                     ->label('Nama Pemondokan')
                                     ->required(),
-                                Forms\Components\TextInput::make('alamat'),
+                                Forms\Components\TextInput::make('alamat')
+                                ->label('Jalan'),
+                                Forms\Components\TextInput::make('nama_kampung'),
+                                Forms\Components\TextInput::make('rt'),
+                                Forms\Components\TextInput::make('kecamatan'),
+                                Forms\Components\TextInput::make('daya_tampung')->numeric(),
+                                Forms\Components\TextInput::make('jumlah_kamar_tidur')->numeric(),
+                                Forms\Components\TextInput::make('fasilitas_mck')->numeric(),
+                                Forms\Components\TextInput::make('kendaraan_roda4')->numeric(),
+                                Forms\Components\TextInput::make('kendaraan_roda2')->numeric(),
+                               
                                 TinyEditor::make('body')
                                     ->label('Keterangan')
                                     ->fileAttachmentsDisk('public')
@@ -68,7 +78,7 @@ class PemondokanResource extends Resource
                                             ->image()
                                             ->reorderable()
                                             ->appendFiles()
-                                            ->maxSize(1048)
+                                            ->maxSize(500)
                                             ->directory('pemondokan'),
                                     ]),
                                 Forms\Components\Toggle::make('publish')

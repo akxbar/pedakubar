@@ -29,6 +29,7 @@ class PesertaResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('email')
                     ->email()
+                    ->unique(ignoreRecord: true)
                     ->required(),
 
                 Forms\Components\TextInput::make('password')

@@ -15,6 +15,14 @@ return new class extends Migration {
             $table->string('tempat_pemondokan_id');
             $table->string('title');
             $table->string('alamat')->nullable();
+            $table->string('nama_kampung')->nullable();
+            $table->string('rt')->nullable();
+            $table->string('kecamatan')->nullable();
+            $table->string('daya_tampung')->nullable();
+            $table->string('jumlah_kamar_tidur')->nullable();
+            $table->string('fasilitas_mck')->nullable();
+            $table->string('kendaraan_roda4')->nullable();
+            $table->string('kendaraan_roda2')->nullable();
             $table->text('body')->nullable();
             $table->json('image')->nullable();
             $table->boolean('publish')->default(true);

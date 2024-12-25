@@ -29,6 +29,7 @@ class UserResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('email')
                     ->email()
+                    ->unique(ignoreRecord: true)
                     ->required(),
                 Select::make('roles')
                     ->relationship(

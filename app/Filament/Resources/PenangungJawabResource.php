@@ -31,6 +31,7 @@ class PenangungJawabResource extends Resource
                     ->schema([
                         Forms\Components\Select::make('pemondokan_id')
                             ->label('Nama Pemondokan')
+                            ->unique(ignoreRecord: true)
                             ->options(Pemondokan::all()->where('publish', 1)->pluck('title', 'id'))
                             ->required(),
                         Repeater::make('image')
