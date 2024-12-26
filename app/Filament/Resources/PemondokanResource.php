@@ -10,6 +10,7 @@ use Filament\Tables\Table;
 use App\Models\TempatPemondokan;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Textarea;
 use Illuminate\Database\Eloquent\Builder;
 use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -69,7 +70,7 @@ class PemondokanResource extends Resource
                                     ->ltr()
                                     ->columnSpan('full'),
 
-                                Forms\Components\TextArea::make('embed_gmap'),
+                                    Textarea::make('embed_gmap'),
 
                                 Forms\Components\TextInput::make('link_gmap')
                             ]),
