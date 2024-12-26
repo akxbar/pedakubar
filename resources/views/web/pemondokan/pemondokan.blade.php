@@ -33,7 +33,7 @@
             @forelse  ($lokasis as $lokasi)
                 <div class="card card-style mb-3">
                     <div class="list-group list-custom-small list-icon-0 bg-orange-light mb-3 mx-0">
-                        <a data-bs-toggle="collapse" class="no-effect" href="#collapse-51">
+                        <a data-bs-toggle="collapse" class="no-effect" href="#collapse-{{$lokasi->id}}">
                             <div class="d-flex">
                                 <div class="ps-1 ms-1 align-self-center">
                                     <h4 class="pt-4 color-white">{{ $lokasi->title }}</h4>
@@ -46,7 +46,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="collapse ps-2 pe-4" id="collapse-51">
+                    <div class="collapse ps-2 pe-4" id="collapse-{{$lokasi->id}}">
 
 
                          @php
@@ -216,8 +216,8 @@
                  @php $counter1 = 1; @endphp
                                     @foreach ($dataArray2 as $value)
 
-                <a class="col" data-gallery="gallery-{{ $counter1 }}/{{$value['fasilitas']}}"
-                        title="Parkiran">
+                <a class="col" data-gallery="gallery-{{ $counter1 }}" href="{{ asset('storage') }}/{{$value['fasilitas']}}"
+                        title="{{$value['name']}}">
                         <img src="{{ asset('storage') }}/{{$value['fasilitas']}}"
                             data-src="{{ asset('storage') }}/{{$value['fasilitas']}}"
                             class="preload-img img-fluid rounded-xs" alt="img">

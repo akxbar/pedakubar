@@ -40,8 +40,8 @@ class HeaderResource extends Resource
                     ->image()
                     ->directory('web-header')
                     ->required()
-                    ->helperText('Tidak Boleh Lebih dari 1MB')
-                    ->maxSize(1024),
+                    ->helperText('Tidak Boleh Lebih dari 500 KB')
+                    ->maxSize(500),
                 Forms\Components\Textarea::make('body')
                     ->label('Deskripsi')
                     ->columnSpanFull(),
