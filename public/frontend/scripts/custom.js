@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
             var greetingExist = document.querySelectorAll('.greeting-text')[0]
             if(greetingExist){
             var greetingUser = document.querySelectorAll('.greeting-text')[0].getAttribute('data-username');
-                var greetingMorning = ('Good morning');
-                var greetingAfternoon = ('Good afternoon');
-                var greetingEvening = ('Good evening');
+                var greetingMorning = ('Welcome');
+                var greetingAfternoon = ('Welcome');
+                var greetingEvening = ('Welcome');
 
                 if (greetingTime >= 0 && greetingTime < 12) {greetingMessage = greetingMorning;
                 } else if (greetingTime >= 12 && greetingTime < 17) {greetingMessage = greetingAfternoon;

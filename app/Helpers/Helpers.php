@@ -175,3 +175,51 @@ if (!function_exists('getUserId')) {
         return Peserta::where('id', $userId)->exists();
     }
 }
+
+
+if (!function_exists('getWarna')) {
+
+    function getWarna()
+    {
+
+        $array = [
+            'bg-blue-dark' => 'Biru',
+            'bg-mint-dark' => 'Hijau Tua',
+            'bg-green-dark' => 'Hiaju Muda',
+            'bg-yellow-dark' => 'Kuning',
+            'bg-orange-dark' => 'Oranye',
+        ];
+        return $array?? null;
+    }
+}
+
+if (!function_exists('getIcon')) {
+
+    function getIcon()
+    {
+
+        $array = [
+        'fa-medkit'              => 'Medical Kit',
+		'fa-suitcase'            => 'Tas',
+		'fa-building'            => 'Bangunan',
+		'fa-hands-praying'       => 'Berdoa',
+		'fa-mosque'              => 'Mesjid',
+		'fa-church'              => 'Gereja',
+		'fa-vihara'              => 'Vihara',
+		'fa-credit-card'         => 'Kartu Kredit',
+		'fa-car'                 => 'Mobil',
+		'fa-bus'                 => 'Bis',
+		'fa-motorcycle'          => 'Motor',
+		'fa-gas-pump'            => 'Pom Bensin',
+		'fa-cart-shopping'       => 'Keranjang Belanja',
+		'fa-utensils'            => 'Sendok Garpu',
+		'fa-coffee'              => 'Kopi',
+		'fa-gift'                => 'Hadiah',
+		'fa-umbrella-beach'      => 'Payung Pantai',
+		'fa-house'               => 'Rumah',
+		'fa-location-dot'        => 'Lokasi',
+        'fa-plane'               => 'Pesawat',
+        ];
+        return $array?? null;
+    }
+}

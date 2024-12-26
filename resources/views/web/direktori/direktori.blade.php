@@ -24,16 +24,16 @@
         <div class="content">
             <h4>Direktori Informasi</h4>
             <p>
-                Simple link list that can get tapped to reveal more content. We used links in our example, you can use anything you want.
+                Direktori Informasi adalah kumpulan informasi fasilitas umum dan fasilitas kesehatan.
             </p>
         </div>
     </div>
 
 @forelse ( $kategoris as $kategori )
 <div class="card card-style mb-3">
-        <div class="list-group list-custom-small list-icon-0 bg-blue-dark ps-3 pe-4">
+        <div class="list-group list-custom-small list-icon-0 {{$kategori->color??'bg-blue-dark'}} ps-3 pe-4">
             <a data-bs-toggle="collapse" class="no-effect" href="#collapse-{{ $kategori->id }}">
-                <i class="fa fa-medkit color-white"></i>
+                <i class="fa {{$kategori->icon}} color-white"></i>
                 <span class="font-14 color-white">{{ $kategori->title }}</span>
                 <i class="fa fa-angle-down color-white"></i>
             </a>
@@ -45,7 +45,7 @@
 
             @if($kategori->id == $direktori->kategori_direktori_id)
             <a href="#" data-menu="menu-maps-{{ $direktori->id }}">
-                    <i class="fa font-13 fa-home color-green-dark"></i>
+                    <i class="fa font-13 {{ $direktori->logo??'fa-suitcase'}} color-green-dark"></i>
                     <span>{{  $direktori->title }}</span>
                     <i class="fa fa-angle-right"></i>
                 </a>

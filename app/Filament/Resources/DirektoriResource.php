@@ -41,8 +41,10 @@ class DirektoriResource extends Resource
                                 Forms\Components\TextInput::make('title')
                                     ->label('Nama Tempat')
                                     ->required(),
-                                Forms\Components\TextInput::make('logo')
-                                    ->label('Logo Title'),
+                                    Forms\Components\Select::make('logo')
+                                    ->label('Icon Title')
+                                    ->required()
+                                    ->options(getIcon()),
                                 Forms\Components\Select::make('kategori_direktori_id')
                                     ->label('Kategori')
                                     ->options(KategoriDirektori::all()->where('active', 1)->pluck('title', 'id'))
@@ -58,6 +60,7 @@ class DirektoriResource extends Resource
                                     ->columnSpan('full'),
 
                                 Forms\Components\TextInput::make('no_telp')
+                                    ->helperText('No Tlp wajib +62')
                                     ->label('Nomor Telpon'),
                                 Forms\Components\TextInput::make('alamat'),
 

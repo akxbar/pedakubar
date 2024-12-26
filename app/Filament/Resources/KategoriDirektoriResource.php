@@ -32,22 +32,12 @@ class KategoriDirektoriResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
-                    Forms\Components\TextInput::make('icon')
-                    ->maxLength(255),
+                    Forms\Components\Select::make('icon')
+                    ->required()
+                    ->options(getIcon()),
                     Forms\Components\Select::make('color')
-                    ->options([
-                        'bg-blue-500' => 'Biru',
-                        'bg-green-500' => 'Hijau',
-                        'bg-yellow-500' => 'Kuning',
-                        'bg-red-500' => 'Merah',
-                        'bg-purple-500' => 'Ungu',
-                        'bg-pink-500' => 'Pink',
-                        'bg-indigo-500' => 'Indigo',
-                        'bg-cyan-500' => 'Cyan',
-                        'bg-gray-500' => 'Abu-abu',
-                        'bg-black' => 'Hitam',
-                        'bg-white' => 'Putih',
-                    ]),
+                    ->required()
+                    ->options(getWarna()),
                     Forms\Components\Hidden::make('sort')
                     ->default(function (?string $operation) {
                         if ($operation === 'create') {

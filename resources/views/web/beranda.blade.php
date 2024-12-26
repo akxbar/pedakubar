@@ -25,23 +25,21 @@
     <div class="splide single-slider slider-no-arrows slider-no-dots homepage-slider" id="single-slider-1">
         <div class="splide__track">
             <div class="splide__list">
+
                 <div class="splide__slide">
                     <div class="card card-style"
                         style="background-image:url({{ asset('frontend') }}/images/pictures/pedashow.png)"
                         data-card-height="320">
                         <div class="card-bottom">
                             <h1 class="font-24 font-700 text-center"></h1>
-                            <p class="boxed-text-xl mx-2 ">Logo Resmi Pekan Daerah (PEDA) KTNA Kalimantan Timur XI Tahun
+                            <p class="boxed-text-xl">Logo Resmi Pekan Daerah (PEDA) KTNA Kalimantan Timur XI Tahun
                                 2025</p>
-                            {{-- <p class="boxed-text-xl">
-                                MELALUI PEKAN DAERAH XI PETANI NELAYAN PROVINSI KALIMANTAN TIMUR TAHUN 2025 KITA
-                                TINGKATKAN DAYA SAING DAN PRODUK UNGGULAN PETANI NELAYAN MENDUKUNG KALIMANTAN TIMUR
-                                SEBAGAI PENYANGGA IBUKOTA NUSANTARA
-                            </p> --}}
+
                         </div>
                         <div class="card-overlay bg-gradient-fade "></div>
                     </div>
                 </div>
+
                 <div class="splide__slide">
                     <div class="card card-style"
                         style="background-image:url({{ asset('frontend') }}/images/pictures/kubar2.jpg)"
@@ -56,6 +54,7 @@
                         <div class="card-overlay bg-gradient-fade"></div>
                     </div>
                 </div>
+
                 <div class="splide__slide">
                     <div class="card card-style"
                         style="background-image:url({{ asset('frontend') }}/images/pictures/kubar3.jpg)"
