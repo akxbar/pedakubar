@@ -3,11 +3,12 @@
 
 <div class="page-content">
 
-    <div class="page-title page-title-small">
+<div class="page-title page-title-small dropdown">
         <h2><a href="#" data-back-button></a>Pengumuman</h2>
-        <a href="#" data-menu="menu-warning-1" class="bg-fade-highlight-light shadow-xl preload-img"
-            data-src="{{ asset('frontend') }}/images/pictures/logokubar.png"></a>
+        @include('web.logout')
     </div>
+
+
     <div class="card header-card shape-rounded" data-card-height="150">
         <div class="card-overlay bg-highlight opacity-95"></div>
         <div class="card-overlay dark-mode-tint"></div>
@@ -17,7 +18,7 @@
     <!--Menu Warning-->
     <!---------------->
     <!---------------->
-    @include('web.logout')
+
     <!---------------->
     <!---------------->
 

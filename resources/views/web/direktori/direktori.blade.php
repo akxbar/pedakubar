@@ -2,9 +2,9 @@
 @section('content')
 
 <div class="page-content" style="min-height:60vh!important">
-    <div class="page-title page-title-small">
+<div class="page-title page-title-small dropdown">
         <h2><a href="#" data-back-button></a>Direktori</h2>
-        <a href="#" data-menu="menu-warning-1" class="bg-fade-highlight-light shadow-xl preload-img" data-src="{{ asset('frontend') }}/images/pictures/logokubar.png"></a>
+        @include('web.logout')
     </div>
     <div class="card header-card shape-rounded" data-card-height="150">
         <div class="card-overlay bg-highlight opacity-95"></div>

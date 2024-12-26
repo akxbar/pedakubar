@@ -3,26 +3,24 @@
 @endphp
 
 @if ($aksesExists)
-    <div id="menu-warning-1" class="menu menu-box-right menu-box-detached rounded-m" data-menu-height="10"
-        data-menu-effect="menu-over">
-        <h4 class="text-center mt-5 text-uppercase font-700">{{ session('user_name', 'Guest') }}</h4>
-        <img class="mx-auto mb-3 text-center" src="{{ asset('frontend') }}/images/logopeda2.png" width="100">
-
-
-        <form action="{{ url('logout') }}" method="POST">
+      <a href="#" data-menu="#" class="bg-fade-highlight-light shadow-xl preload-img dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" data-src="{{ asset('frontend') }}/images/pictures/logokubar.png"></a>
+          <ul class="dropdown-menu text-center btn-xxs rounded-s bg-orange-light" aria-labelledby="dropdownMenuButton1">
+            <li>
+            <form action="{{ url('logout') }}" method="POST">
             @csrf
-            <button
-                class="close-menu btn btn-m btn-center-m button-s shadow-l rounded-s text-uppercase font-700 bg-red-light"
-                type="submit"> Logout </button>
-        </form>
-    </div>
+            <button class="dropdown-item"  type="submit"><strong>Log Out</strong></button>
+            </form>
+        </li>
+          </ul>
 @else
-    <div id="menu-warning-1" class="menu menu-box-right menu-box-detached rounded-m" data-menu-height="10"
-        data-menu-effect="menu-over">
+<a href="#" data-menu="#" class="bg-fade-highlight-light shadow-xl preload-img dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" data-src="{{ asset('frontend') }}/images/pictures/logokubar.png"></a>
+          <ul class="dropdown-menu text-center btn-xxs rounded-s bg-green-light" aria-labelledby="dropdownMenuButton1">
+            <li>
 
-        <h4 class="text-center mt-5 text-uppercase font-700">{{ session('user_name', 'Guest') }} </h4>
-        <img class="mx-auto mb-3 text-center" src="{{ asset('frontend') }}/images/logopeda2.png" width="100">
-        <a href="/"
-            class="mb-3 close-menu btn btn-m btn-center-m button-s shadow-l rounded-s text-uppercase font-700 bg-green-light">Login</a>
-    </div>
+            <a class="dropdown-item" href="/"><strong>Login</strong></a>
+
+          </ul>
 @endif
+
+
+
