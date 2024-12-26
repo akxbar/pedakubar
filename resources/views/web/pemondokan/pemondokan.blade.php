@@ -293,10 +293,10 @@
         </div>
         <!-- Bagian Kanan -->
         <div>
-            <a href="tel:{{$data['no_hp']}}" 
+            <!-- <a href="tel:{{$data['no_hp']}}" 
                 class="btn btn-sm btn-primary shadow-sm rounded-circle me-2">
                 <i class="fa fa-phone"></i>
-            </a>
+            </a> -->
             <a href="https://wa.me/{{$data['no_hp']}}" 
                 class="btn btn-sm btn-success shadow-sm rounded-circle">
                 <i class="fab fa-whatsapp"></i>
