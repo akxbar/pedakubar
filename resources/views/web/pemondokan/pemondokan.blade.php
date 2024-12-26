@@ -274,20 +274,27 @@
         <!-- Bagian Kiri -->
         <div class="d-flex align-items-center">
             <!-- Gambar -->
+             @if($data['panitia'])
+            <img src="{{ asset('storage/' . $data['panitia']) }}" 
+                class="me-3 rounded-circle shadow-sm" 
+                width="50" 
+                alt="Avatar">
+            @else
             <img src="{{ asset('frontend') }}/images/avatars/2s.png" 
                 class="me-3 rounded-circle shadow-sm" 
                 width="50" 
                 alt="Avatar">
+                @endif
             <!-- Teks -->
             <div>
-                <h5 class="mt-1 mb-0">Alexander Mac</h5>
-                <p class="text-muted mb-0" style="font-size: 0.875rem;">Panitia</p>
+                <h5 class="mt-1 mb-0">{{$data['name']}}</h5>
+                <p class="text-muted mb-0" style="font-size: 0.875rem;">{{$data['jabatan']}}</p>
             </div>
         </div>
         <!-- Bagian Kanan -->
         <div>
             <a href="tel:{{$data['no_hp']}}" 
-                class="btn btn-sm btn-light shadow-sm rounded-circle me-2">
+                class="btn btn-sm btn-primary shadow-sm rounded-circle me-2">
                 <i class="fa fa-phone"></i>
             </a>
             <a href="https://wa.me/{{$data['no_hp']}}" 
