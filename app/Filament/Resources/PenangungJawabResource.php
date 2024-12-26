@@ -22,17 +22,16 @@ class PenangungJawabResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Pemondokan';
-    protected static ?string $navigationLabel = 'Penangung Jawab';
-    protected static ?string $pluralModelLabel = 'Penangung Jawab';
-    protected ?string $heading = 'Penangung Jawab';
+    protected static ?string $navigationLabel = 'Penanggung Jawab';
+    protected static ?string $pluralModelLabel = 'Penanggung Jawab';
+    protected ?string $heading = 'Penanggung Jawab';
     protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Section::make('Rate limiting')
-                    ->description('Prevent abuse by limiting the number of requests per period')
+                Section::make('Penanggung Jawab Pemondokan')
                     ->schema([
                         Forms\Components\Select::make('pemondokan_id')
                             ->label('Nama Pemondokan')
@@ -40,18 +39,18 @@ class PenangungJawabResource extends Resource
                             ->options(Pemondokan::all()->where('publish', 1)->pluck('title', 'id'))
                             ->required(),
                         Repeater::make('image')
-                            ->label('Panitia')
-                            ->addActionLabel('Tambah Panitia')
+                            ->label('Penanggung Jawab')
+                            ->addActionLabel('Tambah Penanggung Jawab')
                             ->maxItems(8)
                             ->schema([
                                 Forms\Components\TextInput::make('name')
-                                    ->label('Nama Panitia'),
+                                    ->label('Nama Penanggung Jawab'),
                                 Forms\Components\TextInput::make('jabatan'),
                                 Forms\Components\TextInput::make('no_hp')
                                     ->label('Nomor HP')
                                     ->helperText('Nomor wajib awal +62'),
                                 Forms\Components\FileUpload::make('panitia')
-                                    ->label('Foto Panitia')
+                                    ->label('Foto Penanggung Jawab')
                                     ->image()
                                     ->reorderable()
                                     ->appendFiles()
