@@ -78,7 +78,8 @@ data-menu-width="400">
             <h1 class="mb-n1 mt-2">{{ $direktori->title }}</h1>
             <p class="font-10 mb-1 pb-1"><i class="fa fa-map-marker-alt me-2"></i>{{ $direktori->alamat}}</p>
             <p class="font-10 mb-1 pb-1"><i class="fa fa-phone me-2"></i>{{ $direktori->no_telp}}</p>
-            <a href="{{$direktori->gmap}}" class="float-end btn btn-s bg-highlight rounded-xl shadow-xl text-uppercase font-900 font-11 mb-3">View on Map</a>
+            <a href="{{$direktori->link_gmap}}" class="float-end btn btn-s bg-highlight rounded-xl shadow-xl text-uppercase font-900 font-11 mb-3">View on Map</a>
+       
         </div>
 
     </div>
