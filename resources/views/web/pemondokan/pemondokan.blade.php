@@ -1,6 +1,8 @@
 @extends('app.home')
 @section('content')
 
+
+
 <div class="page-content">
 
 <div class="page-title page-title-small dropdown">
@@ -16,7 +18,7 @@
     <!--Menu Warning-->
     <!---------------->
     <!---------------->
-  
+
     <!---------------->
     <!---------------->
 
@@ -210,21 +212,28 @@
                    Tampilan Gambar Fasilitas Pemondokan {{ $pemondokan->title }}
                 </p>
                 <div class="row text-center row-cols-3 mb-0">
-                                     @php
-                                        $dataArray2 = $pemondokan->image;
-                                    @endphp
-                 @php $counter1 = 1; @endphp
-                                    @foreach ($dataArray2 as $value)
+                @php
 
-                <a class="col" data-gallery="gallery-{{ $counter1 }}" href="{{ asset('storage') }}/{{$value['fasilitas']}}"
-                        title="{{$value['name']}}">
-                        <img src="{{ asset('storage') }}/{{$value['fasilitas']}}"
-                            data-src="{{ asset('storage') }}/{{$value['fasilitas']}}"
-                            class="preload-img img-fluid rounded-xs" alt="img">
-                        <p class="font-600 pb-1">{{$value['name']}}</p>
-                    </a>
-                    @php $counter1++; @endphp
-                    @endforeach
+    $dataArray2 = $pemondokan->image;
+
+@endphp
+
+@foreach ($dataArray2 as $index => $value)
+
+    <a class="col" data-gallery="gallery-{{ $loop->iteration }}"
+        href="{{ asset('storage/' . $value['fasilitas']) }}"
+        title="{{ $value['name'] }}">
+
+
+
+        <img src="{{ asset('storage/' . $value['fasilitas']) }}"
+             data-src="{{ asset('storage/' . $value['fasilitas']) }}"
+             class="preload-img img-fluid rounded-xs" alt="img">
+        <p class="font-600 pb-1">{{ $value['name'] }}</p>
+
+
+    </a>
+@endforeach
                 </div>
             </div>
         </div>
@@ -259,52 +268,37 @@
 
                              @php $counter = 1; @endphp
                                     @foreach ($dataArray as $data)
-                                        <div data-splide='{"autoplay":false}' class="splide single-slider slider-no-arrows slider-no-dots"
-                                            id="user-slider-{{ $counter }}">
-                                            <div class="splide__track">
-                                                <div class="splide__list">
-                                                    <div class="splide__slide mx-3">
-                                                        <div class="d-flex">
-                                                            <div>
-                                                                @if ($data['panitia'])
-                                                                    <img src="{{ asset('storage') }}/{{ $data['panitia'] }}"
-                                                                        class="me-3 rounded-circle bg-fade-red-light shadow-l" width="50">
-                                                                @else
+                                   
+                                    <div class="splide__slide mx-3">
+    <div class="d-flex align-items-center justify-content-between">
+        <!-- Bagian Kiri -->
+        <div class="d-flex align-items-center">
+            <!-- Gambar -->
+            <img src="{{ asset('frontend') }}/images/avatars/2s.png" 
+                class="me-3 rounded-circle shadow-sm" 
+                width="50" 
+                alt="Avatar">
+            <!-- Teks -->
+            <div>
+                <h5 class="mt-1 mb-0">Alexander Mac</h5>
+                <p class="text-muted mb-0" style="font-size: 0.875rem;">Panitia</p>
+            </div>
+        </div>
+        <!-- Bagian Kanan -->
+        <div>
+            <a href="tel:{{$data['no_hp']}}" 
+                class="btn btn-sm btn-light shadow-sm rounded-circle me-2">
+                <i class="fa fa-phone"></i>
+            </a>
+            <a href="https://wa.me/{{$data['no_hp']}}" 
+                class="btn btn-sm btn-success shadow-sm rounded-circle">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+</div>
 
-                                                                    <img src="{{ asset('frontend') }}/images/avatars/1s.png"
-                                                                        class="me-3 rounded-circle bg-fade-red-light shadow-l" width="50">
-                                                                @endif
-
-
-
-                                                            </div>
-                                                            <div>
-                                                                <h5 class="mt-1 mb-0">{{$data['name']}}</h5>
-                                                                <p class="font-10 mt-n1 color-red-dark">{{$data['jabatan']}}</p>
-                                                            </div>
-                                                            <div class="ms-auto"><span class="slider-next badge bg-red-dark mt-2 p-2 font-8">TAP
-                                                                    FOR MORE</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="splide__slide mx-3">
-                                                        <div class="d-flex">
-                                                            <div>
-                                                                <h5 class="mt-1 mb-0">{{$data['name']}}</h5>
-                                                                <p class="font-10 mt-n1 color-red-dark">{{$data['jabatan']}}</p>
-                                                            </div>
-                                                            <div class="ms-auto">
-                                                                <a href="tel:{{$data['no_hp']}}"
-                                                                    class="icon icon-xs rounded-circle shadow-l bg-phone"><i
-                                                                        class="fa fa-phone"></i></a>
-                                                                <a href="https://wa.me/{{$data['no_hp']}}"
-                                                                    class="icon icon-xs rounded-circle shadow-l bg-facebook me-2 ms-2"><i
-                                                                        class="fab fa-whatsapp"></i></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                               
 
                                         <div class="divider mt-3"></div>
                                         @php $counter++; @endphp
@@ -329,5 +323,8 @@
     </div>
 
 @endforeach
+<script>
+    document.querySelector('.gnext.gbtn').style.display = 'none';
 
+    </script>
 @endsection
