@@ -2,6 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Foto;
+use App\Models\Video;
+use App\Models\Berita;
+use App\Models\Header;
+
+use App\Models\Halaman;
+use App\Models\ContactUs;
 use App\Models\Direktori;
 use App\Models\Pemondokan;
 use App\Models\Pengumuman;
@@ -28,8 +35,13 @@ class HomeController extends Controller
 
     public function beranda()
     {
-
-        return view('web.beranda');
+        $header =  Header::where('publish', 1)->get();
+        $kontak =  ContactUs::first();
+        $halaman = Halaman::where('publish', 1)->get();
+        $berita = Berita::where('publish', 1)->latest()->simplePaginate(3);
+        $foto = Foto::latest()->first();
+        $video = Video::first();
+        return view('web.beranda', compact('header', 'kontak', 'halaman', 'berita', 'foto', 'video'));
     }
 
 

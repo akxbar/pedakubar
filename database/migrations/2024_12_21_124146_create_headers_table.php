@@ -15,6 +15,8 @@ return new class extends Migration {
             $table->string('title')->nullable();
             $table->string('image')->nullable();
             $table->text('body')->nullable();
+            $table->boolean('publish')->default(true);
+
             $table->timestamps();
         });
     }
