@@ -96,9 +96,9 @@
                         <div class="content">
 
                             <div class="list-group list-custom-small">
-                                <a href="tel:+1 234 567 890">
+                                <a href="tel:+681312121212">
                                     <i class="fa font-18 fa-phone color-phone"></i>
-                                    <span>+1 234 567 8900</span>
+                                    <span>+62 234 567 8900</span>
                                     <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO
                                         CALL</span>
                                     <i class="fa fa-angle-right"></i>

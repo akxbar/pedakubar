@@ -88,7 +88,7 @@ data-menu-width="400">
     <div class="content" id="tab-group-2">
         <div class="tab-controls tabs-small tabs-rounded" data-highlight="bg-blue-dark">
             <a href="#" data-active data-bs-toggle="collapse" data-bs-target="#tab-5">Informasi</a>
-            <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-7">Foto</a>
+            {{-- <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-7">Foto</a> --}}
         </div>
         <div class="clearfix mb-3"></div>
         <div data-bs-parent="#tab-group-2" class="collapse show" id="tab-5">
@@ -100,7 +100,7 @@ data-menu-width="400">
                 </div>
             </div>
         </div>
-
+{{-- 
         <div data-bs-parent="#tab-group-2" class="collapse" id="tab-7">
             <div class="card card-style">
                 <div class="content mb-3">
@@ -119,7 +119,7 @@ data-menu-width="400">
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
 
