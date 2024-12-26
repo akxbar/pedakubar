@@ -419,7 +419,6 @@ data-menu-width="400">
     </div> --}}
     <div class="content mb-0">
         <div class="float-start">
-            <div class="divider divider-margins"></div>
             <div class="mt-0">
                 <img src="{{ asset('frontend') }}/images/pictures/11w.jpg" class="img-fluid rounded-sm shadow-xl">
             </div>
