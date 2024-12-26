@@ -69,8 +69,7 @@ class BeritaResource extends Resource
                                     ->options(Kategori::all()->where('active', 1)->pluck('title', 'id'))
                                     ->required(),
                                 Forms\Components\Hidden::make('user_id')
-                                    ->default(auth()->user()->id)
-                                ,
+                                    ->default(auth()->user()->id),
 
                                 Forms\Components\Toggle::make('publish')
                                     ->default(true)

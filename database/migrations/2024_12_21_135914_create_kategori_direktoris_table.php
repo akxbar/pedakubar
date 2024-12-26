@@ -12,7 +12,10 @@ return new class extends Migration {
     {
         Schema::create('kategori_direktoris', function (Blueprint $table) {
             $table->id();
+            $table->integer('sort')->nullable();
             $table->string('title');
+            $table->string('icon')->nullable();
+            $table->string('color')->nullable();
             $table->boolean('active')->default(true);
             $table->timestamps();
         });

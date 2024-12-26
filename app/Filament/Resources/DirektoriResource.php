@@ -9,6 +9,7 @@ use App\Models\Direktori;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use App\Models\KategoriDirektori;
+use Filament\Forms\Components\Repeater;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Builder;
@@ -40,6 +41,8 @@ class DirektoriResource extends Resource
                                 Forms\Components\TextInput::make('title')
                                     ->label('Nama Tempat')
                                     ->required(),
+                                Forms\Components\TextInput::make('logo')
+                                    ->label('Logo Title'),
                                 Forms\Components\Select::make('kategori_direktori_id')
                                     ->label('Kategori')
                                     ->options(KategoriDirektori::all()->where('active', 1)->pluck('title', 'id'))
@@ -76,15 +79,20 @@ class DirektoriResource extends Resource
                                     ->helperText('Gambar Max 1MB, Setiap Gambar di Size Kecilkan Dulu')
                                     ->maxSize(1024),
 
-                                Forms\Components\FileUpload::make('multi_image')
-                                    ->label('Multi Gambar Fasilitas')
-                                    ->multiple()
-                                    ->image()
-                                    ->directory('multi_direktori')
-
-                                    ->helperText('Uplod total Gambar Max 2MB, Setiap Gambar di Size Kecilkan Dulu')
-                                    ->maxSize(2024),
-
+                                    Repeater::make('multi_image')
+                                    ->label('Fasilitas')
+                                    ->addActionLabel('Add image')
+                                    ->maxItems(6)
+                                    ->schema([
+                                        Forms\Components\TextInput::make('title'),
+                                        Forms\Components\FileUpload::make('image')
+                                            ->image()
+                                            ->reorderable()
+                                            ->appendFiles()
+                                            ->helperText('max 500kb')
+                                            ->maxSize(500)
+                                            ->directory('multi_direktori'),
+                                    ]),
 
                                 Forms\Components\Toggle::make('publish')
                                     ->default(true)
@@ -112,7 +120,7 @@ class DirektoriResource extends Resource
                 Tables\Columns\TextColumn::make('kategori_direktori.title'),
 
                 Tables\Columns\ToggleColumn::make('publish'),
-            ])
+            ])->defaultSort('id', 'desc')
             ->filters([
                 //
             ])

@@ -32,6 +32,29 @@ class KategoriDirektoriResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
+                    Forms\Components\TextInput::make('icon')
+                    ->maxLength(255),
+                    Forms\Components\Select::make('color')
+                    ->options([
+                        'bg-blue-500' => 'Biru',
+                        'bg-green-500' => 'Hijau',
+                        'bg-yellow-500' => 'Kuning',
+                        'bg-red-500' => 'Merah',
+                        'bg-purple-500' => 'Ungu',
+                        'bg-pink-500' => 'Pink',
+                        'bg-indigo-500' => 'Indigo',
+                        'bg-cyan-500' => 'Cyan',
+                        'bg-gray-500' => 'Abu-abu',
+                        'bg-black' => 'Hitam',
+                        'bg-white' => 'Putih',
+                    ]),
+                    Forms\Components\Hidden::make('sort')
+                    ->default(function (?string $operation) {
+                        if ($operation === 'create') {
+                            return KategoriDirektori::max('sort') + 1;
+                        }
+                        return null; // Or some other default value for non-create operations
+                    }),
 
             ]);
     }
@@ -43,7 +66,7 @@ class KategoriDirektoriResource extends Resource
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\ToggleColumn::make('active'),
-            ])->defaultSort('id', 'desc')
+            ])
 
             ->filters([
                 //
@@ -55,7 +78,11 @@ class KategoriDirektoriResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     // Tables\Actions\DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])->paginated(false)
+
+            ->defaultSort('sort', 'asc')
+
+            ->reorderable('sort');
     }
 
     public static function getRelations(): array

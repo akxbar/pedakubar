@@ -168,7 +168,7 @@ if (!function_exists('getTimePeriod')) {
 }
 
 
-if (!function_exists('getUserId(')) {
+if (!function_exists('getUserId')) {
 
     function getUserId($userId)
     {

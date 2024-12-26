@@ -21,6 +21,7 @@ Route::get('/beranda', [HomeController::class, 'beranda'])->name('beranda');
 
 
 Route::get('/pemondokan', [HomeController::class, 'pemondokan'])->name('pemondokan');
+Route::get('/direktori', [HomeController::class, 'direktori'])->name('direktori');
 
 
 //
@@ -54,9 +55,9 @@ Route::get('/event', function () {
 //     return view('frontend.pemondokan.pemondokan');
 // })->name(name: 'pemondokan');
 
-Route::get('/direktori', function () {
-    return view('frontend.direktori.direktori');
-})->name(name: 'direktori');
+// Route::get('/direktori', function () {
+//     return view('frontend.direktori.direktori');
+// })->name(name: 'direktori');
 
 
 //halaman

@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Direktori;
 use App\Models\Pemondokan;
-use App\Models\PenangungJawab;
 use App\Models\Pengumuman;
 use Illuminate\Http\Request;
+use App\Models\PenangungJawab;
 use App\Models\TempatPemondokan;
+use App\Models\KategoriDirektori;
 
 class HomeController extends Controller
 {
@@ -41,6 +43,16 @@ class HomeController extends Controller
         // dd($lokasis);
 
         return view('web.pemondokan.pemondokan', compact('lokasis', 'pemondokans', 'penangungjawabs'));
+    }
+
+
+
+    public function direktori()
+    {
+        $kategoris = KategoriDirektori::where('active', 1)->orderBy('sort','asc')->get();
+
+        $direktoris = Direktori::where('publish', 1)->orderBy('id','asc')->get();
+        return view('web.direktori.direktori', compact('kategoris','direktoris'));
     }
 
 }

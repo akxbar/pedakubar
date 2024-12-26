@@ -13,12 +13,12 @@ return new class extends Migration {
         Schema::create('direktoris', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('logo')->nullable();
             $table->string('kategori_direktori_id');
             $table->text('body')->nullable();
             $table->string('image')->nullable();
             $table->text('multi_image')->nullable();
             $table->boolean('publish')->default(true);
-
             $table->string('alamat')->nullable();
             $table->string('no_telp')->nullable();
             $table->string('link_gmap')->nullable();

@@ -47,6 +47,8 @@ class PemondokanResource extends Resource
                                 Forms\Components\TextInput::make('title')
                                     ->label('Nama Pemondokan')
                                     ->required(),
+                                    Forms\Components\TextInput::make('title')
+                                    ->label('Nama Pemondokan'),
                                 Forms\Components\TextInput::make('alamat')
                                 ->label('Jalan'),
                                 Forms\Components\TextInput::make('nama_kampung'),
