@@ -130,7 +130,7 @@
                     <p>
                     {!! $isi !!}..
                     </p>
-                    <a href="{{ route('sambutan') }}"
+                    <a href="{{ route('page',[$item->id]) }}"
                         class="btn btn-m btn-full bg-highlight font-900 text-uppercase rounded-s">Read More</a>
                 </div>
             </div>

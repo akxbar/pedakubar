@@ -68,4 +68,11 @@ class HomeController extends Controller
         return view('web.direktori.direktori', compact('kategoris','direktoris'));
     }
 
+
+    public function page($id)
+    {
+
+        $post = Halaman::where('id', $id)->first();
+        return view('web.page', compact('post'));
+    }
 }
