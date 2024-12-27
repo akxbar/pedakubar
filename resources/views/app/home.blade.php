@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
-    <title>Event Distan Kubar</title>
+    <title>PEDA KTNA KALTIM XI Tahun 2025</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend') }}/styles/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend') }}/styles/style.css">
     <link rel="stylesheet" class="page-highlight" type="text/css"
@@ -40,7 +40,7 @@
 
         <!-- Be sure this is on your main visiting page, for example, the index.html page-->
         <!-- Install Prompt for Android -->
-        <div id="menu-install-pwa-android" class="menu menu-box-bottom menu-box-detached rounded-l"
+        {{-- <div id="menu-install-pwa-android" class="menu menu-box-bottom menu-box-detached rounded-l"
             data-menu-height="350" data-menu-effect="menu-parallax">
             <div class="boxed-text-l mt-4">
                 <img class="rounded-l mb-3" src="{{ asset('frontend') }}/app/icons/icon-128x128.png" alt="img"
@@ -58,7 +58,7 @@
                     later</a>
                 <div class="clear"></div>
             </div>
-        </div>
+        </div> --}}
     </div>
 
 
