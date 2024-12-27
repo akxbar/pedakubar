@@ -184,10 +184,16 @@ if (!function_exists('getWarna')) {
 
         $array = [
             'bg-blue-dark' => 'Biru',
+            'bg-blue-light' => 'Biru Muda',
             'bg-mint-dark' => 'Hijau Tua',
             'bg-green-dark' => 'Hiaju Muda',
             'bg-yellow-dark' => 'Kuning',
             'bg-orange-dark' => 'Oranye',
+            'bg-orange-light' => 'Oranye Muda',
+            'bg-yellow-light' => 'Kuning Muda',
+            'bg-green-light' => 'Hijau Muda',
+            'bg-mint-light' => 'Hijau Tua Muda',
+
         ];
         return $array?? null;
     }
@@ -219,6 +225,7 @@ if (!function_exists('getIcon')) {
 		'fa-house'               => 'Rumah',
 		'fa-location-dot'        => 'Lokasi',
         'fa-plane'               => 'Pesawat',
+        'fa-calendar'            => 'Kalender',
         ];
         return $array?? null;
     }

@@ -5,11 +5,14 @@ namespace App\Filament\Resources;
 use Filament\Forms;
 use Filament\Tables;
 use App\Models\Event;
+use App\Models\Kategori;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Filament\Forms\Components\Repeater;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Filament\Forms\Components\TimePicker;
 use Illuminate\Database\Eloquent\Builder;
 use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use App\Filament\Resources\EventResource\Pages;
@@ -37,17 +40,26 @@ class EventResource extends Resource
                             ->schema([
                                 Forms\Components\TextInput::make('title')
                                     ->required(),
+                                    Forms\Components\Select::make('icon')
+                                    ->label('Icon Title')
+                                    ->required()
+                                    ->options(getIcon()),
+
+                                Forms\Components\Select::make('kategori_id')
+                                    ->label('Kategori')
+                                    ->required()
+                                    ->options(Kategori::all()->where('active', 1)->pluck('title', 'id')),
                                 TinyEditor::make('body')
                                     ->fileAttachmentsDisk('public')
                                     ->fileAttachmentsVisibility('public')
                                     ->fileAttachmentsDirectory('event')
                                     ->profile('simpel')
                                     ->ltr()
-                                    ->columnSpan('full')
-                                    ->required(),
+                                    ->columnSpan('full'),
+
                                 Forms\Components\TextInput::make('tempat')->label('Nama Tempat'),
                                 Forms\Components\TextInput::make('alamat'),
-
+                                Forms\Components\TextInput::make('narsum')->label('Narasumber'),
                                 Forms\Components\TextInput::make('link_gmap')
                             ]),
                     ])
@@ -67,11 +79,33 @@ class EventResource extends Resource
                                     ->default(true)
                                     ->inline(),
 
-                                Forms\Components\DateTimePicker::make('tanggal')
+                                Forms\Components\DatePicker::make('tanggal')
 
                                     // ->default(now())
-                                    ->label('Tanggal Waktu Kegiatan')
-                                ,
+                                    ->label('Tanggal Waktu Kegiatan'),
+
+                                    TimePicker::make('begin')
+                                    ->label('Waktu Mulai')
+                                    ->prefixIcon('heroicon-m-check-circle')
+                                    ->prefixIconColor('success'),
+
+                                    TimePicker::make('end')
+                                    ->label('Waktu Selesai')
+                                    ->prefixIcon('heroicon-m-check-circle')
+                                    ->prefixIconColor('success'),
+
+                                    Repeater::make('materi')
+                                    ->label('Materi Event')
+                                    ->addActionLabel('Add Materi')
+                                    // ->maxItems(6)
+                                    ->schema([
+                                        Forms\Components\TextInput::make('title'),
+                                        Forms\Components\FileUpload::make('file')
+                                            ->appendFiles()
+                                            // ->helperText('max 500kb')
+                                            ->directory('materi'),
+                                    ]),
+
                             ]),
                     ])
                     ->columnSpan(['lg' => 1]),
@@ -93,9 +127,6 @@ class EventResource extends Resource
                     ->dateTime()
                     ->sortable(),
                 Tables\Columns\ToggleColumn::make('publish'),
-
-
-
 
             ])->defaultSort('id', 'desc')
             ->filters([
@@ -134,8 +165,8 @@ class EventResource extends Resource
     {
         return [
             'index' => Pages\ListEvents::route('/'),
-            // 'create' => Pages\CreateEvent::route('/create'),
-            // 'edit' => Pages\EditEvent::route('/{record}/edit'),
+            'create' => Pages\CreateEvent::route('/create'),
+            'edit' => Pages\EditEvent::route('/{record}/edit'),
         ];
     }
 }

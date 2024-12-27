@@ -13,7 +13,8 @@ return new class extends Migration {
         Schema::create('kategoris', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->boolean('active')->default(true);
+            $table->string('color')->nullable();
+            $table->boolean('publish')->default(true);
             $table->timestamps();
         });
     }

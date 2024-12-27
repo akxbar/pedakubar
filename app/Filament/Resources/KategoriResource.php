@@ -20,12 +20,12 @@ class KategoriResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
 
-    protected static ?string $navigationGroup = 'Beranda';
-    protected static bool $shouldRegisterNavigation = false;
-    protected static ?string $navigationLabel = 'Kategori Berita';
-    protected static ?string $pluralModelLabel = 'Kategori Berita';
-    protected ?string $heading = 'Kategori Berita';
-    protected static ?int $navigationSort = 5;
+    protected static ?string $navigationGroup = 'Event';
+    // protected static bool $shouldRegisterNavigation = false;
+    protected static ?string $navigationLabel = 'Kategori Event';
+    protected static ?string $pluralModelLabel = 'Kategori Event';
+    protected ?string $heading = 'Kategori Event';
+    protected static ?int $navigationSort = 2;
 
 
     public static function form(Form $form): Form
@@ -36,7 +36,9 @@ class KategoriResource extends Resource
                     ->required()
                     ->maxLength(255),
 
-
+                    Forms\Components\Select::make('color')
+                    ->required()
+                    ->options(getWarna()),
             ]);
     }
 
@@ -46,7 +48,8 @@ class KategoriResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\ToggleColumn::make('active'),
+                Tables\Columns\ToggleColumn::make('publish')
+                    ->label('Publish'),
 
             ])->defaultSort('id', 'desc')
             ->filters([

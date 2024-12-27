@@ -13,13 +13,21 @@ return new class extends Migration {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->integer('kategori_id');
+            $table->integer('icon')->nullable();
             $table->text('body')->nullable();
             $table->string('image')->nullable();
             $table->dateTime('tanggal')->nullable();
-            $table->boolean('publish')->default(true);
+            $table->time("begin")->nullable();
+            $table->time("end")->nullable();
+
             $table->string('tempat')->nullable();
             $table->string('alamat')->nullable();
+            $table->string('narsum')->nullable();
+
             $table->string('link_gmap')->nullable();
+            $table->text('materi')->nullable();
+            $table->boolean('publish')->default(true);
             $table->timestamps();
         });
     }

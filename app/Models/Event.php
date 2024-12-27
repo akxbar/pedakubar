@@ -11,5 +11,6 @@ class Event extends Model
 
     protected $casts = [
         'tanggal' => 'datetime',
+        'materi' => 'array',
     ];
 }
