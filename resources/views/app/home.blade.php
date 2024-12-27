@@ -61,8 +61,6 @@
         </div> --}}
     </div>
 
-
-
     <script type="text/javascript" src="{{ asset('frontend') }}/scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{ asset('frontend') }}/scripts/custom.js"></script>
 
