@@ -24,6 +24,10 @@ Route::get('/pemondokan', [HomeController::class, 'pemondokan'])->name('pemondok
 Route::get('/direktori', [HomeController::class, 'direktori'])->name('direktori');
 
 
+Route::get('/page/{id}',[HomeController::class, 'page'])->name(name: 'page');
+Route::get('/selengkapya/{id}',[HomeController::class, 'selengkapnya'])->name(name: 'selengkapnya');
+Route::get('/arsip-berita',[HomeController::class, 'arsipberita'])->name(name: 'arsipberita');
+
 //
 
 
@@ -61,9 +65,9 @@ Route::get('/event', function () {
 
 
 //halaman
-Route::get('/sambutan', function () {
-    return view('frontend.sambutan');
-})->name(name: 'sambutan');
+// Route::get('/sambutan', function () {
+//     return view('frontend.sambutan');
+// })->name(name: 'sambutan');
 
 Route::get('/tatib', function () {
     return view('frontend.tatib');

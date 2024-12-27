@@ -35,13 +35,14 @@ class HomeController extends Controller
 
     public function beranda()
     {
-        $header =  Header::where('publish', 1)->get();
+        $slides =  Header::where('publish', 1)->get();
         $kontak =  ContactUs::first();
         $halaman = Halaman::where('publish', 1)->get();
         $berita = Berita::where('publish', 1)->latest()->simplePaginate(3);
         $foto = Foto::latest()->first();
         $video = Video::first();
-        return view('web.beranda', compact('header', 'kontak', 'halaman', 'berita', 'foto', 'video'));
+        // dd($kontak);
+        return view('web.beranda', compact('slides', 'kontak', 'halaman', 'berita', 'foto', 'video'));
     }
 
 
@@ -67,4 +68,30 @@ class HomeController extends Controller
         return view('web.direktori.direktori', compact('kategoris','direktoris'));
     }
 
+
+    public function page($id)
+    {
+
+        $post = Halaman::where('publish', 1)->where('id', $id)->first();
+        return view('web.page', compact('post'));
+    }
+
+
+    public function selengkapnya($id)
+    {
+
+        $post = Berita::where('publish', 1)->where('id', $id)->first();
+        return view('web.selengkapnya', compact('post'));
+    }
+
+
+
+    public function arsipberita()
+    {
+        $posts = Berita::where('publish', 1)->latest()->paginate(10);
+        return view('web.arsipberita', compact('posts'));
+    }
 }
+
+
+

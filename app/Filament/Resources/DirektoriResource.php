@@ -78,24 +78,24 @@ class DirektoriResource extends Resource
                                     ->directory('direktori')
 
                                     ->imageResizeMode('cover')
-                                    ->imageResizeTargetWidth('440')
-                                    ->helperText('Gambar Max 1MB, Setiap Gambar di Size Kecilkan Dulu')
-                                    ->maxSize(1024),
 
-                                    Repeater::make('multi_image')
-                                    ->label('Fasilitas')
-                                    ->addActionLabel('Add image')
-                                    ->maxItems(6)
-                                    ->schema([
-                                        Forms\Components\TextInput::make('title'),
-                                        Forms\Components\FileUpload::make('image')
-                                            ->image()
-                                            ->reorderable()
-                                            ->appendFiles()
-                                            ->helperText('max 500kb')
-                                            ->maxSize(500)
-                                            ->directory('multi_direktori'),
-                                    ]),
+                                    ->helperText('Gambar Max 500kb, Setiap Gambar di Size Kecilkan Dulu')
+                                    ->maxSize(500),
+
+                                    // Repeater::make('multi_image')
+                                    // ->label('Fasilitas')
+                                    // ->addActionLabel('Add image')
+                                    // ->maxItems(6)
+                                    // ->schema([
+                                    //     Forms\Components\TextInput::make('title'),
+                                    //     Forms\Components\FileUpload::make('image')
+                                    //         ->image()
+                                    //         ->reorderable()
+                                    //         ->appendFiles()
+                                    //         ->helperText('max 500kb')
+                                    //         ->maxSize(500)
+                                    //         ->directory('multi_direktori'),
+                                    // ]),
 
                                 Forms\Components\Toggle::make('publish')
                                     ->default(true)

@@ -220,7 +220,7 @@
 
 @foreach ($dataArray2 as $index => $value)
 
-    <a class="col" data-gallery="gallery-{{ $loop->iteration }}"
+    <a class="col" data-gallery="gallery1" data-draggable="false"
         href="{{ asset('storage/' . $value['fasilitas']) }}"
         title="{{ $value['name'] }}">
 
@@ -268,21 +268,21 @@
 
                              @php $counter = 1; @endphp
                                     @foreach ($dataArray as $data)
-                                   
+
                                     <div class="splide__slide mx-3">
     <div class="d-flex align-items-center justify-content-between">
         <!-- Bagian Kiri -->
         <div class="d-flex align-items-center">
             <!-- Gambar -->
              @if($data['panitia'])
-            <img src="{{ asset('storage/' . $data['panitia']) }}" 
-                class="me-3 rounded-circle shadow-sm" 
-                width="50" 
+            <img src="{{ asset('storage/' . $data['panitia']) }}"
+                class="me-3 rounded-circle shadow-sm"
+                width="50"
                 alt="Avatar">
             @else
-            <img src="{{ asset('frontend') }}/images/avatars/2s.png" 
-                class="me-3 rounded-circle shadow-sm" 
-                width="50" 
+            <img src="{{ asset('frontend') }}/images/avatars/2s.png"
+                class="me-3 rounded-circle shadow-sm"
+                width="50"
                 alt="Avatar">
                 @endif
             <!-- Teks -->
@@ -293,11 +293,11 @@
         </div>
         <!-- Bagian Kanan -->
         <div>
-            <!-- <a href="tel:{{$data['no_hp']}}" 
+            <!-- <a href="tel:{{$data['no_hp']}}"
                 class="btn btn-sm btn-primary shadow-sm rounded-circle me-2">
                 <i class="fa fa-phone"></i>
             </a> -->
-            <a href="https://wa.me/{{$data['no_hp']}}" 
+            <a href="https://wa.me/{{$data['no_hp']}}"
                 class="btn btn-sm btn-success shadow-sm rounded-circle">
                 <i class="fab fa-whatsapp"></i>
             </a>
@@ -305,7 +305,7 @@
     </div>
 </div>
 
-                                               
+
 
                                         <div class="divider mt-3"></div>
                                         @php $counter++; @endphp

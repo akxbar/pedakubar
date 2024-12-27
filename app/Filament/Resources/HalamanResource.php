@@ -44,8 +44,8 @@ class HalamanResource extends Resource
                                     ->fileAttachmentsDirectory('halaman')
                                     ->profile('simpel')
                                     ->ltr()
-                                    ->columnSpan('full')
-                                    ->required(),
+                                    ->columnSpan('full'),
+
                             ]),
                     ])
                     ->columnSpan(['lg' => 2]),
@@ -56,10 +56,10 @@ class HalamanResource extends Resource
                                 Forms\Components\FileUpload::make('image')
                                     ->image()
                                     ->directory('halaman')
-                                    ->helperText('Tidak Boleh Lebih dari 1MB')
+                                    ->helperText('Tidak Boleh Lebih dari 500kb')
                                     ->imageResizeMode('cover')
                                     ->imageResizeTargetWidth('800')
-                                    ->maxSize(1024),
+                                    ->maxSize(500),
 
 
 

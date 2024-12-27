@@ -12,6 +12,7 @@ return new class extends Migration {
     {
         Schema::create('fotos', function (Blueprint $table) {
             $table->id();
+            $table->integer('kat_id')->nullable();
             $table->string('title')->nullable();
             $table->string('ket')->nullable();
             $table->text('image')->nullable();
