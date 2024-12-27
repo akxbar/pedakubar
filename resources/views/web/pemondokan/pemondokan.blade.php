@@ -228,7 +228,7 @@
 
         <img src="{{ asset('storage/' . $value['fasilitas']) }}"
              data-src="{{ asset('storage/' . $value['fasilitas']) }}"
-             class="preload-img img-fluid rounded-xs" alt="img">
+             class="preload-img img-fluid rounded-xs" loading="lazy" alt="img">
         <p class="font-600 pb-1">{{ $value['name'] }}</p>
 
 
@@ -330,8 +330,5 @@
     </div>
 
 @endforeach
-<script>
-    document.querySelector('.gnext.gbtn').style.display = 'none';
 
-    </script>
 @endsection
