@@ -38,14 +38,15 @@ class VideoResource extends Resource
                 Forms\Components\TextInput::make('link')
                     ->label('Link Youtube')
                     ->required(),
-                Forms\Components\TextInput::make('ket')->label('Keterangan'),
-                // Forms\Components\FileUpload::make('image')
-                //     ->image()
-                //     ->helperText('Tidak Boleh Lebih dari 1MB')
-                //     ->directory('video')
-                //     ->imageResizeMode('cover')
-                //     ->imageResizeTargetWidth('750')
-                //     ->maxSize(1024),
+                // Forms\Components\TextInput::make('ket')->label('Keterangan'),
+                Forms\Components\FileUpload::make('image')
+                ->label('Gambar Beranda Youtube')
+                    ->image()
+                    ->required()
+                    ->helperText('Tidak Boleh Lebih dari 500kb')
+                    ->directory('video')
+                    ->imageResizeMode('cover')
+                    ->maxSize(500),
 
             ]);
     }
@@ -74,16 +75,16 @@ class VideoResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make()
-                    ->requiresConfirmation()
-                    ->before(function (Model $record) {
-                        if ($record->image == null) {
-                            return;
-                        } else {
+                // Tables\Actions\DeleteAction::make()
+                //     ->requiresConfirmation()
+                //     ->before(function (Model $record) {
+                //         if ($record->image == null) {
+                //             return;
+                //         } else {
 
-                            Storage::disk('public')->delete($record->image);
-                        }
-                    })
+                //             Storage::disk('public')->delete($record->image);
+                //         }
+                //     })
 
             ])
             ->bulkActions([
