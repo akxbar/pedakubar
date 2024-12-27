@@ -222,4 +222,41 @@ if (!function_exists('getIcon')) {
         ];
         return $array?? null;
     }
+
+
+    if (!function_exists('getDay')) {
+
+        function getDay()
+        {
+
+            $array = [
+                '1' => 'Day 1',
+                '2' => 'Day 2',
+                '3' => 'Day 3',
+                '4' => 'Day 4',
+                '5' => 'Day 5',
+                '6' => 'Day 6',
+            ];
+            return $array?? null;
+        }
+    }
+
+
+    if (!function_exists('getDay1')) {
+
+        function getDay1($data)
+        {
+
+            $array = [
+                '1' => 'Day 1',
+                '2' => 'Day 2',
+                '3' => 'Day 3',
+                '4' => 'Day 4',
+                '5' => 'Day 5',
+                '6' => 'Day 6',
+            ];
+            return $array[$data]?? null;
+        }
+
+    }
 }

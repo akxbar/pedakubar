@@ -72,7 +72,26 @@ class HomeController extends Controller
     public function page($id)
     {
 
-        $post = Halaman::where('id', $id)->first();
+        $post = Halaman::where('publish', 1)->where('id', $id)->first();
         return view('web.page', compact('post'));
     }
+
+
+    public function selengkapnya($id)
+    {
+
+        $post = Berita::where('publish', 1)->where('id', $id)->first();
+        return view('web.selengkapnya', compact('post'));
+    }
+
+
+
+    public function arsipberita()
+    {
+        $posts = Berita::where('publish', 1)->latest()->paginate(10);
+        return view('web.arsipberita', compact('posts'));
+    }
 }
+
+
+

@@ -34,7 +34,11 @@ class FotoResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')->required(),
-                Forms\Components\TextInput::make('ket')->label('Keterangan'),
+
+                Forms\Components\Select::make('kat_id')
+                ->label('Kategori Hari')
+                ->required()
+                ->options(getDay()),
                 Forms\Components\FileUpload::make('image')
                     ->required()
                     ->image()
@@ -52,10 +56,11 @@ class FotoResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('No')->rowIndex(),
-                Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
-                Tables\Columns\ImageColumn::make('image')
-                    ->width(200),
+                Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('tgl')
+                ->label('Kategori Hari')
+                    ->default(fn ($record) => getDay()[$record->kat_id])
+                   ,
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

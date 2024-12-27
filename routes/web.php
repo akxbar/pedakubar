@@ -25,6 +25,8 @@ Route::get('/direktori', [HomeController::class, 'direktori'])->name('direktori'
 
 
 Route::get('/page/{id}',[HomeController::class, 'page'])->name(name: 'page');
+Route::get('/selengkapya/{id}',[HomeController::class, 'selengkapnya'])->name(name: 'selengkapnya');
+Route::get('/arsip-berita',[HomeController::class, 'arsipberita'])->name(name: 'arsipberita');
 
 //
 

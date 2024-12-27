@@ -115,7 +115,7 @@
         <div class="col-6 pe-0">
             <div class="card card-style me-2">
                 <a data-card-height="150" class="card preload-img mb-3"
-                    data-src="{{ asset('storage') }}/{{ $item->image }}" href="#">
+                    data-src="{{ asset('storage') }}/{{ $item->image }}" href="{{ route('page',[$item->id]) }}">
                     <div class="card-bottom ms-3 mb-2">
                         <h4 class="color-white font-600">{{$item->title}}</h4>
                     </div>
@@ -147,7 +147,7 @@
 
     <div class="content mb-2 pt-3">
         <h5 class="float-start font-28 font-600 mb-3">🔥 Berita Terkini</h5>
-        <a class="float-end font-18 color-highlight mt-n1 pe-4" href="{{ route('daftarberita') }}">View All</a>
+        <a class="float-end font-18 color-highlight mt-n1 pe-4" href="{{ route('arsipberita') }}">View All</a>
         <div class="clearfix"></div>
     </div>
 
@@ -157,11 +157,12 @@
     use Carbon\Carbon;
 @endphp
      @foreach ($berita as $item )
-            <a href="{{ route('berita') }}">
+            <a href="{{ route('selengkapnya',[$item->id]) }}">
                 <div class="d-flex mb-3">
                     <div class="align-self-center">
                         <h5 class="font-500 font-20 pb-1">{{$item->title}}</h5>
-                        <span class="badge text-uppercase font-16 px-2 py-1 bg-orange-dark">{{ Carbon::parse($item->updated_at)->diffForHumans() }}</span>
+                         <!-- Carbon::parse($item->updated_at)->diffForHumans()  -->
+                        <span class="badge text-uppercase font-16 px-2 py-1 bg-orange-dark">{{$item->tanggal->format('d M Y')}}</span>
                     </div>
                     <div class="align-self-center ms-auto">
                         <img src="{{ asset('storage') }}/{{ $item->image }}" class="rounded-m ms-3" width="90">
