@@ -5,10 +5,7 @@
 
     <div class="page-title page-title-small dropdown">
         <h2><a href="#" data-back-button></a>Event</h2>
-        <a href="#" data-menu="#" class="bg-fade-highlight-light shadow-xl preload-img dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" data-src="{{ asset('frontend') }}/images/pictures/logokubar.png"></a>
-          <ul class="dropdown-menu text-center btn-xxs rounded-s bg-orange-light" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#"><strong>Log Out</strong></a></li>
-          </ul>
+        @include('web.logout')
     </div>
     <div class="card header-card shape-rounded" data-card-height="150">
         <div class="card-overlay bg-highlight opacity-95"></div>
@@ -20,8 +17,8 @@
         <div class="content mb-0">
             <h4>Penyelenggaraan PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025 </h4>
             <p>
-                Similar to action sheets you can create store actions for your store elements that will be triggered on specific buttons. For example, carts, wishlists and more.
-            </p>
+              Event PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025
+          </p>
 
             <div class="accordion mt-4" id="accordion-1">
                 <div class="card card-style shadow-0 bg-orange-light mb-1">

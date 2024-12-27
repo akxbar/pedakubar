@@ -13,4 +13,11 @@ class Event extends Model
         'tanggal' => 'datetime',
         'materi' => 'array',
     ];
+
+
+
+    public function kategori()
+    {
+        return $this->belongsTo(Kategori::class);
+    }
 }

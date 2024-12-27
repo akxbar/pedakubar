@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('title');
             $table->integer('kategori_id');
-            $table->integer('icon')->nullable();
+            $table->string('icon')->nullable();
             $table->text('body')->nullable();
             $table->string('image')->nullable();
             $table->dateTime('tanggal')->nullable();

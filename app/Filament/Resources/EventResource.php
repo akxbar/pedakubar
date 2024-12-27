@@ -48,7 +48,7 @@ class EventResource extends Resource
                                 Forms\Components\Select::make('kategori_id')
                                     ->label('Kategori')
                                     ->required()
-                                    ->options(Kategori::all()->where('active', 1)->pluck('title', 'id')),
+                                    ->options(Kategori::all()->where('publish', 1)->pluck('title', 'id')),
                                 TinyEditor::make('body')
                                     ->fileAttachmentsDisk('public')
                                     ->fileAttachmentsVisibility('public')
@@ -122,9 +122,11 @@ class EventResource extends Resource
 
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('kategori.title')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('tanggal')
-                    ->label('Tanggal Waktu Kegiatan')
-                    ->dateTime()
+                    ->label('Tanggal Kegiatan')
+                    ->date()
                     ->sortable(),
                 Tables\Columns\ToggleColumn::make('publish'),
 
