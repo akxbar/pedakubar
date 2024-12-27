@@ -35,13 +35,14 @@ class HomeController extends Controller
 
     public function beranda()
     {
-        $header =  Header::where('publish', 1)->get();
+        $slides =  Header::where('publish', 1)->get();
         $kontak =  ContactUs::first();
         $halaman = Halaman::where('publish', 1)->get();
         $berita = Berita::where('publish', 1)->latest()->simplePaginate(3);
         $foto = Foto::latest()->first();
         $video = Video::first();
-        return view('web.beranda', compact('header', 'kontak', 'halaman', 'berita', 'foto', 'video'));
+        // dd($kontak);
+        return view('web.beranda', compact('slides', 'kontak', 'halaman', 'berita', 'foto', 'video'));
     }
 
 

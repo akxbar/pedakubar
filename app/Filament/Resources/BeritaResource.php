@@ -64,11 +64,11 @@ class BeritaResource extends Resource
                                     ->imageResizeTargetWidth('800')
                                     ->maxSize(1024),
 
-                                Forms\Components\Select::make('kategori_id')
-                                    ->label('Kategori')
-                                    ->options(Kategori::all()->where('active', 1)->pluck('title', 'id'))
-                                    ->required(),
-                                Forms\Components\Hidden::make('user_id')
+                                // Forms\Components\Select::make('kategori_id')
+                                //     ->label('Kategori')
+                                //     ->options(Kategori::all()->where('active', 1)->pluck('title', 'id')),
+
+                                    Forms\Components\Hidden::make('user_id')
                                     ->default(auth()->user()->id),
 
                                 Forms\Components\Toggle::make('publish')
@@ -95,8 +95,8 @@ class BeritaResource extends Resource
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
 
-                Tables\Columns\TextColumn::make('kategori.title')
-                    ->searchable(),
+                // Tables\Columns\TextColumn::make('kategori.title')
+                //     ->searchable(),
                 Tables\Columns\TextColumn::make('user.name')
                     ->searchable(),
                 Tables\Columns\ToggleColumn::make('publish'),
