@@ -91,6 +91,19 @@ class HomeController extends Controller
         $posts = Berita::where('publish', 1)->latest()->paginate(10);
         return view('web.arsipberita', compact('posts'));
     }
+
+
+    public function foto()
+    {
+        $foto1 = Foto::where('kat_id', 1)->latest()->get();
+        $foto2 = Foto::where('kat_id', 2)->latest()->get();
+        $foto3 = Foto::where('kat_id', 3)->latest()->get();
+        $foto4 = Foto::where('kat_id', 4)->latest()->get();
+        $foto5 = Foto::where('kat_id', 5)->latest()->get();
+        $foto6 = Foto::where('kat_id', 6)->latest()->get();
+
+        return view('web.foto', compact('foto1', 'foto2', 'foto3', 'foto4', 'foto5', 'foto6'));
+    }
 }
 
 

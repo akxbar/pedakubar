@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="page-content">
-        
+
     <div class="page-title page-title-small dropdown">
         <h2><a href="{{ route('beranda') }}" data-back-button><i class="fa fa-arrow-left"></i></a>Kembali</h2>
         <a href="#" data-menu="#" class="bg-fade-highlight-light shadow-xl preload-img dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" data-src="{{ asset('frontend') }}/images/pictures/logokubar.png"></a>
@@ -54,7 +54,7 @@
                                     <p>With all the gadgets you'd ever wish for.</p>
                                     <div class="divider bottom-0"></div>
                                 </div>
-                            </a>		
+                            </a>
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/28t.jpg" title="Plain Cookies and Flour">
                                 <img src="images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/28t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
@@ -62,7 +62,7 @@
                                     <p>The perfect and small notification device.</p>
                                     <div class="divider bottom-0"></div>
                                 </div>
-                            </a>	
+                            </a>
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/18t.jpg" title="Pots and Stuff">
                                 <img src="images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/18t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
@@ -85,7 +85,7 @@
                                     <h4 class=" color-theme">Feather and Paper?</h4>
                                     <p>Going back to days when things were simplere.</p>
                                 </div>
-                            </a>			
+                            </a>
                         </div>
                     </div>
 
@@ -109,7 +109,7 @@
                                     <p>With all the gadgets you'd ever wish for.</p>
                                     <div class="divider bottom-0"></div>
                                 </div>
-                            </a>		
+                            </a>
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/28t.jpg" title="Plain Cookies and Flour">
                                 <img src="images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/28t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
@@ -117,7 +117,7 @@
                                     <p>The perfect and small notification device.</p>
                                     <div class="divider bottom-0"></div>
                                 </div>
-                            </a>	
+                            </a>
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/18t.jpg" title="Pots and Stuff">
                                 <img src="images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/18t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
@@ -140,10 +140,10 @@
                                     <h4 class=" color-theme">Feather and Paper?</h4>
                                     <p>Going back to days when things were simplere.</p>
                                 </div>
-                            </a>			
+                            </a>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div data-bs-parent="#tab-group-1" class="collapse" id="tab-3">
 
@@ -164,7 +164,7 @@
                                     <p>With all the gadgets you'd ever wish for.</p>
                                     <div class="divider bottom-0"></div>
                                 </div>
-                            </a>		
+                            </a>
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/28t.jpg" title="Plain Cookies and Flour">
                                 <img src="images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/28t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
@@ -172,7 +172,7 @@
                                     <p>The perfect and small notification device.</p>
                                     <div class="divider bottom-0"></div>
                                 </div>
-                            </a>	
+                            </a>
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/18t.jpg" title="Pots and Stuff">
                                 <img src="images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/18t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
@@ -195,7 +195,7 @@
                                     <h4 class=" color-theme">Feather and Paper?</h4>
                                     <p>Going back to days when things were simplere.</p>
                                 </div>
-                            </a>			
+                            </a>
                         </div>
                     </div>
 
@@ -219,7 +219,7 @@
                                     <p>With all the gadgets you'd ever wish for.</p>
                                     <div class="divider bottom-0"></div>
                                 </div>
-                            </a>		
+                            </a>
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/28t.jpg" title="Plain Cookies and Flour">
                                 <img src="images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/28t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
@@ -227,7 +227,7 @@
                                     <p>The perfect and small notification device.</p>
                                     <div class="divider bottom-0"></div>
                                 </div>
-                            </a>	
+                            </a>
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/18t.jpg" title="Pots and Stuff">
                                 <img src="images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/18t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
@@ -250,7 +250,7 @@
                                     <h4 class=" color-theme">Feather and Paper?</h4>
                                     <p>Going back to days when things were simplere.</p>
                                 </div>
-                            </a>			
+                            </a>
                         </div>
                     </div>
 
@@ -274,7 +274,7 @@
                                     <p>With all the gadgets you'd ever wish for.</p>
                                     <div class="divider bottom-0"></div>
                                 </div>
-                            </a>		
+                            </a>
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/28t.jpg" title="Plain Cookies and Flour">
                                 <img src="{{ asset('frontend') }}/images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/28t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
@@ -282,7 +282,7 @@
                                     <p>The perfect and small notification device.</p>
                                     <div class="divider bottom-0"></div>
                                 </div>
-                            </a>	
+                            </a>
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/18t.jpg" title="Pots and Stuff">
                                 <img src="{{ asset('frontend') }}/images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/18t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
@@ -305,7 +305,7 @@
                                     <h4 class=" color-theme">Feather and Paper?</h4>
                                     <p>Going back to days when things were simplere.</p>
                                 </div>
-                            </a>			
+                            </a>
                         </div>
                     </div>
 
@@ -329,7 +329,7 @@
                                     <p>With all the gadgets you'd ever wish for.</p>
                                     <div class="divider bottom-0"></div>
                                 </div>
-                            </a>		
+                            </a>
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/28t.jpg" title="Plain Cookies and Flour">
                                 <img src="images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/28t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
@@ -337,7 +337,7 @@
                                     <p>The perfect and small notification device.</p>
                                     <div class="divider bottom-0"></div>
                                 </div>
-                            </a>	
+                            </a>
                             <a data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/18t.jpg" title="Pots and Stuff">
                                 <img src="images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/18t.jpg" class="rounded-m preload-img shadow-l img-fluid" alt="img">
                                 <div class="caption">
@@ -360,22 +360,22 @@
                                     <h4 class=" color-theme">Feather and Paper?</h4>
                                     <p>Going back to days when things were simplere.</p>
                                 </div>
-                            </a>			
+                            </a>
                         </div>
                     </div>
 
                 </div>
             </div>
-        </div>   
+        </div>
 
 
 
     </div>
 
 
-    
+
     <!-- footer and footer card-->
-    <div class="footer" data-menu-load="menu-footer.html"></div>  
-</div>    
+    <div class="footer" data-menu-load="menu-footer.html"></div>
+</div>
 
 @endsection

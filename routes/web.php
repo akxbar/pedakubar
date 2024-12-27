@@ -27,6 +27,7 @@ Route::get('/direktori', [HomeController::class, 'direktori'])->name('direktori'
 Route::get('/page/{id}',[HomeController::class, 'page'])->name(name: 'page');
 Route::get('/selengkapya/{id}',[HomeController::class, 'selengkapnya'])->name(name: 'selengkapnya');
 Route::get('/arsip-berita',[HomeController::class, 'arsipberita'])->name(name: 'arsipberita');
+Route::get('/foto',[HomeController::class, 'foto'])->name(name: 'foto');
 
 //
 
@@ -69,25 +70,25 @@ Route::get('/event', function () {
 //     return view('frontend.sambutan');
 // })->name(name: 'sambutan');
 
-Route::get('/tatib', function () {
-    return view('frontend.tatib');
-})->name(name: 'tatib');
+// Route::get('/tatib', function () {
+//     return view('frontend.tatib');
+// })->name(name: 'tatib');
 
-Route::get('/profilkeg', function () {
-    return view('frontend.profilkeg');
-})->name(name: 'profilkeg');
+// Route::get('/profilkeg', function () {
+//     return view('frontend.profilkeg');
+// })->name(name: 'profilkeg');
 
-Route::get('/daftarberita', function () {
-    return view('frontend.daftarberita');
-})->name(name: 'daftarberita');
+// Route::get('/daftarberita', function () {
+//     return view('frontend.daftarberita');
+// })->name(name: 'daftarberita');
 
-Route::get('/berita', function () {
-    return view('frontend.berita');
-})->name(name: 'berita');
+// Route::get('/berita', function () {
+//     return view('frontend.berita');
+// })->name(name: 'berita');
 
-Route::get('/foto', function () {
-    return view('frontend.foto');
-})->name(name: 'foto');
+// Route::get('/foto', function () {
+//     return view('frontend.foto');
+// })->name(name: 'foto');
 
 Route::get('/evendetail', function () {
     return view('frontend.evendetail');

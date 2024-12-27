@@ -220,7 +220,7 @@
 
 @foreach ($dataArray2 as $index => $value)
 
-    <a class="col" data-gallery="gallery1" data-draggable="false"
+    <a class="col" data-gallery="gallery-{{ $pemondokan->id }}" data-draggable="false"
         href="{{ asset('storage/' . $value['fasilitas']) }}"
         title="{{ $value['name'] }}">
 
