@@ -21,182 +21,35 @@
           </p>
 
             <div class="accordion mt-4" id="accordion-1">
-                <div class="card card-style shadow-0 bg-orange-light mb-1">
-                    <button class="btn accordion-btn  color-white no-effect" data-bs-toggle="collapse" data-bs-target="#collapse4">
-                        Upacara dan Apresiasi
+
+            @foreach ($kategoris as $kat )
+
+                <div class="card card-style shadow-0 {{$kat->color??'bg-orange-light' }} mb-1">
+                    <button class="btn accordion-btn  color-white no-effect" data-bs-toggle="collapse" data-bs-target="#collapse{{$kat->id}}">
+                        {{ $kat->title }}
                         <i class="fa fa-chevron-down font-10 accordion-icon"></i>
                     </button>
 
-                    <div id="collapse4" class="collapse bg-theme" data-bs-parent="#accordion-1">
+                    <div id="collapse{{$kat->id}}" class="collapse bg-theme" data-bs-parent="#accordion-{{$kat->id}}">
                         <div class="pt-3 pb-3">
                             <div class="list-group list-custom-small">
-                                <a href="#"  data-menu="cart-item-list">
+                       @foreach ($events as $event)
+                                @if($kat->id == $event->kategori_id)
+                                <a href="#"  data-menu="cart-item-list-{{$event->id}}" class="open-menu">
                                     <i class="fa font-13 fa-calendar color-orange-dark"></i>
-                                    <span>Pembukaan</span>
+                                    <span>{{ $event->title }}</span>
                                     <i class="fa fa-angle-right"></i>
                                 </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-calendar color-orange-dark"></i>
-                                    <span>Temu Wicara dengan Gubernur Kaltim</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-calendar color-orange-dark"></i>
-                                    <span>Temu Wicara dengan Kepala OPD/Instansi Terkait</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-calendar color-orange-dark"></i>
-                                    <span>Pemberian Penghargaan dan Hadiah Lomba</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-calendar color-orange-dark"></i>
-                                    <span>Penutupan</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
+                                @endif
+                                @endforeach
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card card-style shadow-0 bg-yellow-light mb-1">
-                    <button class="btn accordion-btn color-white no-effect" data-bs-toggle="collapse" data-bs-target="#collapse5">
-                        Kepemimpinan dan Kemandirian Kontak Tani Nelayan
-                        <i class="fa fa-chevron-down font-10 accordion-icon"></i>
-                    </button>
-                    <div id="collapse5" class="collapse bg-theme" data-bs-parent="#accordion-2">
-                        <div class="pt-3 pb-3">
-                            <div class="list-group list-custom-small">
-                                <a href="#"  data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-home color-green-dark"></i>
-                                    <span>Pembukaan</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-suitcase color-brown-light"></i>
-                                    <span>Klinik</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-building color-gray-dark"></i>
-                                    <span>Puskesmas</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-building color-gray-dark"></i>
-                                    <span>Puskesmas Pembantu</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card card-style shadow-0 bg-green-light mb-1">
-                    <button class="btn accordion-btn color-white no-effect" data-bs-toggle="collapse" data-bs-target="#collapse6">
-                        Kemitraan Usaha dan Jaringan Informasi Agribisnis
-                        <i class="fa fa-chevron-down font-10 accordion-icon"></i>
-                    </button>
-                    <div id="collapse6" class="collapse bg-theme" data-bs-parent="#accordion-3">
-                        <div class="pt-3 pb-3">
-                            <div class="list-group list-custom-small">
-                                <a href="#"  data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-home color-green-dark"></i>
-                                    <span>Pembukaan</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-suitcase color-brown-light"></i>
-                                    <span>Klinik</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-building color-gray-dark"></i>
-                                    <span>Puskesmas</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-building color-gray-dark"></i>
-                                    <span>Puskesmas Pembantu</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card card-style shadow-0 bg-mint-light mb-1">
-                    <button class="btn accordion-btn color-white no-effect" data-bs-toggle="collapse" data-bs-target="#collapse7">
-                        Pengembangan Teknologi dan Kualitas Produksi Agribisnis
-                        <i class="fa fa-chevron-down font-10 accordion-icon"></i>
-                    </button>
-                    <div id="collapse7" class="collapse bg-theme" data-bs-parent="#accordion-4">
-                        <div class="pt-3 pb-3">
-                            <div class="list-group list-custom-small">
-                                <a href="#"  data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-home color-green-dark"></i>
-                                    <span>Pembukaan</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-suitcase color-brown-light"></i>
-                                    <span>Temu Wicara dengan Gubernur Kaltim</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-building color-gray-dark"></i>
-                                    <span>Temu Wicara dengan Kepala OPD/Instansi Terkait</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-building color-gray-dark"></i>
-                                    <span>Pemberian Penghargaan</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-building color-gray-dark"></i>
-                                    <span>Temu Wicara dengan Kepala OPD/Instansi Terkait</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-building color-gray-dark"></i>
-                                    <span>Puskesmas Pembantu</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card card-style shadow-0 bg-blue-light">
-                    <button class="btn accordion-btn color-white no-effect" data-bs-toggle="collapse" data-bs-target="#collapse8">
-                        Study Banding, Widyawisata dan Pagelaran Seni Budaya
-                        <i class="fa fa-chevron-down font-10 accordion-icon"></i>
-                    </button>
-                    <div id="collapse8" class="collapse bg-theme" data-bs-parent="#accordion-5">
-                        <div class="pt-3 pb-3">
-                            <div class="list-group list-custom-small">
-                                <a href="#"  data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-home color-green-dark"></i>
-                                    <span>Pembukaan</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-suitcase color-brown-light"></i>
-                                    <span>Klinik</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-building color-gray-dark"></i>
-                                    <span>Puskesmas</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                                <a href="#" data-menu="cart-item-list">
-                                    <i class="fa font-13 fa-building color-gray-dark"></i>
-                                    <span>Puskesmas Pembantu</span>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                @endforeach
+
+
             </div>
         </div>
     </div>
@@ -206,8 +59,10 @@
 </div>
 <!-- end of page content-->
 
+@foreach ( $events as $event )
 
-<div id="cart-item-list"
+
+<div id="cart-item-list-{{$event->id}}"
      class="menu menu-box-bottom menu-box-detached rounded-m"
      data-menu-height="550"
      data-menu-effect="menu-over">
@@ -215,7 +70,7 @@
      <div class="content">
         <div class="d-flex mb-3">
             <div class="me-auto">
-                <img src="{{ asset('frontend') }}/images/food/1s.jpg" class="rounded-m shadow-xl" width="110">
+                <img src="{{ asset('storage/'.$event->image) ?? asset('frontend'.'/images/food/1s.jpg') }}" class="rounded-m shadow-xl" width="110">
             </div>
             <div class="ms-auto w-100 ps-3">
                 <h5 class="font-17 font-600 pb-0"></h5>
@@ -223,7 +78,7 @@
                 <div class="clearfix"></div>
                 <div class="d-flex">
                     <div>
-                        <h3 class="font-18 font-700 pt-2 mt-4 ">Kegiatan Pameran Bibit Unggulan Kabupaten Kubar</h3>
+                        <h3 class="font-18 font-700 pt-2 mt-4 ">{{ $event->title }}</h3>
                     </div>
                 </div>
             </div>
@@ -234,34 +89,38 @@
                 <div>
                     <h4>About Event</h4>
                     <p class="mb-2">
-                        Are you a fan of paintball? Then this is the even for you! Join today and you get free gear for the duration of the event.
+                        {!! $event->body !!}
                     </p>
                </div>
             </div>
+            @php
+             \Carbon\Carbon::setLocale('id');
+               $date = \Carbon\Carbon::parse($event->tanggal);
+            @endphp
             <div class="list-group list-custom-large mb-0">
                 <a href="#">
                     <i class="far fa-calendar color-blue-dark"></i>
-                    <span>Sat, May 25, 2029</span>
-                    <strong>10:00 AM -  11:30 AM</strong>
+                    <span>{{ $date->translatedFormat('l, j F Y') }}</span>
+                    <strong>{{ substr($event->begin, 0, 5) }} WITA - {{ substr($event->end, 0, 5) }} WITA </strong>
                 </a>
-                <a href="https://maps.app.goo.gl/xnBnH4aHwwimWWjy6" target="_blank">
+                <a href="{{ $event->link_gmap }}" target="_blank">
                     <i class="fa fa-map-marker-alt color-red-dark"></i>
-                    <span>Aula Kantor Distan Kubar</span>
-                    <strong>Jalan Usaha Tani Nomor 10</strong>
+                    <span>{{ $event->tempat }}</span>
+                    <strong>{{ $event->alamat }}</strong>
                     <span class="badge bg-blue-dark font-10 rounded-xs mb-0">SEE ON MAP</span>
                     <i class="fa fa-angle-right"></i>
                 </a>
                 <a href="#">
                     <i class="far fa-calendar color-blue-dark mb-2"></i>
                     <span>Narasumber</span>
-                    <strong>Dr. Tahir, MP dan Ir. Rano, MP</strong>
+                    <strong>{{ $event->narsum }}</strong>
                 </a>
                 <div class="divider"></div>
             </div>
-            <a href="{{ route('evendetail') }}" class="btn text-uppercase font-900 bg-highlight rounded-sm mb-0 shadow-xl btn-m ">Selengkapnya</a>
+            <a href="{{ route('evendetail', $event->id) }}" class="btn text-uppercase font-900 bg-highlight rounded-sm mb-0 shadow-xl btn-m ">Selengkapnya</a>
         </div>
     </div>
 </div>
-
+@endforeach
 
 @endsection

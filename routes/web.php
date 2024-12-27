@@ -28,7 +28,10 @@ Route::get('/page/{id}',[HomeController::class, 'page'])->name(name: 'page');
 Route::get('/selengkapya/{id}',[HomeController::class, 'selengkapnya'])->name(name: 'selengkapnya');
 Route::get('/arsip-berita',[HomeController::class, 'arsipberita'])->name(name: 'arsipberita');
 Route::get('/foto',[HomeController::class, 'foto'])->name(name: 'foto');
+Route::get('/event',[HomeController::class, 'event'])->name(name: 'event');
+Route::get('/evendetail/{id}', [HomeController::class, 'evendetail'])->name(name: 'evendetail');
 
+Route::get('/download/{file}', [HomeController::class, 'download'])->name('file.download');
 //
 
 
@@ -48,9 +51,9 @@ Route::get('/foto',[HomeController::class, 'foto'])->name(name: 'foto');
 //     return view('frontend.beranda');
 // })->name(name: 'beranda');
 
-Route::get('/event', function () {
-    return view('frontend.event.event');
-})->name(name: 'event');
+// Route::get('/event', function () {
+//     return view('frontend.event.event');
+// })->name(name: 'event');
 
 // Route::get('/pengumuman', function () {
 //     return view('frontend.pengumuman.pengumuman');
@@ -90,6 +93,6 @@ Route::get('/event', function () {
 //     return view('frontend.foto');
 // })->name(name: 'foto');
 
-Route::get('/evendetail', function () {
-    return view('frontend.evendetail');
-})->name(name: 'evendetail');
+// Route::get('/evendetail', function () {
+//     return view('frontend.evendetail');
+// })->name(name: 'evendetail');

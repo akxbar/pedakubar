@@ -20,7 +20,7 @@
         <div class="content mb-0">
             <h4>Penyelenggaraan PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025 </h4>
             <p>
-                Similar to action sheets you can create store actions for your store elements that will be triggered on specific buttons. For example, carts, wishlists and more.
+                Event PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025
             </p>
 
             <div class="accordion mt-4" id="accordion-1">

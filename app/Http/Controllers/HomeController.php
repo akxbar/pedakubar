@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Foto;
+use App\Models\Event;
 use App\Models\Video;
 use App\Models\Berita;
-use App\Models\Header;
 
+use App\Models\Header;
 use App\Models\Halaman;
+use App\Models\Kategori;
 use App\Models\ContactUs;
 use App\Models\Direktori;
 use App\Models\Pemondokan;
@@ -16,6 +18,7 @@ use Illuminate\Http\Request;
 use App\Models\PenangungJawab;
 use App\Models\TempatPemondokan;
 use App\Models\KategoriDirektori;
+use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
@@ -104,6 +107,39 @@ class HomeController extends Controller
 
         return view('web.foto', compact('foto1', 'foto2', 'foto3', 'foto4', 'foto5', 'foto6'));
     }
+
+
+
+    public function event()
+      {
+            $kategoris = Kategori::where('publish', 1)->get();
+            $events = Event::where('publish', 1)->latest()->get();
+
+            return view('web.event.event', compact('kategoris', 'events'));
+
+        }
+
+
+        public function evendetail($id)
+        {
+            return view('web.event.evendetail', [
+                'event' => Event::where('publish', 1)->findOrFail($id),
+            ]);
+        }
+
+
+        public function download($file)
+        {
+dd($file);
+            $filePath = 'storage/' . $file; // Sesuaikan path file Anda
+
+            if (Storage::exists($filePath)) {
+                return response()->download($filePath);
+            }
+
+            return redirect()->back()->with('error', 'File not found.');
+        }
+
 }
 
 
