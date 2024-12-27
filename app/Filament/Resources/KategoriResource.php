@@ -21,11 +21,11 @@ class KategoriResource extends Resource
 
 
     protected static ?string $navigationGroup = 'Beranda';
-
+    protected static bool $shouldRegisterNavigation = false;
     protected static ?string $navigationLabel = 'Kategori Berita';
     protected static ?string $pluralModelLabel = 'Kategori Berita';
     protected ?string $heading = 'Kategori Berita';
-    protected static ?int $navigationSort = 2;
+    protected static ?int $navigationSort = 5;
 
 
     public static function form(Form $form): Form
