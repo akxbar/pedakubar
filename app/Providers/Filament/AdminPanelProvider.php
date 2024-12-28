@@ -28,6 +28,14 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('spdadmin')
+            // ->brandLogo(
+            //     auth()->check()
+            //         ? false
+            //         : asset('frontend/images/pictures/logokubar.png')
+            // )
+            // ->brandLogoHeight('3rem')
+            ->brandName('Sipedakubar')
+            ->favicon(asset('frontend/images/pictures/logokubar.png'))
             ->login()
             ->profile()
             ->spa()

@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend') }}/fonts/css/fontawesome-all.min.css">
     <link rel="manifest" href="{{ asset('frontend') }}/_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('frontend') }}/app/icons/icon-192x192.png">
+    <link rel="icon" href="{{ url('frontend/images/pictures/logokubar.png') }}">
 </head>
 
 <body class="theme-light" data-highlight="blue2">
