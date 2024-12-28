@@ -17,7 +17,7 @@ class KategoriDirektoriResource extends Resource
 {
     protected static ?string $model = KategoriDirektori::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-bookmark-square';
 
     protected static ?string $navigationGroup = 'Direktori';
     protected static ?string $navigationLabel = 'Kategori Direktori';

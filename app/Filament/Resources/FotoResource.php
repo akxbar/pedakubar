@@ -19,7 +19,7 @@ class FotoResource extends Resource
 {
     protected static ?string $model = Foto::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-photo';
 
     protected static ?string $navigationGroup = 'Beranda';
 

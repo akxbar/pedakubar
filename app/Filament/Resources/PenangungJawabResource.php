@@ -20,7 +20,7 @@ class PenangungJawabResource extends Resource
 {
     protected static ?string $model = PenangungJawab::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-user-circle';
     protected static ?string $navigationGroup = 'Pemondokan';
     protected static ?string $navigationLabel = 'Penanggung Jawab';
     protected static ?string $pluralModelLabel = 'Penanggung Jawab';

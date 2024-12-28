@@ -20,7 +20,7 @@ class PengumumanResource extends Resource
 {
     protected static ?string $model = Pengumuman::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-speaker-wave';
 
     protected static ?string $navigationGroup = 'Pengumuman';
     protected static ?string $navigationLabel = 'Pengumuman';

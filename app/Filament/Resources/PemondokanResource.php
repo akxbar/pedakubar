@@ -21,7 +21,7 @@ class PemondokanResource extends Resource
 {
     protected static ?string $model = Pemondokan::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-home';
 
 
     protected static ?string $navigationGroup = 'Pemondokan';

@@ -17,7 +17,7 @@ class TempatPemondokanResource extends Resource
 {
     protected static ?string $model = TempatPemondokan::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-globe-americas';
 
 
     protected static ?string $navigationGroup = 'Pemondokan';
