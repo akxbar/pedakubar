@@ -15,6 +15,7 @@ return new class extends Migration {
             $table->string('no_telp')->nullable();
             $table->string('no_wa')->nullable();
             $table->string('email')->nullable();
+            $table->string('alamat')->nullable();
             $table->timestamps();
         });
     }

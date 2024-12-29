@@ -59,8 +59,7 @@ class FotoResource extends Resource
                 Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('tgl')
                 ->label('Kategori Hari')
-                    ->default(fn ($record) => getDay()[$record->kat_id])
-                   ,
+                     ->default(fn (Foto $record) =>  'day '. $record->kat_id),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

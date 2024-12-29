@@ -65,8 +65,7 @@
             <div class="content">
                 <h4 class="bolder text-center font-800 ">Sekretariat PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025
                 </h4>
-                <p class="text-center font-700 pb-1">Kawasan Perkantoran Bisnis Center Sendawar, Kecamatan Barong
-                    Tongkok, Kabupaten Kutai Barat
+                <p class="text-center font-700 pb-1">{{ $kontak->alamat }}
                 </p>
                 <div class="collapse" id="collapse-8">
                     <div class="card card-style">

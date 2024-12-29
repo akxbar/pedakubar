@@ -45,6 +45,9 @@ class ContactUsResource extends Resource
                     ->email()
                     ->maxLength(255)
                     ->default(null),
+                Forms\Components\TextInput::make('alamat')
+                    ->maxLength(255)
+                    ->default(null),
             ]);
     }
 
