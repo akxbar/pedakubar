@@ -65,30 +65,30 @@
             <div class="content">
                 <h4 class="bolder text-center font-800 ">Sekretariat PEDA KTNA Provinsi Kalimantan Timur XI Tahun 2025
                 </h4>
-                <p class="text-center font-700 pb-1">{{ $kontak->alamat }}
+                <p class="text-center font-700 pb-1">{{ $kontak->alamat??'' }}
                 </p>
                 <div class="collapse" id="collapse-8">
                     <div class="card card-style">
                         <div class="content">
 
                             <div class="list-group list-custom-small">
-                                <a href="tel:{{$kontak->no_telp}}">
+                                <a href="tel:{{$kontak->no_telp??''}}">
                                     <i class="fa font-18 fa-phone color-phone"></i>
-                                    <span>{{$kontak->no_telp}}</span>
+                                    <span>{{$kontak->no_telp??''}}</span>
                                     <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO
                                         CALL</span>
                                     <i class="fa fa-angle-right"></i>
                                 </a>
-                                <a href="https://wa.me/{{$kontak->no_wa}}">
+                                <a href="https://wa.me/{{$kontak->no_wa??''}}">
                                     <i class="fa font-18 fab fa-whatsapp color-whatsapp"></i>
-                                    <span>{{$kontak->no_wa}}</span>
+                                    <span>{{$kontak->no_wa??''}}</span>
                                     <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO
                                         WHATSAPP</span>
                                     <i class="fa fa-angle-right"></i>
                                 </a>
-                                <a href="mailto:{{$kontak->email}}">
+                                <a href="mailto:{{$kontak->email??''}}">
                                     <i class="fa font-18 fa-envelope color-mail"></i>
-                                    <span>{{$kontak->email}}</span>
+                                    <span>{{$kontak->email??''}}</span>
                                     <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO
                                         MAIL</span>
                                     <i class="fa fa-angle-right"></i>
@@ -172,13 +172,13 @@
             @endforeach
         </div>
     </div>
-@if ($video->image )
+@if ($video->image??null)
 @php
     $video1 = 'storage/'.$video->image;
 @endphp
 @endif
 
-@if ($foto->image )
+@if ($foto->image??null)
  @php
    $foto1 = 'storage/'.$foto->image;
     @endphp
@@ -200,7 +200,7 @@
                         </h5>
                         <div class="clearfix"></div>
                         <a href="{{ route('foto') }}"
-                            class="btn btn-m btn-full bg-highlight font-900 text-uppercase rounded-s">Selengkapnya</a>
+                            class="btn btn-m btn-full bg-highlight font-700 text-uppercase rounded-s">Selengkapnya</a>
                     </div>
                 </div>
             </div>
@@ -215,8 +215,8 @@
                             Galery Video Kegiatan
                         </h5>
                         <div class="clearfix"></div>
-                        <a href="{{ $video->link}}" target="_blank"
-                            class="btn btn-m btn-full bg-highlight font-900 text-uppercase rounded-s">Selengkapnya</a>
+                        <a href="{{ $video->link??''}}" target="_blank"
+                            class="btn btn-m btn-full bg-highlight font-700 text-uppercase rounded-s">Selengkapnya</a>
                     </div>
                 </div>
             </div>
