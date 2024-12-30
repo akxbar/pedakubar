@@ -59,9 +59,13 @@ Route::get('/download/{file}', [HomeController::class, 'download'])->name('file.
 //     return view('frontend.pengumuman.pengumuman');
 // })->name(name: 'pengumuman');
 
-// Route::get('/pemondokan', function () {
-//     return view('frontend.pemondokan.pemondokan');
-// })->name(name: 'pemondokan');
+Route::get('/pemondokan1', function () {
+    return view('frontend.pemondokan.pemondokan');
+})->name(name: 'pemondokan');
+
+Route::get('/pemondokandetail', function () {
+    return view('frontend.pemondokan.pemondokandetail');
+})->name(name: 'pemondokandetail');
 
 // Route::get('/direktori', function () {
 //     return view('frontend.direktori.direktori');

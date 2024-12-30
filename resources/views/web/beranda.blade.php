@@ -88,7 +88,7 @@
                                 </a>
                                 <a href="mailto:{{$kontak->email}}">
                                     <i class="fa font-18 fa-envelope color-mail"></i>
-                                    <span>{{$kontak->email}}"></span>
+                                    <span>{{$kontak->email}}</span>
                                     <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO
                                         MAIL</span>
                                     <i class="fa fa-angle-right"></i>

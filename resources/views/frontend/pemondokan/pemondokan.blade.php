@@ -720,52 +720,20 @@
         </div>
     </div>   
 
-    <div class="card card-style">
-    <div class="content mb-3">
-        <h3 class="mb-0">Fasiltas Pemondokan</h3>
-        <p>
-            Simple thumbnails with caption attached to them. These will all open a gallery when tapped.
-        </p>            
-        <div class="row text-center row-cols-3 mb-0">
-            <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/27s.jpg" title="Parkiran">
-                <img src="{{ asset('frontend') }}/images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/27s.jpg" class="preload-img img-fluid rounded-xs" alt="img">
-                <p class="font-600 pb-1">Parkiran</p>
-            </a>
-            <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/22s.jpg" title="Kamar Tidur">
-                <img src="{{ asset('frontend') }}/images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/22s.jpg" class="preload-img img-fluid rounded-xs" alt="img">
-                <p class="font-600 pb-1">Kamar Tidur</p>
-            </a>
-            <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/23s.jpg" title="Kamar Mandi">
-                <img src="{{ asset('frontend') }}/images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/23s.jpg" class="preload-img img-fluid rounded-xs" alt="img">
-                <p class="font-600 pb-1">Dapur</p>
-            </a>
-            <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/24s.jpg" title="Kamar Mandi">
-                <img src="{{ asset('frontend') }}/images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/24s.jpg" class="preload-img img-fluid rounded-xs" alt="img">
-                <p class="font-600 pb-1">Kamar Mandi</p>
-            </a>
-            <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/25s.jpg" title="Ruang Tamu">
-                <img src="{{ asset('frontend') }}/images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/25s.jpg" class="preload-img img-fluid rounded-xs" alt="img">
-                <p class="font-600 pb-1">Ruang Tamu</p>
-            </a>
-            <a class="col" data-gallery="gallery-1" href="{{ asset('frontend') }}/images/pictures/26s.jpg" title="Laundry">
-                <img src="{{ asset('frontend') }}/images/empty.png" data-src="{{ asset('frontend') }}/images/pictures/26s.jpg" class="preload-img img-fluid rounded-xs" alt="img">
-                <p class="font-600 pb-1">Laundry</p>
-            </a>
-        </div>
-    </div>
-</div>
-
     <div class="content">
         <h1>Lokasi Pemondokan</h1>
         <p>
             Simple thumbnails with caption attached to them. These will all open a gallery when tapped.
         </p>
-        <p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4885.6774132665605!2d115.69027702194127!3d-0.23682780309848775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df7f5c9e8dbdb4f%3A0x3c9638ecbaefef26!2sDINAS%20PERTANIAN%20KAB.KUTAI%20BARAT!5e1!3m2!1sen!2sid!4v1729537266556!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </p>
-
-        <a href="https://maps.app.goo.gl/GA9Y7dc4YPAb2iuMA" class="btn btn-m rounded-sm bg-blue-dark font-700 text-uppercase btn-full mb-4">View on Map</a>
-
+        <div class="list-group list-custom-large mb-0">
+            <a href="https://maps.app.goo.gl/xnBnH4aHwwimWWjy6" target="_blank">
+                <i class="fa fa-map-marker-alt color-red-dark"></i>
+                <span>Aula Kantor Distan Kubar</span>
+                <strong>Jalan Usaha Tani Nomor 10</strong>
+                <span class="badge bg-blue-dark font-10 rounded-xs mb-0">SEE ON MAP</span>
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
         <div class="divider"></div>
         <h1>Hubungi Penanggung Jawab</h1>
         <div class="card card-style">
@@ -892,15 +860,11 @@
                         </div>     
                     </div>
                 </div>
-
-                
             </div>
         </div>
-
         <div class="divider mt-2"></div>
-
+        <a href="{{ route('pemondokandetail') }}" class="btn btn-m rounded-sm bg-blue-dark font-700 text-uppercase btn-full mb-4">Detail Pemondokan</a>
     </div>
-    <a href="#" class="close-menu btn btn-full btn-m text-uppercase font-700 bg-red-dark mx-3 rounded-sm mb-3 mt-3">Kembali Ke Pemondokan</a>
 </div>
 
 
