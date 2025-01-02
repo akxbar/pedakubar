@@ -59,6 +59,7 @@ class EventResource extends Resource
 
                                 Forms\Components\TextInput::make('tempat')->label('Nama Tempat'),
                                 Forms\Components\TextInput::make('alamat')
+                                ->label('Nama Jalan')
                                 ->helperText('Karekter Max 60')
                                 ->maxLength(60),
                                 Forms\Components\TextInput::make('narsum')->label('Narasumber'),
