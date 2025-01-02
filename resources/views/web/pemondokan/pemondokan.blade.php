@@ -5,7 +5,7 @@
 
 <div class="page-content">
 
-<div class="page-title page-title-small dropdown">
+    <div class="page-title page-title-small dropdown">
         <h2><a href="#" data-back-button></a>Pemondokan</h2>
         @include('web.logout')
     </div>
@@ -81,8 +81,8 @@
             @endforelse
         </div>
     </div>
-</div>
-</div>
+    </div>
+
 <!-- End of Page Content-->
 
 
