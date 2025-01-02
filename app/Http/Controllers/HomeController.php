@@ -18,6 +18,7 @@ use Illuminate\Http\Request;
 use App\Models\PenangungJawab;
 use App\Models\TempatPemondokan;
 use App\Models\KategoriDirektori;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
@@ -62,10 +63,15 @@ class HomeController extends Controller
     }
 
     public function pemondokandetail($id){
-        $pemondokan = Pemondokan::where('publish', 1)->where('id', $id)->first();
-        $penangungjawabs = PenangungJawab::where('publish', 1)->get();
+        $aksesExists = getUserId(Session::get('user_id'))??false;
+        if(!$aksesExists){
+            return redirect()->route('login');
+        }else{
+            $pemondokan = Pemondokan::where('publish', 1)->where('id', $id)->first();
+            $penangungjawabs = PenangungJawab::where('publish', 1)->get();
+            return view('web.pemondokan.pemondokandetail', compact('pemondokan', 'penangungjawabs'));
+        }
 
-        return view('web.pemondokan.pemondokandetail', compact('pemondokan', 'penangungjawabs'));
     }
 
     public function direktori()
