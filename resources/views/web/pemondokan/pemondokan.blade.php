@@ -3,7 +3,7 @@
 
 
 
-<div class="page-content">
+ <div class="page-content">
 
     <div class="page-title page-title-small dropdown">
         <h2><a href="#" data-back-button></a>Pemondokan</h2>
@@ -80,20 +80,20 @@
             @empty
             @endforelse
         </div>
+     </div>
     </div>
-    </div>
 
-<!-- End of Page Content-->
+ <!-- End of Page Content-->
 
 
-@foreach ($pemondokans as $pemondokan)
+ @foreach ($pemondokans as $pemondokan)
     <div id="menu-appointment-{{ $pemondokan->id }}" class="menu menu-box-left" data-menu-width="cover"
         data-menu-height="cover">
         <a href="#"
             class="close-menu py-3 text-center font-12 btn-full rounded-0 text-uppercase font-800 bg-black color-white"><i
                 class="fa fa-arrow-left pe-3"></i>Kembali Ke Pemondokan</a>
-        {{-- <img src="{{ asset('frontend') }}/images/medical/6t.jpg" class="img-fluid" alt="doctor"> --}}
-        <div class="card card-style">
+          {{-- <img src="{{ asset('frontend') }}/images/medical/6t.jpg" class="img-fluid" alt="doctor"> --}}
+         <div class="card card-style">
             <div class="content mb-3">
                 <h3 class="mb-0">Informasi Pemondokan </h3>
                 <p>
@@ -203,10 +203,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+         </div>
 
 
-        <div class="content">
+         <div class="content">
             <h1>Lokasi Pemondokan</h1>
             <p>
               {!! $pemondokan->body !!}
@@ -224,7 +224,7 @@
                 <span class="badge bg-blue-dark font-10 rounded-xs mb-0">SEE ON MAP</span>
                 <i class="fa fa-angle-right"></i>
             </a>
-        </div>
+         </div>
             <div class="divider"></div>
             <h1>Hubungi Penanggung Jawab</h1>
             <div class="card card-style">
@@ -241,11 +241,11 @@
 
 
 
-                             @php $counter = 1; @endphp
-                                    @foreach ($dataArray as $data)
+         @php $counter = 1; @endphp
+        @foreach ($dataArray as $data)
 
-                                    <div class="splide__slide mx-3">
-    <div class="d-flex align-items-center justify-content-between">
+        <div class="splide__slide mx-3">
+       <div class="d-flex align-items-center justify-content-between">
         <!-- Bagian Kiri -->
         <div class="d-flex align-items-center">
             <!-- Gambar -->
@@ -277,21 +277,16 @@
                 <i class="fab fa-whatsapp"></i>
             </a>
         </div>
-    </div>
-</div>
+       </div>
+   </div>
 
 
 
-                                        <div class="divider mt-3"></div>
-                                        @php $counter++; @endphp
-                                    @endforeach
-                            @endif
-                    @endforeach
-
-
-
-
-
+                    <div class="divider mt-3"></div>
+                @php $counter++; @endphp
+                 @endforeach
+                @endif
+        @endforeach
 
                 </div>
             </div>
@@ -300,8 +295,8 @@
             <a href="{{ route('pemondokandetail', ['id' => $pemondokan->id]) }}" class="btn btn-m rounded-sm bg-blue-dark font-700 text-uppercase btn-full mb-4">Detail Pemondokan</a>
 
         </div>
-    </div>
+     </div>
 
-@endforeach
+      @endforeach
 
 @endsection

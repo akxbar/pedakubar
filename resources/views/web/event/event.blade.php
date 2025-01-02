@@ -97,16 +97,17 @@
              \Carbon\Carbon::setLocale('id');
                $date = \Carbon\Carbon::parse($event->tanggal);
             @endphp
+
             <div class="list-group list-custom-large mb-0">
                 <a href="#">
                     <i class="far fa-calendar color-blue-dark"></i>
                     <span>{{ $date->translatedFormat('l, j F Y') }}</span>
                     <strong>{{ substr($event->begin, 0, 5) }} WITA - {{ substr($event->end, 0, 5) }} WITA </strong>
                 </a>
-                <a href="{{ $event->link_gmap }}" target="_blank">
+                <a href="{{ $event->link_gmap }}" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Hooray!">
                     <i class="fa fa-map-marker-alt color-red-dark"></i>
                     <span>{{ $event->tempat }}</span>
-                    <strong>{{ $event->alamat }}</strong>
+                    <strong>{{ substr( $event->alamat, 0,60) }}</strong>
                     <span class="badge bg-blue-dark font-10 rounded-xs mb-0">SEE ON MAP</span>
                     <i class="fa fa-angle-right"></i>
                 </a>
@@ -117,10 +118,14 @@
                 </a>
                 <div class="divider"></div>
             </div>
+
+
+
             <a href="{{ route('evendetail', $event->id) }}" class="btn text-uppercase font-900 bg-highlight rounded-sm mb-0 shadow-xl btn-m ">Selengkapnya</a>
         </div>
     </div>
 </div>
 @endforeach
+
 
 @endsection

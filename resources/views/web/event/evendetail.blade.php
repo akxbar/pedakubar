@@ -35,7 +35,7 @@
                 <a href="{{ $event->link_gmap }}" target="_blank">
                     <i class="fa fa-map-marker-alt color-red-dark"></i>
                     <span>{{ $event->tempat }}</span>
-                    <strong>{{ $event->alamat }}</strong>
+                    <strong>{{  substr( $event->alamat, 0,60)}}</strong>
                     <span class="badge bg-blue-dark font-10 rounded-xs mb-0">SEE ON MAP</span>
                     <i class="fa fa-angle-right"></i>
                 </a>
