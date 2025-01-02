@@ -1,13 +1,12 @@
 @extends('app.home')
 @section('content')
 
-
-
 <div class="page-content">
 
-<div class="page-title page-title-small dropdown">
-        <h2><a href="#" data-back-button></a>Pemondokan</h2>
+    <div class="page-title page-title-small dropdown ">
+        <h2><a href="{{ route('pemondokan') }}" data-back-button><i class="fa fa-arrow-left"></i></a>Kembali</h2>
         @include('web.logout')
+          </ul>
     </div>
     <div class="card header-card shape-rounded" data-card-height="150">
         <div class="card-overlay bg-highlight opacity-95"></div>
@@ -15,86 +14,9 @@
         <div class="card-bg preload-img" data-src="{{ asset('frontend') }}/images/pictures/20s.jpg"></div>
     </div>
 
-    <!--Menu Warning-->
-    <!---------------->
-    <!---------------->
-
-    <!---------------->
-    <!---------------->
-
-
     <div class="card card-style">
-        <div class="content">
-            <h2>Lokasi Pemondokan</h2>
-            <p class="mb-3">
-            Lokasi Pemondokan PEDA KTNA XI Provinsi Kalimantan Timur Tahun 2025 .
-            </p>
-
-
-
-            @forelse  ($lokasis as $lokasi)
-                <div class="card card-style mb-3">
-                    <div class="list-group list-custom-small list-icon-0 bg-orange-light mb-3 mx-0">
-                        <a data-bs-toggle="collapse" class="no-effect" href="#collapse-{{$lokasi->id}}">
-                            <div class="d-flex">
-                                <div class="ps-1 ms-1 align-self-center">
-                                    <h4 class="pt-4 color-white">{{ $lokasi->title }}</h4>
-                                    <p class="font-12 color-white mt-n2 mb-0 opacity-70">Schedule it on the right day for
-                                        you.</p>
-                                </div>
-                                <div class="ms-auto me-3 align-self-center">
-                                    <i class="fa fa-angle-down color-white"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="collapse ps-2 pe-4" id="collapse-{{$lokasi->id}}">
-
-
-                         @php
-                        $aksesExists = getUserId(session('user_id'))??false;
-                        @endphp
-
-                        @foreach ($pemondokans as $pemondokan)
-                            @if($pemondokan->tempat_pemondokan_id == $lokasi->id)
-
-                                        @if ($aksesExists)
-                                          @php
-                                           $ada =  $pemondokan->id ;
-                                           @endphp
-                                          @endif
-
-                                <a href="#" data-menu="menu-appointment-{{ $ada??null}}">
-                                    <div class="card card-style bg-mint-light mb-2 mx-0">
-                                        <div class="d-flex">
-                                            <div class="ps-2 ms-2 mb-3 align-self-center">
-                                                <h6 class="pt-4 color-white">{{ $pemondokan->title }}</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            @endif
-                        @endforeach
-                    </div>
-                </div>
-            @empty
-            @endforelse
-        </div>
-    </div>
-</div>
-</div>
-<!-- End of Page Content-->
-
-
-@foreach ($pemondokans as $pemondokan)
-    <div id="menu-appointment-{{ $pemondokan->id }}" class="menu menu-box-left" data-menu-width="cover"
-        data-menu-height="cover">
-        <a href="#"
-            class="close-menu py-3 text-center font-12 btn-full rounded-0 text-uppercase font-800 bg-black color-white"><i
-                class="fa fa-arrow-left pe-3"></i>Kembali Ke Pemondokan</a>
-        {{-- <img src="{{ asset('frontend') }}/images/medical/6t.jpg" class="img-fluid" alt="doctor"> --}}
-        <div class="card card-style">
-            <div class="content mb-3">
+        <div class="card card-style mt-3">
+        <div class="content mb-3">
                 <h3 class="mb-0">Informasi Pemondokan </h3>
                 <p>
                    {{ $pemondokan->alamat }}
@@ -205,26 +127,50 @@
             </div>
         </div>
 
+        <div class="card card-style">
+        <div class="content mb-3">
+                <h3 class="mb-0">Fasiltas Pemondokan</h3>
+                <p>
+                   Tampilan Gambar Fasilitas Pemondokan {{ $pemondokan->title }}
+                </p>
+                <div class="row text-center row-cols-3 mb-0">
+                @php
+
+              $dataArray2 = $pemondokan->image;
+
+               @endphp
+
+@foreach ($dataArray2 as $index => $value)
+
+    <a class="col" data-gallery="gallery-{{ $pemondokan->id }}" data-draggable="false"
+        href="{{ asset('storage/' . $value['fasilitas']) }}"
+        title="{{ $value['name'] }}">
+
+
+
+        <img src="{{ asset('storage/' . $value['fasilitas']) }}"
+             data-src="{{ asset('storage/' . $value['fasilitas']) }}"
+             class="preload-img img-fluid rounded-xs" alt="img">
+        <p class="font-600 pb-1">{{ $value['name'] }}</p>
+
+
+    </a>
+@endforeach
+                </div>
+            </div>
+    </div>
 
         <div class="content">
             <h1>Lokasi Pemondokan</h1>
             <p>
-              {!! $pemondokan->body !!}
+            {!! $pemondokan->body !!}
+            </p>
+            <p>
+            {!! $pemondokan->embed_gmap !!}
             </p>
 
+            <a href="{{$pemondokan->link_gmap}}" class="btn btn-m rounded-sm bg-blue-dark font-700 text-uppercase btn-full mb-4">View on Map</a>
 
-
-
-
-                <div class="list-group list-custom-large mb-0">
-            <a href="{{$pemondokan->link_gmap}}" target="_blank">
-                <i class="fa fa-map-marker-alt color-red-dark"></i>
-                <span>{{$pemondokan->nama_kampung}}</span>
-                <strong>{{ $pemondokan->alamat }}</strong>
-                <span class="badge bg-blue-dark font-10 rounded-xs mb-0">SEE ON MAP</span>
-                <i class="fa fa-angle-right"></i>
-            </a>
-        </div>
             <div class="divider"></div>
             <h1>Hubungi Penanggung Jawab</h1>
             <div class="card card-style">
@@ -296,12 +242,8 @@
                 </div>
             </div>
 
-            <div class="divider mt-2"></div>
-            <a href="{{ route('pemondokandetail', ['id' => $pemondokan->id]) }}" class="btn btn-m rounded-sm bg-blue-dark font-700 text-uppercase btn-full mb-4">Detail Pemondokan</a>
-
         </div>
     </div>
-
-@endforeach
+</div>
 
 @endsection

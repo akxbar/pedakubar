@@ -61,7 +61,12 @@ class HomeController extends Controller
         return view('web.pemondokan.pemondokan', compact('lokasis', 'pemondokans', 'penangungjawabs'));
     }
 
+    public function pemondokandetail($id){
+        $pemondokan = Pemondokan::where('publish', 1)->where('id', $id)->first();
+        $penangungjawabs = PenangungJawab::where('publish', 1)->get();
 
+        return view('web.pemondokan.pemondokandetail', compact('pemondokan', 'penangungjawabs'));
+    }
 
     public function direktori()
     {
@@ -130,7 +135,7 @@ class HomeController extends Controller
 
         public function download($file)
         {
-dd($file);
+
             $filePath = 'storage/' . $file; // Sesuaikan path file Anda
 
             if (Storage::exists($filePath)) {
