@@ -90,7 +90,7 @@
                                         WHATSAPP</span>
                                     <i class="fa fa-angle-right"></i>
                                 </a>
-                                <a href="#" onclick="window.location.href='{{ isset($kontak->email) ? 'mailto:' . $kontak->email : '#' }}'; return false;"></a>
+                                <a href="#" onclick="window.location.href='{{ isset($kontak->email) ? 'mailto:' . $kontak->email : '#' }}'; return false;">
                                     <i class="fa font-18 fa-envelope color-mail"></i>
                                     <span>{{ $kontak->email ?? 'Email not available' }}</span>
                                     <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO MAIL</span>
