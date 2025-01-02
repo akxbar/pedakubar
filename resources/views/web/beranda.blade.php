@@ -203,7 +203,7 @@
                         </h5>
                         <div class="clearfix"></div>
                         <a href="{{ route('foto') }}"
-                            class="btn btn-m btn-full bg-highlight font-700 text-uppercase rounded-s">Selengkapnya</a>
+                            class="btn btn-m btn-full bg-highlight font-700 text-uppercase rounded-s"  style="font-size: 9px !important;">Selengkapnya</a>
                     </div>
                 </div>
             </div>
@@ -219,7 +219,7 @@
                         </h5>
                         <div class="clearfix"></div>
                         <a href="{{ $video->link??''}}" target="_blank"
-                            class="btn btn-m btn-full bg-highlight font-700 text-uppercase rounded-s">Selengkapnya</a>
+                            class="btn btn-m btn-full bg-highlight font-700 text-uppercase rounded-s"     style="font-size: 9px !important;">Selengkapnya</a>
                     </div>
                 </div>
             </div>
