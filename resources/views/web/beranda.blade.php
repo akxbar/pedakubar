@@ -72,7 +72,7 @@
                         <div class="content">
 
                             <div class="list-group list-custom-small">
-                                <a href="tel:{{$kontak->no_telp??''}}">
+                                <a href="tel://{{$kontak->no_telp??''}}">
                                     <i class="fa font-18 fa-phone color-phone"></i>
                                     <span>{{$kontak->no_telp??''}}</span>
                                     <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO
@@ -86,7 +86,7 @@
                                         WHATSAPP</span>
                                     <i class="fa fa-angle-right"></i>
                                 </a>
-                                <a href="mailto:{{$kontak->email??''}}">
+                                <a href="mailto://{{$kontak->email??''}}">
                                     <i class="fa font-18 fa-envelope color-mail"></i>
                                     <span>{{$kontak->email??''}}</span>
                                     <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO
