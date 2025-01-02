@@ -74,12 +74,12 @@
                             <div class="list-group list-custom-small">
 
 
-                            <!-- <button type="button" onclick="window.location.href='tel:+1234567890';" aria-label="Call +1234567890">
+                            <button type="button" onclick="window.location.href='tel:+1234567890';" aria-label="Call +1234567890">
                                 <i class="fa font-18 fa-phone color-phone"></i>
                                 <span>+1234567890</span>
                                 <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO CALL</span>
                                 <i class="fa fa-angle-right"></i>
-                            </button> -->
+                            </button>
 
                             <a href="#" onclick="window.location.href='{{ isset($kontak->no_telp) ? 'tel:' . $kontak->no_telp : '#' }}'; return false;">
                                 <i class="fa font-18 fa-phone color-phone"></i>
