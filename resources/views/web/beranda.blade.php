@@ -72,6 +72,8 @@
                         <div class="content">
 
                             <div class="list-group list-custom-small">
+                            <a href="tel:+1234567890">Test Call</a>
+
                             <a href="{{ isset($kontak->no_telp) ? 'tel:' . $kontak->no_telp : '#' }}">
                                     <i class="fa font-18 fa-phone color-phone"></i>
                                     <span>{{ $kontak->no_telp ?? 'Phone number not available' }}</span>
