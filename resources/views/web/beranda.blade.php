@@ -72,20 +72,27 @@
                         <div class="content">
 
                             <div class="list-group list-custom-small">
-                            <button type="button" onclick="window.location.href='tel:+1234567890';" aria-label="Call +1234567890">
+
+
+                            <!-- <button type="button" onclick="window.location.href='tel:+1234567890';" aria-label="Call +1234567890">
                                 <i class="fa font-18 fa-phone color-phone"></i>
                                 <span>+1234567890</span>
                                 <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO CALL</span>
                                 <i class="fa fa-angle-right"></i>
-                            </button>
+                            </button> -->
 
-
-                            <a href="{{ isset($kontak->no_telp) ? 'tel:' . $kontak->no_telp : '#' }}">
+                            <a href="#" onclick="window.location.href='{{ isset($kontak->no_telp) ? 'tel:' . $kontak->no_telp : '#' }}'; return false;">
+                                <i class="fa font-18 fa-phone color-phone"></i>
+                                <span>{{ $kontak->no_telp ?? 'Phone number not available' }}</span>
+                                <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO CALL</span>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <!-- <a href="{{ isset($kontak->no_telp) ? 'tel:' . $kontak->no_telp : '#' }}">
                                     <i class="fa font-18 fa-phone color-phone"></i>
                                     <span>{{ $kontak->no_telp ?? 'Phone number not available' }}</span>
                                     <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO CALL</span>
                                     <i class="fa fa-angle-right"></i>
-                                </a>
+                                </a> -->
                                 <a href="https://wa.me/{{$kontak->no_wa??''}}">
                                     <i class="fa font-18 fab fa-whatsapp color-whatsapp"></i>
                                     <span>{{$kontak->no_wa??''}}</span>
