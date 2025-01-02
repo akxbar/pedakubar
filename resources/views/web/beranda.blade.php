@@ -72,11 +72,10 @@
                         <div class="content">
 
                             <div class="list-group list-custom-small">
-                                <a href="tel://{{$kontak->no_telp??''}}">
+                            <a href="{{ isset($kontak->no_telp) ? 'tel:' . $kontak->no_telp : '#' }}">
                                     <i class="fa font-18 fa-phone color-phone"></i>
-                                    <span>{{$kontak->no_telp??''}}</span>
-                                    <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO
-                                        CALL</span>
+                                    <span>{{ $kontak->no_telp ?? 'Phone number not available' }}</span>
+                                    <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO CALL</span>
                                     <i class="fa fa-angle-right"></i>
                                 </a>
                                 <a href="https://wa.me/{{$kontak->no_wa??''}}">
@@ -86,11 +85,10 @@
                                         WHATSAPP</span>
                                     <i class="fa fa-angle-right"></i>
                                 </a>
-                                <a href="mailto://{{$kontak->email??''}}">
+                                <a href="{{ isset($kontak->email) ? 'mailto:' . $kontak->email : '#' }}">
                                     <i class="fa font-18 fa-envelope color-mail"></i>
-                                    <span>{{$kontak->email??''}}</span>
-                                    <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO
-                                        MAIL</span>
+                                    <span>{{ $kontak->email ?? 'Email not available' }}</span>
+                                    <span class="badge bg-highlight rounded-xs color-white fa font-10">TAP TO MAIL</span>
                                     <i class="fa fa-angle-right"></i>
                                 </a>
                             </div>
