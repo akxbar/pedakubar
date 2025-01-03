@@ -26,7 +26,7 @@ class ContactUsResource extends Resource
 
     protected ?string $heading = 'Contact Us';
 
-    protected static ?int $navigationSort = 7;
+    protected static ?int $navigationSort = 2;
 
 
 

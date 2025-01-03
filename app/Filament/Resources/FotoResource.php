@@ -26,7 +26,7 @@ class FotoResource extends Resource
     protected static ?string $navigationLabel = 'Galleri Foto';
     protected static ?string $pluralModelLabel = 'Galleri Foto';
     protected ?string $heading = 'Galleri Foto';
-    protected static ?int $navigationSort = 4;
+    protected static ?int $navigationSort = 5;
 
 
     public static function form(Form $form): Form

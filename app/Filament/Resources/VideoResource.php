@@ -26,7 +26,7 @@ class VideoResource extends Resource
     protected static ?string $navigationLabel = 'Galleri Video';
     protected static ?string $pluralModelLabel = 'Galleri Video';
     protected ?string $heading = 'Galleri Video';
-    protected static ?int $navigationSort = 4;
+    protected static ?int $navigationSort = 6;
 
 
 

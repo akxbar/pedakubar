@@ -30,7 +30,7 @@ class BeritaResource extends Resource
 
     protected ?string $heading = 'Berita';
 
-    protected static ?int $navigationSort = 1;
+    protected static ?int $navigationSort = 4;
     public static function form(Form $form): Form
     {
         return $form
