@@ -26,12 +26,13 @@ Route::get('/pemondokandetail/{id}', [HomeController::class, 'pemondokandetail']
 Route::get('/direktori', [HomeController::class, 'direktori'])->name('direktori');
 
 
-Route::get('/page/{id}',[HomeController::class, 'page'])->name(name: 'page');
-Route::get('/selengkapya/{id}',[HomeController::class, 'selengkapnya'])->name(name: 'selengkapnya');
-Route::get('/arsip-berita',[HomeController::class, 'arsipberita'])->name(name: 'arsipberita');
-Route::get('/foto',[HomeController::class, 'foto'])->name(name: 'foto');
-Route::get('/event',[HomeController::class, 'event'])->name(name: 'event');
+Route::get('/page/{id}', [HomeController::class, 'page'])->name(name: 'page');
+Route::get('/selengkapya/{id}', [HomeController::class, 'selengkapnya'])->name(name: 'selengkapnya');
+Route::get('/arsip-berita', [HomeController::class, 'arsipberita'])->name(name: 'arsipberita');
+Route::get('/foto', [HomeController::class, 'foto'])->name(name: 'foto');
+Route::get('/event', [HomeController::class, 'event'])->name(name: 'event');
 Route::get('/evendetail/{id}', [HomeController::class, 'evendetail'])->name(name: 'evendetail');
+Route::get('/event/detail/{id}', [HomeController::class, 'loadEventDetail']);
 
 Route::get('/download/{file}', [HomeController::class, 'download'])->name('file.download');
 //

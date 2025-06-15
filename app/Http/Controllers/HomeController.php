@@ -39,8 +39,8 @@ class HomeController extends Controller
 
     public function beranda()
     {
-        $slides =  Header::where('publish', 1)->get();
-        $kontak =  ContactUs::first();
+        $slides = Header::where('publish', 1)->get();
+        $kontak = ContactUs::first();
         $halaman = Halaman::where('publish', 1)->get();
         $berita = Berita::where('publish', 1)->latest()->simplePaginate(3);
         $foto = Foto::latest()->first();
@@ -62,11 +62,12 @@ class HomeController extends Controller
         return view('web.pemondokan.pemondokan', compact('lokasis', 'pemondokans', 'penangungjawabs'));
     }
 
-    public function pemondokandetail($id){
-        $aksesExists = getUserId(Session::get('user_id'))??false;
-        if(!$aksesExists){
+    public function pemondokandetail($id)
+    {
+        $aksesExists = getUserId(Session::get('user_id')) ?? false;
+        if (!$aksesExists) {
             return redirect()->route('login');
-        }else{
+        } else {
             $pemondokan = Pemondokan::where('publish', 1)->where('id', $id)->first();
             $penangungjawabs = PenangungJawab::where('publish', 1)->get();
             return view('web.pemondokan.pemondokandetail', compact('pemondokan', 'penangungjawabs'));
@@ -76,10 +77,10 @@ class HomeController extends Controller
 
     public function direktori()
     {
-        $kategoris = KategoriDirektori::where('active', 1)->orderBy('sort','asc')->get();
+        $kategoris = KategoriDirektori::where('active', 1)->orderBy('sort', 'asc')->get();
 
-        $direktoris = Direktori::where('publish', 1)->orderBy('id','asc')->get();
-        return view('web.direktori.direktori', compact('kategoris','direktoris'));
+        $direktoris = Direktori::where('publish', 1)->orderBy('id', 'asc')->get();
+        return view('web.direktori.direktori', compact('kategoris', 'direktoris'));
     }
 
 
@@ -122,34 +123,41 @@ class HomeController extends Controller
 
 
     public function event()
-      {
-            $kategoris = Kategori::where('publish', 1)->get();
-            $events = Event::where('publish', 1)->latest()->get();
+    {
+        $kategoris = Kategori::where('publish', 1)->get();
+        $events = Event::where('publish', 1)->latest()->get();
 
-            return view('web.event.event', compact('kategoris', 'events'));
+        return view('web.event.event', compact('kategoris', 'events'));
 
+    }
+
+
+    public function evendetail($id)
+    {
+        return view('web.event.evendetail', [
+            'event' => Event::where('publish', 1)->findOrFail($id),
+        ]);
+    }
+
+
+    public function download($file)
+    {
+
+        $filePath = 'storage/' . $file; // Sesuaikan path file Anda
+
+        if (Storage::exists($filePath)) {
+            return response()->download($filePath);
         }
 
-
-        public function evendetail($id)
-        {
-            return view('web.event.evendetail', [
-                'event' => Event::where('publish', 1)->findOrFail($id),
-            ]);
-        }
+        return redirect()->back()->with('error', 'File not found.');
+    }
 
 
-        public function download($file)
-        {
-
-            $filePath = 'storage/' . $file; // Sesuaikan path file Anda
-
-            if (Storage::exists($filePath)) {
-                return response()->download($filePath);
-            }
-
-            return redirect()->back()->with('error', 'File not found.');
-        }
+    public function loadEventDetail($id)
+    {
+        $event = Event::findOrFail($id);
+        return view('web.partials.event_modal', compact('event'));
+    }
 
 }
 
