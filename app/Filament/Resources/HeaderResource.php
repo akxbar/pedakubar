@@ -27,7 +27,7 @@ class HeaderResource extends Resource
     protected static ?string $navigationLabel = 'Header';
     protected static ?string $pluralModelLabel = 'Header';
     protected ?string $heading = 'Header';
-    protected static ?int $navigationSort = 5;
+    protected static ?int $navigationSort = 1;
 
     public static function form(Form $form): Form
     {

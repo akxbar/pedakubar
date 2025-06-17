@@ -21,15 +21,18 @@ Route::get('/beranda', [HomeController::class, 'beranda'])->name('beranda');
 
 
 Route::get('/pemondokan', [HomeController::class, 'pemondokan'])->name('pemondokan');
+Route::get('/pemondokandetail/{id}', [HomeController::class, 'pemondokandetail'])->name('pemondokandetail');
+
 Route::get('/direktori', [HomeController::class, 'direktori'])->name('direktori');
 
 
-Route::get('/page/{id}',[HomeController::class, 'page'])->name(name: 'page');
-Route::get('/selengkapya/{id}',[HomeController::class, 'selengkapnya'])->name(name: 'selengkapnya');
-Route::get('/arsip-berita',[HomeController::class, 'arsipberita'])->name(name: 'arsipberita');
-Route::get('/foto',[HomeController::class, 'foto'])->name(name: 'foto');
-Route::get('/event',[HomeController::class, 'event'])->name(name: 'event');
+Route::get('/page/{id}', [HomeController::class, 'page'])->name(name: 'page');
+Route::get('/selengkapya/{id}', [HomeController::class, 'selengkapnya'])->name(name: 'selengkapnya');
+Route::get('/arsip-berita', [HomeController::class, 'arsipberita'])->name(name: 'arsipberita');
+Route::get('/foto', [HomeController::class, 'foto'])->name(name: 'foto');
+Route::get('/event', [HomeController::class, 'event'])->name(name: 'event');
 Route::get('/evendetail/{id}', [HomeController::class, 'evendetail'])->name(name: 'evendetail');
+Route::get('/event/detail/{id}', [HomeController::class, 'loadEventDetail']);
 
 Route::get('/download/{file}', [HomeController::class, 'download'])->name('file.download');
 //
@@ -59,13 +62,13 @@ Route::get('/download/{file}', [HomeController::class, 'download'])->name('file.
 //     return view('frontend.pengumuman.pengumuman');
 // })->name(name: 'pengumuman');
 
-Route::get('/pemondokan1', function () {
-    return view('frontend.pemondokan.pemondokan');
-})->name(name: 'pemondokan');
+// Route::get('/pemondokan1', function () {
+//     return view('frontend.pemondokan.pemondokan');
+// })->name(name: 'pemondokan1');
 
-Route::get('/pemondokandetail', function () {
-    return view('frontend.pemondokan.pemondokandetail');
-})->name(name: 'pemondokandetail');
+// Route::get('/pemondokandetail1', function () {
+//     return view('frontend.pemondokan.pemondokandetail');
+// });
 
 // Route::get('/direktori', function () {
 //     return view('frontend.direktori.direktori');
